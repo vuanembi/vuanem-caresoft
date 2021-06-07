@@ -1,0 +1,5957 @@
+[
+    {
+        "ticket_no": 1029674,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: H\u1ed3ng Linh",
+        "created_at": "2021-06-01T02:01:41Z",
+        "updated_at": "2021-06-01T02:01:41Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805629,
+        "requester_id": 93589263,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93589263,
+            "username": "H\u1ed3ng Linh",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029671,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: H\u01b0\u01a1ng Nguy\u1ec5n Th\u1ecb Thu",
+        "created_at": "2021-06-01T02:01:40Z",
+        "updated_at": "2021-06-01T02:01:40Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805615,
+        "requester_id": 114032305,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114032305,
+            "username": "H\u01b0\u01a1ng Nguy\u1ec5n Th\u1ecb Thu",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029673,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: \u0110i\u1ec7n M\u00e1y An Gi\u00e1p",
+        "created_at": "2021-06-01T02:01:40Z",
+        "updated_at": "2021-06-01T02:01:40Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805622,
+        "requester_id": 114088253,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114088253,
+            "username": "\u0110i\u1ec7n M\u00e1y An Gi\u00e1p",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029672,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Thi\u00ean Kim",
+        "created_at": "2021-06-01T02:01:40Z",
+        "updated_at": "2021-06-01T02:01:40Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805616,
+        "requester_id": 114090706,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114090706,
+            "username": "Thi\u00ean Kim",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029669,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Hoa C\u1ecf May",
+        "created_at": "2021-06-01T02:01:37Z",
+        "updated_at": "2021-06-01T02:01:37Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805444,
+        "requester_id": 114093611,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114093611,
+            "username": "Hoa C\u1ecf May",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029670,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: T\u00f4 Thanh Bi\u00ean",
+        "created_at": "2021-06-01T02:01:37Z",
+        "updated_at": "2021-06-01T02:01:37Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805467,
+        "requester_id": 114092723,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114092723,
+            "username": "T\u00f4 Thanh Bi\u00ean",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029668,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Belle Tran",
+        "created_at": "2021-06-01T02:01:36Z",
+        "updated_at": "2021-06-01T02:01:36Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805400,
+        "requester_id": 114090747,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114090747,
+            "username": "Belle Tran",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029667,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: V\u0103n H\u00f9ng CT",
+        "created_at": "2021-06-01T02:01:35Z",
+        "updated_at": "2021-06-01T02:01:35Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805351,
+        "requester_id": 114095382,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114095382,
+            "username": "V\u0103n H\u00f9ng CT",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029666,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Lich Tien",
+        "created_at": "2021-06-01T02:01:34Z",
+        "updated_at": "2021-06-01T02:01:34Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805286,
+        "requester_id": 114088605,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114088605,
+            "username": "Lich Tien",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029664,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Thuy Dang",
+        "created_at": "2021-06-01T02:01:33Z",
+        "updated_at": "2021-06-01T02:01:33Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805227,
+        "requester_id": 114617557,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114617557,
+            "username": "Thuy Dang",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029665,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Lan Hoang",
+        "created_at": "2021-06-01T02:01:33Z",
+        "updated_at": "2021-06-01T02:01:33Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805234,
+        "requester_id": 114095660,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114095660,
+            "username": "Lan Hoang",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029662,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Shi Su",
+        "created_at": "2021-06-01T02:01:32Z",
+        "updated_at": "2021-06-01T02:01:32Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805149,
+        "requester_id": 93589398,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93589398,
+            "username": "Shi Su",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029663,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: \u0110\u1ed7 Thuy",
+        "created_at": "2021-06-01T02:01:32Z",
+        "updated_at": "2021-06-01T02:01:32Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805156,
+        "requester_id": 114091871,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114091871,
+            "username": "\u0110\u1ed7 Thuy",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029661,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Huong L\u00ea",
+        "created_at": "2021-06-01T02:01:31Z",
+        "updated_at": "2021-06-01T02:01:31Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805118,
+        "requester_id": 93592062,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93592062,
+            "username": "Huong L\u00ea",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029656,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ho\u00e0ng Linh",
+        "created_at": "2021-06-01T02:01:30Z",
+        "updated_at": "2021-06-01T02:01:30Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805010,
+        "requester_id": 114094992,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114094992,
+            "username": "Ho\u00e0ng Linh",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029658,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Trang Nhung",
+        "created_at": "2021-06-01T02:01:30Z",
+        "updated_at": "2021-06-01T02:01:30Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805036,
+        "requester_id": 93489211,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93489211,
+            "username": "Trang Nhung",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029660,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Nguy\u1ec5n Duy Anh",
+        "created_at": "2021-06-01T02:01:30Z",
+        "updated_at": "2021-06-01T02:01:30Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805043,
+        "requester_id": 114095268,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114095268,
+            "username": "Nguy\u1ec5n Duy Anh",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029657,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: \u0110\u1eb7ng Minh H\u00f9ng",
+        "created_at": "2021-06-01T02:01:30Z",
+        "updated_at": "2021-06-01T02:01:30Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805024,
+        "requester_id": 95808262,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 95808262,
+            "username": "\u0110\u1eb7ng Minh H\u00f9ng",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029659,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: T. T. Thanh Tuy\u1ec1n",
+        "created_at": "2021-06-01T02:01:30Z",
+        "updated_at": "2021-06-01T02:01:30Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234805042,
+        "requester_id": 93592118,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93592118,
+            "username": "T. T. Thanh Tuy\u1ec1n",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029654,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Mun Li",
+        "created_at": "2021-06-01T02:01:28Z",
+        "updated_at": "2021-06-01T02:01:28Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804888,
+        "requester_id": 114094390,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114094390,
+            "username": "Mun Li",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029655,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ha Nguyen",
+        "created_at": "2021-06-01T02:01:28Z",
+        "updated_at": "2021-06-01T02:01:28Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804910,
+        "requester_id": 114617463,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114617463,
+            "username": "Ha Nguyen",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029653,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Mai Dau",
+        "created_at": "2021-06-01T02:01:26Z",
+        "updated_at": "2021-06-01T02:01:26Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804811,
+        "requester_id": 114085016,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114085016,
+            "username": "Mai Dau",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029651,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Tr\u1ea7n Tu\u1ea5n",
+        "created_at": "2021-06-01T02:01:26Z",
+        "updated_at": "2021-06-01T02:01:26Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804784,
+        "requester_id": 114093396,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114093396,
+            "username": "Tr\u1ea7n Tu\u1ea5n",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029652,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Dang Nhat Thu",
+        "created_at": "2021-06-01T02:01:26Z",
+        "updated_at": "2021-06-01T02:01:26Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804788,
+        "requester_id": 108941116,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 108941116,
+            "username": "Dang Nhat Thu",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029649,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: \u0110\u1eb7ng H\u1ed3ng Quang",
+        "created_at": "2021-06-01T02:01:25Z",
+        "updated_at": "2021-06-01T02:01:25Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804729,
+        "requester_id": 114094152,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114094152,
+            "username": "\u0110\u1eb7ng H\u1ed3ng Quang",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029650,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: L\u00ea Mina",
+        "created_at": "2021-06-01T02:01:25Z",
+        "updated_at": "2021-06-01T02:01:25Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804733,
+        "requester_id": 114094136,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114094136,
+            "username": "L\u00ea Mina",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029648,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: H\u00e0 L\u01b0\u01a1ng",
+        "created_at": "2021-06-01T02:01:23Z",
+        "updated_at": "2021-06-01T02:01:23Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804587,
+        "requester_id": 114094233,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114094233,
+            "username": "H\u00e0 L\u01b0\u01a1ng",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029647,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Nh\u00e0n V\u00f5",
+        "created_at": "2021-06-01T02:01:22Z",
+        "updated_at": "2021-06-01T02:01:22Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804544,
+        "requester_id": 114032570,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114032570,
+            "username": "Nh\u00e0n V\u00f5",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029644,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Trang K\u01b0m",
+        "created_at": "2021-06-01T02:01:21Z",
+        "updated_at": "2021-06-01T02:01:21Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804453,
+        "requester_id": 114032602,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114032602,
+            "username": "Trang K\u01b0m",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029646,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Nhat Nam",
+        "created_at": "2021-06-01T02:01:21Z",
+        "updated_at": "2021-06-01T02:01:21Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804475,
+        "requester_id": 114032056,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114032056,
+            "username": "Nhat Nam",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029645,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Anh Kiet",
+        "created_at": "2021-06-01T02:01:21Z",
+        "updated_at": "2021-06-01T02:01:21Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804467,
+        "requester_id": 102287817,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 102287817,
+            "username": "Anh Kiet",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029643,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Th\u00fay H\u01b0\u1eddng",
+        "created_at": "2021-06-01T02:01:19Z",
+        "updated_at": "2021-06-01T02:01:19Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804362,
+        "requester_id": 114095350,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114095350,
+            "username": "Th\u00fay H\u01b0\u1eddng",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029641,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Hu\u1ef3nh Th\u1ecb Kim Anh",
+        "created_at": "2021-06-01T02:01:18Z",
+        "updated_at": "2021-06-01T02:01:18Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804282,
+        "requester_id": 113727624,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 113727624,
+            "username": "Hu\u1ef3nh Th\u1ecb Kim Anh",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029642,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Em B\u1ed1ng",
+        "created_at": "2021-06-01T02:01:18Z",
+        "updated_at": "2021-06-01T02:01:18Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804323,
+        "requester_id": 114091884,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114091884,
+            "username": "Em B\u1ed1ng",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029640,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Kim Thoa",
+        "created_at": "2021-06-01T02:01:17Z",
+        "updated_at": "2021-06-01T02:01:17Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804194,
+        "requester_id": 114092378,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114092378,
+            "username": "Kim Thoa",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029639,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: \u0110\u1ea1t B\u00f9i",
+        "created_at": "2021-06-01T02:01:16Z",
+        "updated_at": "2021-06-01T02:01:16Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234804103,
+        "requester_id": 114094068,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114094068,
+            "username": "\u0110\u1ea1t B\u00f9i",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029638,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Y\u1ebfn Ng\u1ecdc",
+        "created_at": "2021-06-01T02:01:14Z",
+        "updated_at": "2021-06-01T02:01:14Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234803905,
+        "requester_id": 93592140,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93592140,
+            "username": "Y\u1ebfn Ng\u1ecdc",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029637,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Tien Le",
+        "created_at": "2021-06-01T02:01:13Z",
+        "updated_at": "2021-06-01T02:01:13Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234803740,
+        "requester_id": 113663255,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 113663255,
+            "username": "Tien Le",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029636,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Sen B\u00f9i",
+        "created_at": "2021-06-01T02:01:12Z",
+        "updated_at": "2021-06-01T02:01:12Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234803622,
+        "requester_id": 114031836,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114031836,
+            "username": "Sen B\u00f9i",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029635,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ngoc Bich Nguyen",
+        "created_at": "2021-06-01T02:01:11Z",
+        "updated_at": "2021-06-01T02:01:11Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234803455,
+        "requester_id": 114616981,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114616981,
+            "username": "Ngoc Bich Nguyen",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029633,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Tu\u1ea5n G\u1ea5m",
+        "created_at": "2021-06-01T02:01:07Z",
+        "updated_at": "2021-06-01T02:01:07Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234803027,
+        "requester_id": 114095354,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114095354,
+            "username": "Tu\u1ea5n G\u1ea5m",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029634,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Thu B\u00f9i",
+        "created_at": "2021-06-01T02:01:07Z",
+        "updated_at": "2021-06-01T02:01:07Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234803057,
+        "requester_id": 114616803,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114616803,
+            "username": "Thu B\u00f9i",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029632,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Vantoan Pham",
+        "created_at": "2021-06-01T02:01:06Z",
+        "updated_at": "2021-06-01T02:01:06Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234802874,
+        "requester_id": 114095569,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114095569,
+            "username": "Vantoan Pham",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029631,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: L\u00ea Thu\u1ef3 Trang",
+        "created_at": "2021-06-01T02:01:05Z",
+        "updated_at": "2021-06-01T02:01:05Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234802772,
+        "requester_id": 109902578,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 109902578,
+            "username": "L\u00ea Thu\u1ef3 Trang",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029629,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Thu M\u00edt",
+        "created_at": "2021-06-01T02:01:04Z",
+        "updated_at": "2021-06-01T02:01:04Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234802583,
+        "requester_id": 114093080,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114093080,
+            "username": "Thu M\u00edt",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029630,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Hanh Nguyen",
+        "created_at": "2021-06-01T02:01:04Z",
+        "updated_at": "2021-06-01T02:01:04Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234802596,
+        "requester_id": 113641095,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 113641095,
+            "username": "Hanh Nguyen",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029628,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Thang Pham",
+        "created_at": "2021-06-01T02:01:03Z",
+        "updated_at": "2021-06-01T02:01:03Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234802552,
+        "requester_id": 114094998,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114094998,
+            "username": "Thang Pham",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029626,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Nguyen Thi Khanh Nga",
+        "created_at": "2021-06-01T02:01:03Z",
+        "updated_at": "2021-06-01T02:01:03Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234802498,
+        "requester_id": 114095878,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114095878,
+            "username": "Nguyen Thi Khanh Nga",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029627,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Le Thuy Dao",
+        "created_at": "2021-06-01T02:01:03Z",
+        "updated_at": "2021-06-01T02:01:03Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234802506,
+        "requester_id": 109609952,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 109609952,
+            "username": "Le Thuy Dao",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029625,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Hoang Lan Anh",
+        "created_at": "2021-06-01T02:01:01Z",
+        "updated_at": "2021-06-01T02:01:01Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234802281,
+        "requester_id": 93589319,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93589319,
+            "username": "Hoang Lan Anh",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029624,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ph\u01b0\u01a1ng Thu",
+        "created_at": "2021-06-01T02:00:59Z",
+        "updated_at": "2021-06-01T02:00:59Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234801997,
+        "requester_id": 114093947,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114093947,
+            "username": "Ph\u01b0\u01a1ng Thu",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029623,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Huy\u1ec1n Chip",
+        "created_at": "2021-06-01T02:00:59Z",
+        "updated_at": "2021-06-01T02:00:59Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234801956,
+        "requester_id": 114086990,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114086990,
+            "username": "Huy\u1ec1n Chip",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029622,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: My Linh Le",
+        "created_at": "2021-06-01T02:00:58Z",
+        "updated_at": "2021-06-01T02:00:58Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234801878,
+        "requester_id": 114094632,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114094632,
+            "username": "My Linh Le",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029621,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Nhan Do",
+        "created_at": "2021-06-01T02:00:57Z",
+        "updated_at": "2021-06-01T02:00:57Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234801745,
+        "requester_id": 114092163,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114092163,
+            "username": "Nhan Do",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029620,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Huynh Don",
+        "created_at": "2021-06-01T02:00:56Z",
+        "updated_at": "2021-06-01T02:00:56Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234801561,
+        "requester_id": 93594245,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93594245,
+            "username": "Huynh Don",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029619,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Hin Su",
+        "created_at": "2021-06-01T02:00:52Z",
+        "updated_at": "2021-06-01T02:00:52Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234801119,
+        "requester_id": 114094454,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114094454,
+            "username": "Hin Su",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029618,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ng\u1ecdc H\u00e2n",
+        "created_at": "2021-06-01T02:00:50Z",
+        "updated_at": "2021-06-01T02:00:50Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234800763,
+        "requester_id": 111115811,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 111115811,
+            "username": "Ng\u1ecdc H\u00e2n",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029617,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: My My Xinh",
+        "created_at": "2021-06-01T02:00:49Z",
+        "updated_at": "2021-06-01T02:00:49Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234800615,
+        "requester_id": 93592112,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93592112,
+            "username": "My My Xinh",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029615,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: B\u00edch Loan",
+        "created_at": "2021-06-01T02:00:48Z",
+        "updated_at": "2021-06-01T02:00:48Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234800478,
+        "requester_id": 110163143,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 110163143,
+            "username": "B\u00edch Loan",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029616,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: B\u1ebfp Nh\u00e0 Bin",
+        "created_at": "2021-06-01T02:00:48Z",
+        "updated_at": "2021-06-01T02:00:48Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234800584,
+        "requester_id": 114087986,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114087986,
+            "username": "B\u1ebfp Nh\u00e0 Bin",
+            "email": null,
+            "phone_no": "0941067186",
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029614,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: H\u1ed3ng Y\u1ebfn",
+        "created_at": "2021-06-01T02:00:47Z",
+        "updated_at": "2021-06-01T02:00:47Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234800451,
+        "requester_id": 93593964,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93593964,
+            "username": "H\u1ed3ng Y\u1ebfn",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029613,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: R\u00f9a Con",
+        "created_at": "2021-06-01T02:00:46Z",
+        "updated_at": "2021-06-01T02:00:46Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234800228,
+        "requester_id": 114090481,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114090481,
+            "username": "R\u00f9a Con",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029612,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Su Shi",
+        "created_at": "2021-06-01T02:00:45Z",
+        "updated_at": "2021-06-01T02:00:45Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234800115,
+        "requester_id": 93512374,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93512374,
+            "username": "Su Shi",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029611,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Mamy C\u1ee7a B\u00e9 Tin",
+        "created_at": "2021-06-01T02:00:44Z",
+        "updated_at": "2021-06-01T02:00:44Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234800011,
+        "requester_id": 93594061,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93594061,
+            "username": "Mamy C\u1ee7a B\u00e9 Tin",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029609,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Vi Lanh",
+        "created_at": "2021-06-01T02:00:43Z",
+        "updated_at": "2021-06-01T02:00:43Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234799847,
+        "requester_id": 111080504,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 111080504,
+            "username": "Vi Lanh",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029607,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Trang Trang",
+        "created_at": "2021-06-01T02:00:43Z",
+        "updated_at": "2021-06-01T02:00:43Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234799828,
+        "requester_id": 114093683,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114093683,
+            "username": "Trang Trang",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029608,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Minh Mu\u00f4n M\u00e0u",
+        "created_at": "2021-06-01T02:00:43Z",
+        "updated_at": "2021-06-01T02:00:43Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234799833,
+        "requester_id": 114095108,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114095108,
+            "username": "Minh Mu\u00f4n M\u00e0u",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029610,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Kim L\u00ea",
+        "created_at": "2021-06-01T02:00:43Z",
+        "updated_at": "2021-06-01T02:00:43Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234799930,
+        "requester_id": 93589787,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93589787,
+            "username": "Kim L\u00ea",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029606,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: L\u00ea Nh\u1eadt H\u00e0o",
+        "created_at": "2021-06-01T02:00:42Z",
+        "updated_at": "2021-06-01T02:00:42Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234799746,
+        "requester_id": 114095124,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114095124,
+            "username": "L\u00ea Nh\u1eadt H\u00e0o",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029605,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: B\u1ea3o Y\u1ebfn Nguy\u1ec5n",
+        "created_at": "2021-06-01T02:00:42Z",
+        "updated_at": "2021-06-01T02:00:42Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234799695,
+        "requester_id": 93591109,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93591109,
+            "username": "B\u1ea3o Y\u1ebfn Nguy\u1ec5n",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029604,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Cuong Le",
+        "created_at": "2021-06-01T02:00:41Z",
+        "updated_at": "2021-06-01T02:00:41Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234799624,
+        "requester_id": 102296970,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 102296970,
+            "username": "Cuong Le",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029603,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: \u0110\u1eb7ng Ph\u01b0\u01a1ng",
+        "created_at": "2021-06-01T02:00:38Z",
+        "updated_at": "2021-06-01T02:00:38Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234799258,
+        "requester_id": 114031205,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114031205,
+            "username": "\u0110\u1eb7ng Ph\u01b0\u01a1ng",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029602,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Be Que Tran",
+        "created_at": "2021-06-01T02:00:36Z",
+        "updated_at": "2021-06-01T02:00:36Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234799047,
+        "requester_id": 93591885,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93591885,
+            "username": "Be Que Tran",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029601,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Xuan Tran",
+        "created_at": "2021-06-01T02:00:36Z",
+        "updated_at": "2021-06-01T02:00:36Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234798959,
+        "requester_id": 102376411,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 102376411,
+            "username": "Xuan Tran",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029600,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Y\u1ebfn Ruby",
+        "created_at": "2021-06-01T02:00:34Z",
+        "updated_at": "2021-06-01T02:00:34Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234798644,
+        "requester_id": 109633522,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 109633522,
+            "username": "Y\u1ebfn Ruby",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029599,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: L\u00ea Th\u1ecb Y\u1ebfn Nhi",
+        "created_at": "2021-06-01T02:00:32Z",
+        "updated_at": "2021-06-01T02:00:32Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234798474,
+        "requester_id": 114095092,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114095092,
+            "username": "L\u00ea Th\u1ecb Y\u1ebfn Nhi",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029598,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: D\u01b0\u01a1ng Nga",
+        "created_at": "2021-06-01T02:00:31Z",
+        "updated_at": "2021-06-01T02:00:31Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234798305,
+        "requester_id": 93591900,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93591900,
+            "username": "D\u01b0\u01a1ng Nga",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029597,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Rst Nguy\u1ec5n",
+        "created_at": "2021-06-01T02:00:30Z",
+        "updated_at": "2021-06-01T02:00:30Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234798139,
+        "requester_id": 114089255,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114089255,
+            "username": "Rst Nguy\u1ec5n",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029596,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ph\u00e1t Nguy\u1ec5n",
+        "created_at": "2021-06-01T02:00:29Z",
+        "updated_at": "2021-06-01T02:00:29Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234798094,
+        "requester_id": 93589245,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93589245,
+            "username": "Ph\u00e1t Nguy\u1ec5n",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029594,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Luy\u1ec7n Th\u1ecb Thu Trang",
+        "created_at": "2021-06-01T02:00:27Z",
+        "updated_at": "2021-06-01T02:00:27Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234797717,
+        "requester_id": 93568288,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93568288,
+            "username": "0337712603",
+            "email": null,
+            "phone_no": "0337712603",
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029595,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: T\u00f4 Thanh Xu\u00e2n",
+        "created_at": "2021-06-01T02:00:27Z",
+        "updated_at": "2021-06-01T02:00:27Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234797772,
+        "requester_id": 114093657,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114093657,
+            "username": "T\u00f4 Thanh Xu\u00e2n",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029592,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Cao Thu\u1ef3 Trang",
+        "created_at": "2021-06-01T02:00:25Z",
+        "updated_at": "2021-06-01T02:00:25Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234797564,
+        "requester_id": 99519921,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 99519921,
+            "username": "Cao Thu\u1ef3 Trang",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029593,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Thanhthuy Dang",
+        "created_at": "2021-06-01T02:00:25Z",
+        "updated_at": "2021-06-01T02:00:25Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234797595,
+        "requester_id": 114614673,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114614673,
+            "username": "Thanhthuy Dang",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029591,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ngay Xuan Em Yeu",
+        "created_at": "2021-06-01T02:00:24Z",
+        "updated_at": "2021-06-01T02:00:24Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234797432,
+        "requester_id": 114614597,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114614597,
+            "username": "Ngay Xuan Em Yeu",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029588,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: \u0110\u1ed7 D\u0169ng",
+        "created_at": "2021-06-01T02:00:23Z",
+        "updated_at": "2021-06-01T02:00:23Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234797229,
+        "requester_id": 114040247,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114040247,
+            "username": "\u0110\u1ed7 D\u0169ng",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029589,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Thi\u00ean V\u01b0\u01a1ng",
+        "created_at": "2021-06-01T02:00:23Z",
+        "updated_at": "2021-06-01T02:00:23Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234797242,
+        "requester_id": 109667749,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 109667749,
+            "username": "Thi\u00ean V\u01b0\u01a1ng",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029590,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: \u0110inhthimi\u00ean \u0110inh",
+        "created_at": "2021-06-01T02:00:23Z",
+        "updated_at": "2021-06-01T02:00:23Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234797297,
+        "requester_id": 114090700,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114090700,
+            "username": "\u0110inhthimi\u00ean \u0110inh",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029587,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: H\u1ed3ng Nhung",
+        "created_at": "2021-06-01T02:00:22Z",
+        "updated_at": "2021-06-01T02:00:22Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234797168,
+        "requester_id": 114093906,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114093906,
+            "username": "H\u1ed3ng Nhung",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029586,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Quangtunghb Tran",
+        "created_at": "2021-06-01T02:00:20Z",
+        "updated_at": "2021-06-01T02:00:20Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234796877,
+        "requester_id": 114084730,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114084730,
+            "username": "Quangtunghb Tran",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029585,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Chi Le",
+        "created_at": "2021-06-01T02:00:17Z",
+        "updated_at": "2021-06-01T02:00:17Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234796520,
+        "requester_id": 111080241,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 111080241,
+            "username": "Chi Le",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029584,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ki\u1ec1u V\u00e2n",
+        "created_at": "2021-06-01T02:00:14Z",
+        "updated_at": "2021-06-01T02:00:14Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234796108,
+        "requester_id": 114089205,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114089205,
+            "username": "Ki\u1ec1u V\u00e2n",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029583,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ho\u00e0ng Ryo",
+        "created_at": "2021-06-01T02:00:13Z",
+        "updated_at": "2021-06-01T02:00:13Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234795996,
+        "requester_id": 109635927,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 109635927,
+            "username": "Ho\u00e0ng Ryo",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029582,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Mai \u0110\u01b0\u1eddng",
+        "created_at": "2021-06-01T02:00:12Z",
+        "updated_at": "2021-06-01T02:00:12Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234795891,
+        "requester_id": 102297320,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 102297320,
+            "username": "Mai \u0110\u01b0\u1eddng",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029581,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ph\u1ea1m M\u00e8",
+        "created_at": "2021-06-01T02:00:11Z",
+        "updated_at": "2021-06-01T02:00:11Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234795740,
+        "requester_id": 114092816,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114092816,
+            "username": "Ph\u1ea1m M\u00e8",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029580,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ph\u1ea1m Thu\u1ef7",
+        "created_at": "2021-06-01T02:00:10Z",
+        "updated_at": "2021-06-01T02:00:10Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234795698,
+        "requester_id": 114031409,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114031409,
+            "username": "Ph\u1ea1m Thu\u1ef7",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029579,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Lam Anh",
+        "created_at": "2021-06-01T02:00:09Z",
+        "updated_at": "2021-06-01T02:00:09Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234795515,
+        "requester_id": 109634391,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 109634391,
+            "username": "Lam Anh",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029575,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Nguy\u1ec5n Th\u1ecb Thanh",
+        "created_at": "2021-06-01T02:00:07Z",
+        "updated_at": "2021-06-01T02:00:07Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234795151,
+        "requester_id": 102323483,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 102323483,
+            "username": "Nguy\u1ec5n Th\u1ecb Thanh",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029577,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Khoa Kim",
+        "created_at": "2021-06-01T02:00:07Z",
+        "updated_at": "2021-06-01T02:00:07Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234795180,
+        "requester_id": 93589294,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93589294,
+            "username": "Khoa Kim",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029576,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: D\u00e2n T\u0103ng",
+        "created_at": "2021-06-01T02:00:07Z",
+        "updated_at": "2021-06-01T02:00:07Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234795158,
+        "requester_id": 114079588,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114079588,
+            "username": "D\u00e2n T\u0103ng",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029578,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Kho\u1ea3ng L\u1eb7ng",
+        "created_at": "2021-06-01T02:00:07Z",
+        "updated_at": "2021-06-01T02:00:07Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234795204,
+        "requester_id": 114087568,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114087568,
+            "username": "Kho\u1ea3ng L\u1eb7ng",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029574,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Nguy\u1ec5n Lan",
+        "created_at": "2021-06-01T02:00:06Z",
+        "updated_at": "2021-06-01T02:00:06Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234795027,
+        "requester_id": 102289019,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 102289019,
+            "username": "Nguy\u1ec5n Lan",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029573,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Th\u01b0 Th\u01b0",
+        "created_at": "2021-06-01T02:00:04Z",
+        "updated_at": "2021-06-01T02:00:04Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234794590,
+        "requester_id": 109611375,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 109611375,
+            "username": "Th\u01b0 Th\u01b0",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029572,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: L\u00ea Thu Th\u1ea3o",
+        "created_at": "2021-06-01T02:00:03Z",
+        "updated_at": "2021-06-01T02:00:03Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234794364,
+        "requester_id": 102292204,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 102292204,
+            "username": "L\u00ea Thu Th\u1ea3o",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029569,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Ph\u1ea1m Loan",
+        "created_at": "2021-06-01T02:00:02Z",
+        "updated_at": "2021-06-01T02:00:02Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234794170,
+        "requester_id": 114093347,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114093347,
+            "username": "Ph\u1ea1m Loan",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029571,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Trang Nguyen",
+        "created_at": "2021-06-01T02:00:02Z",
+        "updated_at": "2021-06-01T02:00:02Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234794323,
+        "requester_id": 114087325,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114087325,
+            "username": "Trang Nguyen",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029570,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Phuong Tran",
+        "created_at": "2021-06-01T02:00:02Z",
+        "updated_at": "2021-06-01T02:00:02Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234794225,
+        "requester_id": 93589284,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93589284,
+            "username": "Phuong Tran",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029567,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Kim Khoa",
+        "created_at": "2021-06-01T02:00:01Z",
+        "updated_at": "2021-06-01T02:00:01Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234794069,
+        "requester_id": 93589259,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 93589259,
+            "username": "Kim Khoa",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029568,
+        "ticket_status": "closed",
+        "ticket_subject": "Chat v\u1edbi kh\u00e1ch h\u00e0ng: Thanh Nh\u00e0n",
+        "created_at": "2021-06-01T02:00:01Z",
+        "updated_at": "2021-06-01T02:00:01Z",
+        "ticket_source_end_status": 0,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234794128,
+        "requester_id": 114040265,
+        "assignee_id": 97250359,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 97250359,
+            "username": "C-00086906 Anh Th\u00e0nh",
+            "email": "thanh.tran3@vuanem.com",
+            "phone_no": "0981411594",
+            "agent_id": "36836",
+            "role_id": 1,
+            "group_id": 12100,
+            "group_name": "CNTT"
+        },
+        "requester": {
+            "id": 114040265,
+            "username": "Thanh Nh\u00e0n",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029565,
+        "ticket_status": "open",
+        "ticket_subject": "Comment t\u1eeb Tr\u1ea7n B\u00eca",
+        "created_at": "2021-06-01T01:04:19Z",
+        "updated_at": "2021-06-01T01:05:19Z",
+        "ticket_source": "Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234793781,
+        "requester_id": 114613271,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "requester": {
+            "id": 114613271,
+            "username": "Tr\u1ea7n B\u00eca",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [
+            {
+                "id": 114613271,
+                "username": "Tr\u1ea7n B\u00eca",
+                "email": null
+            }
+        ],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029564,
+        "ticket_status": "open",
+        "ticket_subject": "Chat nh\u1ee1 t\u1eeb Facebook c\u1ee7a kh\u00e1ch h\u00e0ng: Mai Tran",
+        "created_at": "2021-06-01T00:55:22Z",
+        "updated_at": "2021-06-01T00:55:22Z",
+        "ticket_source_end_status": 1,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234793747,
+        "requester_id": 114453500,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "requester": {
+            "id": 114453500,
+            "username": "Mai Tran",
+            "email": null,
+            "phone_no": "0909970906",
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029563,
+        "ticket_status": "open",
+        "ticket_subject": "Chat nh\u1ee1 t\u1eeb Facebook c\u1ee7a kh\u00e1ch h\u00e0ng: Van Nguyen",
+        "created_at": "2021-06-01T00:23:10Z",
+        "updated_at": "2021-06-01T00:23:10Z",
+        "ticket_source_end_status": 1,
+        "ticket_source": "Inbox Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234790918,
+        "requester_id": 114453344,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "requester": {
+            "id": 114453344,
+            "username": "Van Nguyen",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029562,
+        "ticket_status": "open",
+        "ticket_subject": "Gi\u00e1 th\u1ebf n\u00e0o \u1ea1",
+        "created_at": "2021-06-01T00:15:48Z",
+        "updated_at": "2021-06-01T00:16:49Z",
+        "ticket_source": "Facebook",
+        "ticket_priority": "Normal",
+        "ticket_id": 234790854,
+        "requester_id": 114610498,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "requester": {
+            "id": 114610498,
+            "username": "Nguy\u1ec5n B\u00e1 Trung",
+            "email": null,
+            "phone_no": null,
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [
+            {
+                "id": 114610498,
+                "username": "Nguy\u1ec5n B\u00e1 Trung",
+                "email": null
+            }
+        ],
+        "follows": []
+    },
+    {
+        "ticket_no": 1029554,
+        "ticket_status": "new",
+        "ticket_subject": "Cu\u1ed9c g\u1ecdi nh\u1ee1 t\u1eeb 0945557957",
+        "created_at": "2021-06-01T00:05:58Z",
+        "updated_at": "2021-06-01T00:06:09Z",
+        "ticket_source_end_status": 1,
+        "ticket_source": "Voice",
+        "ticket_priority": "Normal",
+        "ticket_id": 234790772,
+        "requester_id": 114610442,
+        "assignee_id": 92553819,
+        "custom_fields": [
+            {
+                "id": 4871,
+                "lable": "Tr\u1ea1ng th\u00e1i ch\u0103m s\u00f3c",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 4893,
+                "lable": "Tr\u1ea1ng th\u00e1i ti\u1ebfp nh\u1eadn",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5646,
+                "lable": "L\u1ecbch h\u1eb9n kh\u00e1ch",
+                "type": "Date",
+                "value": null
+            }
+        ],
+        "assignee": {
+            "id": 92553819,
+            "username": "V\u0169 An",
+            "email": "an.vu@vuanem.com",
+            "phone_no": "0901555622",
+            "agent_id": "36900",
+            "role_id": 1,
+            "group_id": 11823,
+            "group_name": "Online"
+        },
+        "requester": {
+            "id": 114610442,
+            "username": "0945557957",
+            "email": null,
+            "phone_no": "0945557957",
+            "organization_id": null
+        },
+        "tags": [],
+        "ccs": [],
+        "follows": []
+    }
+]

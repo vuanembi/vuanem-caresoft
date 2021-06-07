@@ -1,0 +1,1744 @@
+[
+    {
+        "account_id": 8092,
+        "id": 114618047,
+        "username": "0345749403",
+        "email": null,
+        "email2": null,
+        "phone_no": "0345749403",
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": null,
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 05:57:18",
+        "updated_at": "2021-06-01 05:57:18",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null
+    },
+    {
+        "account_id": 8092,
+        "id": 114616803,
+        "username": "Thu B\u00f9i",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_3980153478734542",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 02:01:07",
+        "updated_at": "2021-06-01 02:01:07",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "3980153478734542"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114616981,
+        "username": "Ngoc Bich Nguyen",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_3880312998748195",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 02:01:11",
+        "updated_at": "2021-06-01 02:01:11",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "3880312998748195"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114610498,
+        "username": "Nguy\u1ec5n B\u00e1 Trung",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_3961099297321321",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 00:15:54",
+        "updated_at": "2021-06-01 00:15:54",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "3961099297321321"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114617745,
+        "username": "Ph\u1ea1m Linh",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_5826840834000278",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 02:58:08",
+        "updated_at": "2021-06-01 02:58:08",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "5826840834000278"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114614673,
+        "username": "Thanhthuy Dang",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_4010066139029523",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 02:00:25",
+        "updated_at": "2021-06-01 02:00:25",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "4010066139029523"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114617850,
+        "username": "Ha Y\u00ean",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_4347047931974034",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 04:30:52",
+        "updated_at": "2021-06-01 04:30:52",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "4347047931974034"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114618048,
+        "username": "Nguy\u1ec5n Quang Anh",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_3970429299722584",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 05:57:25",
+        "updated_at": "2021-06-01 05:57:25",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "3970429299722584"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114610555,
+        "username": "Y\u1ebfn Tr\u1ea7n",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_3381210338646603",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 00:26:43",
+        "updated_at": "2021-06-01 00:26:43",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "3381210338646603"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114617982,
+        "username": "\ub808\uc778",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_5584319088308606",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 05:41:43",
+        "updated_at": "2021-06-01 05:41:43",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "5584319088308606"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114617997,
+        "username": "Nguy\u1ec5n Tuy\u1ebft",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_4191688714210062",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 05:45:14",
+        "updated_at": "2021-06-01 05:45:14",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "4191688714210062"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114617557,
+        "username": "Thuy Dang",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_5418993831508989",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 02:01:33",
+        "updated_at": "2021-06-01 02:01:33",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "5418993831508989"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114613271,
+        "username": "Tr\u1ea7n B\u00eca",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_4075947915825130",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 01:04:28",
+        "updated_at": "2021-06-01 01:04:28",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "4075947915825130"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114617881,
+        "username": "Minh Hi\u1ec1n",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_5606972842708170",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 04:56:56",
+        "updated_at": "2021-06-01 04:56:56",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "5606972842708170"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114613291,
+        "username": "Linh Bee",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_3850652471727222",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 01:11:53",
+        "updated_at": "2021-06-01 01:11:53",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "3850652471727222"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114617463,
+        "username": "Ha Nguyen",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_4137659109621894",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 02:01:28",
+        "updated_at": "2021-06-01 02:01:28",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "4137659109621894"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114614597,
+        "username": "Ngay Xuan Em Yeu",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_3882529048481501",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 02:00:24",
+        "updated_at": "2021-06-01 02:00:24",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "3882529048481501"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114617966,
+        "username": "Nguyen Hoang",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_4161573193949636",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 05:38:37",
+        "updated_at": "2021-06-01 05:38:37",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "4161573193949636"
+            }
+        ]
+    },
+    {
+        "account_id": 8092,
+        "id": 114617980,
+        "username": "Khang Mecu",
+        "email": null,
+        "email2": null,
+        "phone_no": null,
+        "phone_no2": null,
+        "phone_no3": null,
+        "facebook": "434513510026090_4386986784665563",
+        "gender": null,
+        "organization_id": null,
+        "created_at": "2021-06-01 05:41:27",
+        "updated_at": "2021-06-01 05:41:27",
+        "role_id": 3,
+        "campaign_handler_id": null,
+        "custom_fields": [
+            {
+                "id": 5802,
+                "lable": "Ph\u00e2n lo\u1ea1i",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5803,
+                "lable": "Ngu\u1ed3n kh\u00e1ch",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5840,
+                "lable": "T\u00ean chung c\u01b0",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5847,
+                "lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 5848,
+                "lable": "From Landing",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5849,
+                "lable": "Campaign",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 5862,
+                "lable": "Ng\u00e0y sinh",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6249,
+                "lable": "eVoucher",
+                "type": "Text Area",
+                "value": null
+            },
+            {
+                "id": 6250,
+                "lable": "G\u1eedi SMS",
+                "type": "Single drop-down list",
+                "value": null
+            },
+            {
+                "id": 6251,
+                "lable": "eVoucher Expired Date",
+                "type": "Date",
+                "value": null
+            },
+            {
+                "id": 6279,
+                "lable": "eVoucher Value",
+                "type": "Numeric",
+                "value": null
+            }
+        ],
+        "organization": null,
+        "psid": [
+            {
+                "page_id": "434513510026090",
+                "psid": "4386986784665563"
+            }
+        ]
+    }
+]

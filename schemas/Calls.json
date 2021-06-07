@@ -1,0 +1,90 @@
+[
+    {
+        "name": "id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "customer_id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "call_id",
+        "type": "STRING"
+    },
+    {
+        "name": "caller",
+        "type": "STRING"
+    },
+    {
+        "name": "called",
+        "type": "STRING"
+    },
+    {
+        "name": "user_id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "agent_id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "group_id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "call_type",
+        "type": "INTEGER"
+    },
+    {
+        "name": "start_time",
+        "type": "TIMESTAMP"
+    },
+    {
+        "name": "call_status",
+        "type": "STRING"
+    },
+    {
+        "name": "end_time",
+        "type": "TIMESTAMP"
+    },
+    {
+        "name": "wait_time",
+        "type": "STRING"
+    },
+    {
+        "name": "hold_time",
+        "type": "STRING"
+    },
+    {
+        "name": "talk_time",
+        "type": "STRING"
+    },
+    {
+        "name": "end_status",
+        "type": "STRING"
+    },
+    {
+        "name": "ticket_id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "last_agent_id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "last_user_id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "call_survey",
+        "type": "STRING"
+    },
+    {
+        "name": "call_survey_result",
+        "type": "STRING"
+    },
+    {
+        "name": "missed_reason",
+        "type": "STRING"
+    }
+]

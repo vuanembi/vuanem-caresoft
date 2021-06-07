@@ -1,0 +1,1552 @@
+[
+    {
+        "service_id": 10035730,
+        "service_name": "18002093 - Nh\u00e1nh 36942",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10036171,
+        "service_name": "2-18002095 - Nh\u00e1nh 2 - G\u1eb7p CSKH",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10036219,
+        "service_name": "18002093 - Nh\u00e1nh 36950",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10037585,
+        "service_name": "18002093 - Nh\u00e1nh 36957",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10039459,
+        "service_name": "0982620230",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10033765,
+        "service_name": "18002093 - Nh\u00e1nh 6871",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10034712,
+        "service_name": "18002093 Nh\u00e1nh 36928",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10034913,
+        "service_name": "18002093 - Nh\u00e1nh 36934",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10035188,
+        "service_name": "18002093 - Nh\u00e1nh 36937",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032232,
+        "service_name": "18002093 Nh\u00e1nh 6892",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032112,
+        "service_name": "18002093 Nh\u00e1nh 6819",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032240,
+        "service_name": "18002093 Nh\u00e1nh 6896",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032120,
+        "service_name": "18002093 Nh\u00e1nh 6823",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032248,
+        "service_name": "18002093 Nh\u00e1nh 6901",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032128,
+        "service_name": "18002093 Nh\u00e1nh 6827",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032256,
+        "service_name": "18002093 Nh\u00e1nh 6905",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032136,
+        "service_name": "18002093 Nh\u00e1nh 6831",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032264,
+        "service_name": "18002093 Nh\u00e1nh 6909",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032144,
+        "service_name": "18002093 Nh\u00e1nh 6835",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032272,
+        "service_name": "18002093 Nh\u00e1nh 6913",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032152,
+        "service_name": "18002093 Nh\u00e1nh 6839",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032280,
+        "service_name": "18002093 Nh\u00e1nh 6917",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032160,
+        "service_name": "18002093 Nh\u00e1nh 6844",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032387,
+        "service_name": "18002093 Nh\u00e1nh 6880",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032168,
+        "service_name": "18002093 Nh\u00e1nh 6849",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032395,
+        "service_name": "18002093 Nh\u00e1nh 6884",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032176,
+        "service_name": "18002093 Nh\u00e1nh 6853",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032403,
+        "service_name": "18002093 Nh\u00e1nh 6888",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032184,
+        "service_name": "18002093 Nh\u00e1nh 6857",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032192,
+        "service_name": "18002093 Nh\u00e1nh 6861",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032200,
+        "service_name": "18002093 Nh\u00e1nh 6865",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10030453,
+        "service_name": "0866205880",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032208,
+        "service_name": "18002093 Nh\u00e1nh 6869",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032088,
+        "service_name": "18002093 Nh\u00e1nh 1",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032216,
+        "service_name": "18002093 Nh\u00e1nh 6874",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032096,
+        "service_name": "18002093 Nh\u00e1nh 6807",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032224,
+        "service_name": "18002093 Nh\u00e1nh 6878",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032104,
+        "service_name": "18002093 Nh\u00e1nh 6815",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10035789,
+        "service_name": "18002093 - Nh\u00e1nh 36943",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10036213,
+        "service_name": "18002093 - Nh\u00e1nh 36944",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10036221,
+        "service_name": "18002093 - Nh\u00e1nh 36951",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10037587,
+        "service_name": "18002093 - Nh\u00e1nh 36958",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10033926,
+        "service_name": "18002093 Nh\u00e1nh 6925",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10034714,
+        "service_name": "18002093 Nh\u00e1nh 36929",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10034985,
+        "service_name": "18002093 - Nh\u00e1nh 36933",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10035493,
+        "service_name": "18002093 - Nh\u00e1nh 36935",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032234,
+        "service_name": "18002093 Nh\u00e1nh 6893",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032114,
+        "service_name": "18002093 Nh\u00e1nh 6820",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032242,
+        "service_name": "18002093 Nh\u00e1nh 6897",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032122,
+        "service_name": "18002093 Nh\u00e1nh 6824",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032250,
+        "service_name": "18002093 Nh\u00e1nh 6902",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032130,
+        "service_name": "18002093 Nh\u00e1nh 6828",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032258,
+        "service_name": "18002093 Nh\u00e1nh 6906",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032138,
+        "service_name": "18002093 Nh\u00e1nh 6832",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032266,
+        "service_name": "18002093 Nh\u00e1nh 6910",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032146,
+        "service_name": "18002093 Nh\u00e1nh 6836",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032274,
+        "service_name": "18002093 Nh\u00e1nh 6914",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032154,
+        "service_name": "18002093 Nh\u00e1nh 6840",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032282,
+        "service_name": "18002093 Nh\u00e1nh 6918",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032162,
+        "service_name": "18002093 Nh\u00e1nh 6845",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032389,
+        "service_name": "18002093 Nh\u00e1nh 6881",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032170,
+        "service_name": "18002093 Nh\u00e1nh 6850",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032397,
+        "service_name": "18002093 Nh\u00e1nh 6885",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032178,
+        "service_name": "18002093 Nh\u00e1nh 6854",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032405,
+        "service_name": "18002093 Nh\u00e1nh 6889",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032186,
+        "service_name": "18002093 Nh\u00e1nh 6858",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032194,
+        "service_name": "18002093 Nh\u00e1nh 6862",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032202,
+        "service_name": "18002093 Nh\u00e1nh 6866",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032074,
+        "service_name": "18002093",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032210,
+        "service_name": "18002093 Nh\u00e1nh 6870",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032090,
+        "service_name": "18002093 Nh\u00e1nh 6800",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032218,
+        "service_name": "18002093 Nh\u00e1nh 6875",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032098,
+        "service_name": "18002093 Nh\u00e1nh 6808",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032226,
+        "service_name": "18002093 Nh\u00e1nh 6879",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032106,
+        "service_name": "18002093 Nh\u00e1nh 6816",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10036091,
+        "service_name": "18002093 - Nh\u00e1nh 36947",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10036215,
+        "service_name": "18002093 - Nh\u00e1nh 36945",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10036256,
+        "service_name": "18002093 - Nh\u00e1nh 36813",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10038334,
+        "service_name": "18002093 - Nh\u00e1nh 36962",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10033967,
+        "service_name": "18002093 Nh\u00e1nh 6923",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10034716,
+        "service_name": "18002093 Nh\u00e1nh 36930",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10035175,
+        "service_name": "18002093 - Nh\u00e1nh 36927",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10035519,
+        "service_name": "18002093 - Nh\u00e1nh 36939",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032108,
+        "service_name": "18002093 Nh\u00e1nh 6817",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032236,
+        "service_name": "18002093 Nh\u00e1nh 6894",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032116,
+        "service_name": "18002093 Nh\u00e1nh 6821",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032244,
+        "service_name": "18002093 Nh\u00e1nh 6898",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032124,
+        "service_name": "18002093 Nh\u00e1nh 6825",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032252,
+        "service_name": "18002093 Nh\u00e1nh 6903",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032132,
+        "service_name": "18002093 Nh\u00e1nh 6829",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032260,
+        "service_name": "18002093 Nh\u00e1nh 6907",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032140,
+        "service_name": "18002093 Nh\u00e1nh 6833",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032268,
+        "service_name": "18002093 Nh\u00e1nh 6911",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032148,
+        "service_name": "18002093 Nh\u00e1nh 6837",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032276,
+        "service_name": "18002093 Nh\u00e1nh 6915",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032156,
+        "service_name": "18002093 Nh\u00e1nh 6841",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032284,
+        "service_name": "18002093 Nh\u00e1nh 6919",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032164,
+        "service_name": "18002093 Nh\u00e1nh 6846",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032391,
+        "service_name": "18002093 Nh\u00e1nh 6882",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032172,
+        "service_name": "18002093 Nh\u00e1nh 6851",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032399,
+        "service_name": "18002093 Nh\u00e1nh 6886",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032180,
+        "service_name": "18002093 Nh\u00e1nh 6855",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032578,
+        "service_name": "02471099811",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032188,
+        "service_name": "18002093 Nh\u00e1nh 6859",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032196,
+        "service_name": "18002093 Nh\u00e1nh 6863",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10029667,
+        "service_name": "0812028638",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032204,
+        "service_name": "18002093 Nh\u00e1nh 6867",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032076,
+        "service_name": "18002095",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032212,
+        "service_name": "18002093 Nh\u00e1nh 6872",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032092,
+        "service_name": "18002093 Nh\u00e1nh 6803",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032220,
+        "service_name": "18002093 Nh\u00e1nh 6876",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032100,
+        "service_name": "18002093 Nh\u00e1nh 6809",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032228,
+        "service_name": "18002093 Nh\u00e1nh 6890",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10035728,
+        "service_name": "18002093 - Nh\u00e1nh 36938",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10036169,
+        "service_name": "1-18002095 - Nh\u00e1nh 1 - \u0110\u1eb7t h\u00e0ng",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10036217,
+        "service_name": "18002093 - Nh\u00e1nh 36946",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10036542,
+        "service_name": "0898278699",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10038336,
+        "service_name": "18002093 - Nh\u00e1nh 36960",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032581,
+        "service_name": "18002093 Nh\u00e1nh 2",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10033969,
+        "service_name": "18002093 Nh\u00e1nh 6926",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10034718,
+        "service_name": "18002093 Nh\u00e1nh 36931",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10035186,
+        "service_name": "18002093 - Nh\u00e1nh 36936",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032230,
+        "service_name": "18002093 Nh\u00e1nh 6891",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032110,
+        "service_name": "18002093 Nh\u00e1nh 6818",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032238,
+        "service_name": "18002093 Nh\u00e1nh 6895",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032118,
+        "service_name": "18002093 Nh\u00e1nh 6822",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032246,
+        "service_name": "18002093 Nh\u00e1nh 6899",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032126,
+        "service_name": "18002093 Nh\u00e1nh 6826",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032254,
+        "service_name": "18002093 Nh\u00e1nh 6904",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032134,
+        "service_name": "18002093 Nh\u00e1nh 6830",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032262,
+        "service_name": "18002093 Nh\u00e1nh 6908",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032142,
+        "service_name": "18002093 Nh\u00e1nh 6834",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032270,
+        "service_name": "18002093 Nh\u00e1nh 6912",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032150,
+        "service_name": "18002093 Nh\u00e1nh 6838",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032278,
+        "service_name": "18002093 Nh\u00e1nh 6916",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032158,
+        "service_name": "18002093 Nh\u00e1nh 6842",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032286,
+        "service_name": "18002093 Nh\u00e1nh 6920",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032166,
+        "service_name": "18002093 Nh\u00e1nh 6847",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032393,
+        "service_name": "18002093 Nh\u00e1nh 6883",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032174,
+        "service_name": "18002093 Nh\u00e1nh 6852",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032401,
+        "service_name": "18002093 Nh\u00e1nh 6887",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032182,
+        "service_name": "18002093 Nh\u00e1nh 6856",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032190,
+        "service_name": "18002093 Nh\u00e1nh 6860",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032198,
+        "service_name": "18002093 Nh\u00e1nh 6864",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10029759,
+        "service_name": "0896161208",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032206,
+        "service_name": "18002093 Nh\u00e1nh 6868",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032078,
+        "service_name": "18002092",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032214,
+        "service_name": "18002093 Nh\u00e1nh 6873",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032094,
+        "service_name": "18002093 Nh\u00e1nh 6806",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032222,
+        "service_name": "18002093 Nh\u00e1nh 6877",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 10032102,
+        "service_name": "18002093 Nh\u00e1nh 6812",
+        "service_type": "G\u1ecdi v\u00e0o"
+    },
+    {
+        "service_id": 60029695,
+        "service_name": "CSKH",
+        "service_type": "Live chat"
+    },
+    {
+        "service_id": 91030299,
+        "service_name": "Vua N\u1ec7m",
+        "service_type": "Facebook"
+    },
+    {
+        "service_id": 93032277,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6915",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032285,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6919",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032392,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6882",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032400,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6886",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032579,
+        "service_name": "Voice miss: 02471099811",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93033968,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6923",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93034717,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 36930",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93035176,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36927",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93035520,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36939",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93036092,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36947",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93036216,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36945",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93036257,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36813",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032245,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6898",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93038335,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36962",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032253,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6903",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032261,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6907",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032269,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6911",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032159,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6842",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032167,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6847",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032175,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6852",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032183,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6856",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032191,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6860",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032199,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6864",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93029760,
+        "service_name": "Voice miss: 0896161208",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032207,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6868",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032079,
+        "service_name": "Voice miss: 18002092",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032215,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6873",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032095,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6806",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032223,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6877",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032103,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6812",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032231,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6891",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032111,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6818",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032119,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6822",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032127,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6826",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032135,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6830",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032143,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6834",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032151,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6838",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032279,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6916",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032287,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6920",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032394,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6883",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032402,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6887",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032582,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 2",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93033970,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6926",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93034719,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 36931",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93035187,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36936",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93035729,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36938",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93036170,
+        "service_name": "Voice miss: 1-18002095 - Nh\u00e1nh 1 - \u0110\u1eb7t h\u00e0ng",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93036218,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36946",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032239,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6895",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93036543,
+        "service_name": "Voice miss: 0898278699",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032247,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6899",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93038337,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36960",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032255,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6904",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032263,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6908",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032271,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6912",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032161,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6844",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032169,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6849",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032177,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6853",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032185,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6857",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032193,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6861",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032201,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6865",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93030454,
+        "service_name": "Voice miss: 0866205880",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032209,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6869",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032089,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 1",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032217,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6874",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032097,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6807",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032225,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6878",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032105,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6815",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032233,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6892",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032113,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6819",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032121,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6823",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032129,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6827",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032137,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6831",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032145,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6835",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032153,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6839",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032281,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6917",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032388,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6880",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032396,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6884",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032404,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6888",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93033766,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 6871",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93034713,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 36928",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93034914,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36934",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93035189,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36937",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93035731,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36942",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93036172,
+        "service_name": "Voice miss: 2-18002095 - Nh\u00e1nh 2 - G\u1eb7p CSKH",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93036220,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36950",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032241,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6896",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93037586,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36957",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032249,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6901",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93039460,
+        "service_name": "Voice miss: 0982620230",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032257,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6905",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032265,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6909",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032273,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6913",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032163,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6845",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032171,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6850",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032179,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6854",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032187,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6858",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032195,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6862",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032203,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6866",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032075,
+        "service_name": "Voice miss: 18002093",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032211,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6870",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032091,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6800",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032219,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6875",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032099,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6808",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032227,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6879",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032107,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6816",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032235,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6893",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032115,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6820",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032123,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6824",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032131,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6828",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032139,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6832",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032147,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6836",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032155,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6840",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032283,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6918",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032390,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6881",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032398,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6885",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032406,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6889",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93033927,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6925",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93034715,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 36929",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93034986,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36933",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93035494,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36935",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93035790,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36943",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93036214,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36944",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93036222,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36951",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032243,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6897",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93037588,
+        "service_name": "Voice miss: 18002093 - Nh\u00e1nh 36958",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032251,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6902",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032259,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6906",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032267,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6910",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032275,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6914",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032157,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6841",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032165,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6846",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032173,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6851",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032181,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6855",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032189,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6859",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032197,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6863",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93029668,
+        "service_name": "Voice miss: 0812028638",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032205,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6867",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032077,
+        "service_name": "Voice miss: 18002095",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032213,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6872",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032093,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6803",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032221,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6876",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032101,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6809",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032229,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6890",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032109,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6817",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032237,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6894",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032117,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6821",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032125,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6825",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032133,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6829",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032141,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6833",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 93032149,
+        "service_name": "Voice miss: 18002093 Nh\u00e1nh 6837",
+        "service_type": "Miss tho\u1ea1i"
+    },
+    {
+        "service_id": 94030301,
+        "service_name": "Vua N\u1ec7m",
+        "service_type": "Miss chat"
+    },
+    {
+        "service_id": 94035270,
+        "service_name": "Vua N\u1ec7m",
+        "service_type": "Miss chat"
+    },
+    {
+        "service_id": 94029696,
+        "service_name": "CSKH",
+        "service_type": "Miss chat"
+    },
+    {
+        "service_id": 61030300,
+        "service_name": "Vua N\u1ec7m",
+        "service_type": "Inbox Facebook"
+    },
+    {
+        "service_id": 95040001,
+        "service_name": "Vua Nem BI",
+        "service_type": "Api"
+    },
+    {
+        "service_id": 62035269,
+        "service_name": "Vua N\u1ec7m",
+        "service_type": "Zalo"
+    }
+]

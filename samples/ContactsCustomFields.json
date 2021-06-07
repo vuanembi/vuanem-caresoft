@@ -1,0 +1,205 @@
+[
+    {
+        "custom_field_id": 5802,
+        "custom_field_lable": "Ph\u00e2n lo\u1ea1i",
+        "type": "Single drop-down list",
+        "values": [
+            {
+                "id": 21327,
+                "lable": "Lead B\u00e1n l\u1ebb"
+            },
+            {
+                "id": 21425,
+                "lable": "Customer"
+            },
+            {
+                "id": 21466,
+                "lable": "Lead B\u00e1n bu\u00f4n"
+            },
+            {
+                "id": 26458,
+                "lable": "Partnership"
+            }
+        ]
+    },
+    {
+        "custom_field_id": 5803,
+        "custom_field_lable": "Ngu\u1ed3n kh\u00e1ch",
+        "type": "Single drop-down list",
+        "values": [
+            {
+                "id": 23310,
+                "lable": "Digital - C2L - Ads"
+            },
+            {
+                "id": 23311,
+                "lable": "Digital - C2L - Landing"
+            },
+            {
+                "id": 23312,
+                "lable": "Digital - C2L - Shopify"
+            },
+            {
+                "id": 23313,
+                "lable": "Digital - C2C"
+            },
+            {
+                "id": 23314,
+                "lable": "Digital - C2M"
+            },
+            {
+                "id": 23315,
+                "lable": "Digital - Sales Order - Shopify"
+            },
+            {
+                "id": 23316,
+                "lable": "C\u1eeda h\u00e0ng - Kh\u00e1ch gh\u00e9 th\u0103m"
+            },
+            {
+                "id": 23317,
+                "lable": "C\u1eeda h\u00e0ng - Seeding"
+            },
+            {
+                "id": 23318,
+                "lable": "Magento - Sales Order"
+            },
+            {
+                "id": 23319,
+                "lable": "N\u1ed9i th\u1ea5t, thi\u1ebft k\u1ebf"
+            },
+            {
+                "id": 23320,
+                "lable": "B\u1ea5t \u0111\u1ed9ng s\u1ea3n"
+            },
+            {
+                "id": 23321,
+                "lable": "Website"
+            },
+            {
+                "id": 23322,
+                "lable": "WNM"
+            },
+            {
+                "id": 23323,
+                "lable": "Kh\u00e1c"
+            },
+            {
+                "id": 23384,
+                "lable": "Pop-up Website"
+            },
+            {
+                "id": 23399,
+                "lable": "V\u00f2ng quay FB"
+            },
+            {
+                "id": 23465,
+                "lable": "Orlando"
+            },
+            {
+                "id": 23938,
+                "lable": "Radio"
+            },
+            {
+                "id": 24950,
+                "lable": "\u0110\u1ed1i th\u1ee7"
+            },
+            {
+                "id": 25241,
+                "lable": "Google"
+            },
+            {
+                "id": 25514,
+                "lable": "dem.vn"
+            },
+            {
+                "id": 25561,
+                "lable": "Google Lead Form - vuanem"
+            },
+            {
+                "id": 25562,
+                "lable": "Google Lead Form - demvn"
+            },
+            {
+                "id": 26459,
+                "lable": "Cold Data"
+            },
+            {
+                "id": 26460,
+                "lable": "Survey"
+            },
+            {
+                "id": 26461,
+                "lable": "Partner"
+            }
+        ]
+    },
+    {
+        "custom_field_id": 5840,
+        "custom_field_lable": "T\u00ean chung c\u01b0"
+    },
+    {
+        "custom_field_id": 5847,
+        "custom_field_lable": "Ph\u00e2n kh\u00fac kh\u00e1ch h\u00e0ng",
+        "type": "Single drop-down list",
+        "values": [
+            {
+                "id": 21607,
+                "lable": "Kh\u00e1ch h\u00e0ng trung th\u00e0nh"
+            },
+            {
+                "id": 21608,
+                "lable": "Kh\u00e1ch h\u00e0ng VIP"
+            },
+            {
+                "id": 21609,
+                "lable": "Kh\u00e1ch h\u00e0ng l\u00e2u r\u1ed3i ch\u01b0a mua"
+            },
+            {
+                "id": 22358,
+                "lable": "Kh\u00e1ch h\u00e0ng ti\u1ec1m n\u0103ng"
+            }
+        ]
+    },
+    {
+        "custom_field_id": 5848,
+        "custom_field_lable": "From Landing"
+    },
+    {
+        "custom_field_id": 5849,
+        "custom_field_lable": "Campaign"
+    },
+    {
+        "custom_field_id": 5862,
+        "custom_field_lable": "Ng\u00e0y sinh",
+        "type": "Date"
+    },
+    {
+        "custom_field_id": 6249,
+        "custom_field_lable": "eVoucher"
+    },
+    {
+        "custom_field_id": 6250,
+        "custom_field_lable": "G\u1eedi SMS",
+        "type": "Single drop-down list",
+        "values": [
+            {
+                "id": 26462,
+                "lable": "Yes"
+            },
+            {
+                "id": 26463,
+                "lable": "No"
+            }
+        ]
+    },
+    {
+        "custom_field_id": 6251,
+        "custom_field_lable": "eVoucher Expired Date",
+        "type": "Date"
+    },
+    {
+        "custom_field_id": 6279,
+        "custom_field_lable": "eVoucher Value",
+        "type": "Numeric"
+    }
+]

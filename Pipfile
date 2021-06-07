@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+aiohttp = "*"
+google-cloud-bigquery = "*"
+python-dotenv = "*"
+tqdm = "*"
+google-cloud-pubsub = "*"
+
+[dev-packages]
+black = "*"
+functions-framework = "*"
+pytest = "*"
+pytest-dotenv = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true

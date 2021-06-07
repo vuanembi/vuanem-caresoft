@@ -1,0 +1,184 @@
+[
+    {
+        "name": "ticket_no",
+        "type": "INTEGER"
+    },
+    {
+        "name": "ticket_status",
+        "type": "STRING"
+    },
+    {
+        "name": "ticket_subject",
+        "type": "STRING"
+    },
+    {
+        "name": "created_at",
+        "type": "TIMESTAMP"
+    },
+    {
+        "name": "updated_at",
+        "type": "TIMESTAMP"
+    },
+    {
+        "name": "ticket_source_end_status",
+        "type": "INTEGER"
+    },
+    {
+        "name": "ticket_source",
+        "type": "STRING"
+    },
+    {
+        "name": "ticket_priority",
+        "type": "STRING"
+    },
+    {
+        "name": "ticket_id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "requester_id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "assignee_id",
+        "type": "INTEGER"
+    },
+    {
+        "name": "custom_fields",
+        "type": "record",
+        "mode": "repeated",
+        "fields": [
+            {
+                "name": "id",
+                "type": "INTEGER"
+            },
+            {
+                "name": "lable",
+                "type": "STRING"
+            },
+            {
+                "name": "type",
+                "type": "STRING"
+            },
+            {
+                "name": "value",
+                "type": "STRING"
+            }
+        ]
+    },
+    {
+        "name": "assignee",
+        "type": "record",
+        "fields": [
+            {
+                "name": "id",
+                "type": "INTEGER"
+            },
+            {
+                "name": "username",
+                "type": "STRING"
+            },
+            {
+                "name": "email",
+                "type": "STRING"
+            },
+            {
+                "name": "phone_no",
+                "type": "STRING"
+            },
+            {
+                "name": "agent_id",
+                "type": "STRING"
+            },
+            {
+                "name": "role_id",
+                "type": "INTEGER"
+            },
+            {
+                "name": "group_id",
+                "type": "INTEGER"
+            },
+            {
+                "name": "group_name",
+                "type": "STRING"
+            }
+        ]
+    },
+    {
+        "name": "requester",
+        "type": "record",
+        "fields": [
+            {
+                "name": "id",
+                "type": "INTEGER"
+            },
+            {
+                "name": "username",
+                "type": "STRING"
+            },
+            {
+                "name": "email",
+                "type": "STRING"
+            },
+            {
+                "name": "phone_no",
+                "type": "STRING"
+            },
+            {
+                "name": "organization_id",
+                "type": "STRING"
+            }
+        ]
+    },
+    {
+        "name": "tags",
+        "type": "INTEGER",
+        "mode": "repeated"
+    },
+    {
+        "name": "ccs",
+        "type": "record",
+        "mode": "repeated",
+        "fields": [
+            {
+                "name": "id",
+                "type": "INTEGER"
+            },
+            {
+                "name": "username",
+                "type": "STRING"
+            },
+            {
+                "name": "email",
+                "type": "STRING"
+            }
+        ]
+    },
+    {
+        "name": "follows",
+        "type": "record",
+        "mode": "repeated",
+        "fields": [
+            {
+                "name": "id",
+                "type": "INTEGER"
+            },
+            {
+                "name": "username",
+                "type": "STRING"
+            },
+            {
+                "name": "email",
+                "type": "STRING"
+            },
+            {
+                "name": "phone_no",
+                "type": "STRING"
+            },
+            {
+                "name": "organization_id",
+                "type": "STRING"
+            }
+        ]
+    }
+]
