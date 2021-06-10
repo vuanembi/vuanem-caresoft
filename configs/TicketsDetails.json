@@ -1,7 +1,11 @@
 {
     "keys": {
-        "p_key": ["ticket_id"],
-        "incremental_key": ["updated_at"]
+        "p_key": [
+            "ticket_id"
+        ],
+        "incremental_key": [
+            "updated_at"
+        ]
     },
     "schema": [
         {
@@ -66,7 +70,7 @@
         },
         {
             "name": "satisfaction",
-            "type": "STRING"
+            "type": "INTEGER"
         },
         {
             "name": "satisfaction_at",
@@ -228,7 +232,25 @@
                 },
                 {
                     "name": "organization_id",
-                    "type": "STRING"
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "organization",
+                    "type": "record",
+                    "fields": [
+                        {
+                            "name": "organization_id",
+                            "type": "INTEGER"
+                        },
+                        {
+                            "name": "organization_domain",
+                            "type": "STRING"
+                        },
+                        {
+                            "name": "organization_name",
+                            "type": "STRING"
+                        }
+                    ]
                 }
             ]
         },
@@ -253,6 +275,32 @@
                 {
                     "name": "email",
                     "type": "STRING"
+                },
+                {
+                    "name": "phone_no",
+                    "type": "STRING"
+                },
+                {
+                    "name": "organization_id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "organization",
+                    "type": "record",
+                    "fields": [
+                        {
+                            "name": "organization_id",
+                            "type": "INTEGER"
+                        },
+                        {
+                            "name": "organization_domain",
+                            "type": "STRING"
+                        },
+                        {
+                            "name": "organization_name",
+                            "type": "STRING"
+                        }
+                    ]
                 }
             ]
         },
@@ -279,7 +327,25 @@
                 },
                 {
                     "name": "organization_id",
-                    "type": "STRING"
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "organization",
+                    "type": "record",
+                    "fields": [
+                        {
+                            "name": "organization_id",
+                            "type": "INTEGER"
+                        },
+                        {
+                            "name": "organization_domain",
+                            "type": "STRING"
+                        },
+                        {
+                            "name": "organization_name",
+                            "type": "STRING"
+                        }
+                    ]
                 }
             ]
         },

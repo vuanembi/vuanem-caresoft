@@ -1,5 +1,4 @@
 from unittest.mock import Mock
-from datetime import datetime
 
 from main import main
 
@@ -8,10 +7,9 @@ from .utils import assertion, encode_data
 
 def test_tickets():
     data = {
-        "mode": "manual",
         "table": "Tickets",
-        "start": "2021-01-01",
-        "end": "2021-01-02",
+        "start": "2021-06-05",
+        "end": "2021-06-07",
     }
     message = encode_data(data)
     req = Mock(get_json=Mock(return_value=message), args=message)
@@ -22,7 +20,6 @@ def test_tickets():
 
 def test_contacts():
     data = {
-        "mode": "manual",
         "table": "Contacts",
         "start": "2021-06-01",
         "end": "2021-06-02",
@@ -36,10 +33,9 @@ def test_contacts():
 
 def test_calls():
     data = {
-        "mode": "manual",
         "table": "Calls",
-        "start": "2021-06-02",
-        "end": "2021-06-03",
+        "start": "2021-06-01",
+        "end": "2021-06-07",
     }
     message = encode_data(data)
     req = Mock(get_json=Mock(return_value=message), args=message)
@@ -49,49 +45,53 @@ def test_calls():
 
 
 def test_agents():
-    data = {"table": "Agents", "mode": "manual"}
+    data = {"table": "Agents"}
     message = encode_data(data)
     req = Mock(get_json=Mock(return_value=message), args=message)
     res = main(req)
     res = res.get("results")
     assertion(res)
+
 
 def test_groups():
-    data = {"table": "Groups", "mode": "manual"}
+    data = {"table": "Groups"}
     message = encode_data(data)
     req = Mock(get_json=Mock(return_value=message), args=message)
     res = main(req)
     res = res.get("results")
     assertion(res)
+
 
 def test_services():
-    data = {"table": "Services", "mode": "manual"}
+    data = {"table": "Services"}
     message = encode_data(data)
     req = Mock(get_json=Mock(return_value=message), args=message)
     res = main(req)
     res = res.get("results")
     assertion(res)
+
 
 def test_tickets_custom_fields():
-    data = {"table": "TicketsCustomFields", "mode": "manual"}
+    data = {"table": "TicketsCustomFields"}
     message = encode_data(data)
     req = Mock(get_json=Mock(return_value=message), args=message)
     res = main(req)
     res = res.get("results")
     assertion(res)
+
 
 def test_contacts_custom_fields():
-    data = {"table": "ContactsCustomFields", "mode": "manual"}
+    data = {"table": "ContactsCustomFields"}
     message = encode_data(data)
     req = Mock(get_json=Mock(return_value=message), args=message)
     res = main(req)
     res = res.get("results")
     assertion(res)
 
-def test_manual2():
-    data = {"table": "Tickets", "start": "2021-06-01", "end": "2021-06-02"}
+
+def test_broadcast():
+    data = {"broadcast": True}
     message = encode_data(data)
     req = Mock(get_json=Mock(return_value=message), args=message)
     res = main(req)
-    res = res.get("results")
-    assertion(res)
+    assert res["message_sent"] > 0
