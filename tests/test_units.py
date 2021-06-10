@@ -87,6 +87,17 @@ def test_contacts_custom_fields():
     res = main(req)
     res = res.get("results")
     assertion(res)
+    
+
+def test_calls_auto():
+    data = {
+        "table": "Calls"
+    }
+    message = encode_data(data)
+    req = Mock(get_json=Mock(return_value=message), args=message)
+    res = main(req)
+    res = res.get("results")
+    assertion(res)
 
 
 def test_broadcast():

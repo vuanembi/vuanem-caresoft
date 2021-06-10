@@ -1,6 +1,7 @@
 {
     "keys": {
-        "p_key": ["id"]
+        "p_key": ["id"],
+        "incremental_key": ["start_time"]
     },
     "schema": [
         {
