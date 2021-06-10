@@ -1,0 +1,132 @@
+[
+    {
+        "group_id": 11820,
+        "group_name": "Default Group",
+        "created_at": "2020-06-26 17:14:31"
+    },
+    {
+        "group_id": 11823,
+        "group_name": "Online",
+        "created_at": "2020-06-29 09:04:10"
+    },
+    {
+        "group_id": 11824,
+        "group_name": "ASM H\u01b0\u01a1ng - Mi\u1ec1n B\u1eafc",
+        "created_at": "2020-06-29 09:04:23"
+    },
+    {
+        "group_id": 11829,
+        "group_name": "ASM T\u00f9ng - Mi\u1ec1n B\u1eafc",
+        "created_at": "2020-06-30 11:18:00"
+    },
+    {
+        "group_id": 11838,
+        "group_name": "ASM Quang Th\u00e0nh - Mi\u1ec1n Nam",
+        "created_at": "2020-06-30 17:41:05"
+    },
+    {
+        "group_id": 11844,
+        "group_name": "ASM \u0110\u0103ng Th\u00e0nh - Mi\u1ec1n B\u1eafc",
+        "created_at": "2020-07-02 11:27:53"
+    },
+    {
+        "group_id": 11845,
+        "group_name": "ASM Th\u00f9y - Mi\u1ec1n T\u00e2y",
+        "created_at": "2020-07-02 11:28:12"
+    },
+    {
+        "group_id": 11863,
+        "group_name": "ASM Uy\u00ean - H\u1ed3 Ch\u00ed Minh",
+        "created_at": "2020-07-03 15:20:43"
+    },
+    {
+        "group_id": 11864,
+        "group_name": "ASM Hi\u1ec1n - H\u1ed3 Ch\u00ed Minh",
+        "created_at": "2020-07-03 15:20:53"
+    },
+    {
+        "group_id": 12085,
+        "group_name": "ASM \u0110\u1ee9c - Mi\u1ec1n Trung",
+        "created_at": "2020-09-03 08:53:53"
+    },
+    {
+        "group_id": 12086,
+        "group_name": "ASM Danh - Mi\u1ec1n \u0110\u00f4ng",
+        "created_at": "2020-09-03 09:50:52"
+    },
+    {
+        "group_id": 12100,
+        "group_name": "CNTT",
+        "created_at": "2020-09-11 09:56:43"
+    },
+    {
+        "group_id": 12103,
+        "group_name": "CSKH",
+        "created_at": "2020-09-11 11:48:37"
+    },
+    {
+        "group_id": 12104,
+        "group_name": "MKT",
+        "created_at": "2020-09-11 11:48:54"
+    },
+    {
+        "group_id": 12105,
+        "group_name": "HC",
+        "created_at": "2020-09-11 11:48:59"
+    },
+    {
+        "group_id": 12106,
+        "group_name": "Mua H\u00e0ng",
+        "created_at": "2020-09-11 11:49:10"
+    },
+    {
+        "group_id": 12107,
+        "group_name": "XDCB",
+        "created_at": "2020-09-11 11:49:14"
+    },
+    {
+        "group_id": 12108,
+        "group_name": "Tr\u1ee3 L\u00fd",
+        "created_at": "2020-09-11 11:49:25"
+    },
+    {
+        "group_id": 12109,
+        "group_name": "Nh\u00e2n s\u1ef1",
+        "created_at": "2020-09-11 11:49:34"
+    },
+    {
+        "group_id": 12110,
+        "group_name": "V\u0103n ph\u00f2ng HCM",
+        "created_at": "2020-09-11 11:49:43"
+    },
+    {
+        "group_id": 12111,
+        "group_name": "Kho Lai X\u00e1",
+        "created_at": "2020-09-11 11:49:59"
+    },
+    {
+        "group_id": 12112,
+        "group_name": "Kho H\u00f3c M\u00f4n",
+        "created_at": "2020-09-11 11:50:04"
+    },
+    {
+        "group_id": 12113,
+        "group_name": "K\u1ebf to\u00e1n",
+        "created_at": "2020-09-11 15:57:46"
+    },
+    {
+        "group_id": 12580,
+        "group_name": "Telesales Nguy\u1ec5n Ch\u00e1nh",
+        "created_at": "2021-05-31 08:39:03"
+    },
+    {
+        "group_id": 12600,
+        "group_name": "ASM Ng\u00e2n - H\u1ed3 Ch\u00ed Minh",
+        "created_at": "2021-06-07 11:08:30"
+    },
+    {
+        "group_id": 12601,
+        "group_name": "ASM H\u1ea3o - Mi\u1ec1n T\u00e2y",
+        "created_at": "2021-06-07 11:08:38"
+    }
+]

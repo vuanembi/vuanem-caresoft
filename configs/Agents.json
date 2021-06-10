@@ -1,0 +1,53 @@
+{
+    "keys": null,
+    "schema": [
+        {
+            "name": "id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "username",
+            "type": "STRING"
+        },
+        {
+            "name": "email",
+            "type": "STRING"
+        },
+        {
+            "name": "phone_no",
+            "type": "STRING"
+        },
+        {
+            "name": "agent_id",
+            "type": "STRING"
+        },
+        {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+        },
+        {
+            "name": "updated_at",
+            "type": "TIMESTAMP"
+        },
+        {
+            "name": "group_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "group_name",
+            "type": "STRING"
+        },
+        {
+            "name": "role_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "login_status",
+            "type": "STRING"
+        },
+        {
+            "name": "call_status",
+            "type": "STRING"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "keys": null,
+    "schema": [
+        {
+            "name": "custom_field_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "custom_field_lable",
+            "type": "STRING"
+        },
+        {
+            "name": "type",
+            "type": "STRING"
+        },
+        {
+            "name": "values",
+            "type": "record",
+            "mode": "repeated",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "lable",
+                    "type": "STRING"
+                }
+            ]
+        }
+    ]
+}

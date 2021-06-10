@@ -1,0 +1,11 @@
+SELECT
+    LEAST(
+        {% for key in incremental_key -%}
+            MAX({{ key }})
+            {% if not loop.last -%}
+                ,
+            {%- endif %}
+        {%- endfor %}
+        ) AS incre
+    FROM
+        `{{ dataset }}._stage_{{ table }}`

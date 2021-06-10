@@ -1,0 +1,17 @@
+{
+    "keys": null,
+    "schema": [
+        {
+            "name": "service_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "service_name",
+            "type": "STRING"
+        },
+        {
+            "name": "service_type",
+            "type": "STRING"
+        }
+    ]
+}

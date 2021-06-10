@@ -1,0 +1,288 @@
+{
+    "keys": null,
+    "schema": [
+        {
+            "name": "account_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "ticket_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "sla_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "ticket_no",
+            "type": "INTEGER"
+        },
+        {
+            "name": "requester_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "group_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "ticket_source_end_status",
+            "type": "INTEGER"
+        },
+        {
+            "name": "assignee_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "ticket_priority",
+            "type": "STRING"
+        },
+        {
+            "name": "ticket_source",
+            "type": "STRING"
+        },
+        {
+            "name": "ticket_status",
+            "type": "STRING"
+        },
+        {
+            "name": "ticket_subject",
+            "type": "STRING"
+        },
+        {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+        },
+        {
+            "name": "updated_at",
+            "type": "TIMESTAMP"
+        },
+        {
+            "name": "duedate",
+            "type": "TIMESTAMP"
+        },
+        {
+            "name": "satisfaction",
+            "type": "STRING"
+        },
+        {
+            "name": "satisfaction_at",
+            "type": "TIMESTAMP"
+        },
+        {
+            "name": "satisfaction_send",
+            "type": "STRING"
+        },
+        {
+            "name": "satisfaction_content",
+            "type": "STRING"
+        },
+        {
+            "name": "campaign_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "campaign",
+            "type": "record",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "campaign_name",
+                    "type": "STRING"
+                },
+                {
+                    "name": "status",
+                    "type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "name": "automessage_id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "feedback_status",
+            "type": "STRING"
+        },
+        {
+            "name": "comments",
+            "type": "record",
+            "mode": "repeated",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "comment",
+                    "type": "STRING"
+                },
+                {
+                    "name": "commentator_id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "commentator_name",
+                    "type": "STRING"
+                },
+                {
+                    "name": "comment_source",
+                    "type": "STRING"
+                },
+                {
+                    "name": "created_at",
+                    "type": "TIMESTAMP"
+                },
+                {
+                    "name": "is_public",
+                    "type": "INTEGER"
+                }
+            ]
+        },
+        {
+            "name": "custom_filed",
+            "type": "record",
+            "mode": "repeated",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "lable",
+                    "type": "STRING"
+                },
+                {
+                    "name": "type",
+                    "type": "STRING"
+                },
+                {
+                    "name": "value",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "assignee",
+            "type": "record",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "username",
+                    "type": "STRING"
+                },
+                {
+                    "name": "email",
+                    "type": "STRING"
+                },
+                {
+                    "name": "phone_no",
+                    "type": "STRING"
+                },
+                {
+                    "name": "agent_id",
+                    "type": "STRING"
+                },
+                {
+                    "name": "role_id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "group_id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "group_name",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "requester",
+            "type": "record",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "username",
+                    "type": "STRING"
+                },
+                {
+                    "name": "email",
+                    "type": "STRING"
+                },
+                {
+                    "name": "phone_no",
+                    "type": "STRING"
+                },
+                {
+                    "name": "organization_id",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "tags",
+            "type": "STRING",
+            "mode": "repeated"
+        },
+        {
+            "name": "ccs",
+            "type": "record",
+            "mode": "repeated",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "username",
+                    "type": "STRING"
+                },
+                {
+                    "name": "email",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "follows",
+            "type": "record",
+            "mode": "repeated",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "username",
+                    "type": "STRING"
+                },
+                {
+                    "name": "email",
+                    "type": "STRING"
+                },
+                {
+                    "name": "phone_no",
+                    "type": "STRING"
+                },
+                {
+                    "name": "organization_id",
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "sla",
+            "type": "STRING"
+        }
+    ]
+}
