@@ -163,8 +163,8 @@ class CaresoftCustomFields(CaresoftStatic):
 
 class CaresoftIncremental(Caresoft):
     def __init__(self, table, start, end):
-        self.start, self.end = self.get_time_range(start, end)
         super().__init__(table, table.lower())
+        self.start, self.end = self.get_time_range(start, end)
 
     def get_time_range(self, start, end):
         if start and end:
