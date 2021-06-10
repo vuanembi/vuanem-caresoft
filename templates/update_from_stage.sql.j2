@@ -1,0 +1,33 @@
+CREATE
+OR REPLACE TABLE `{{ dataset }}.{{ table }}` AS
+SELECT
+    *
+EXCEPT
+    (row_num)
+FROM
+    (
+        SELECT
+            *,
+            ROW_NUMBER() OVER (
+                PARTITION BY
+                    {% for key in p_key -%}
+                        {{ key }}
+                        {% if not loop.last -%}
+                            ,
+                        {%- endif %}
+                    {%- endfor %}
+                {% if incremental_key -%}
+                ORDER BY 
+                    {% for key in incremental_key -%}
+                        {{ key }} DESC
+                        {% if not loop.last -%}
+                            ,
+                        {%- endif %}
+                    {%- endfor %}
+                {%- endif %}
+            ) AS row_num
+        FROM
+            `{{ dataset }}._stage_{{ table }}`
+    )
+WHERE
+    row_num = 1

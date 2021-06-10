@@ -187,7 +187,7 @@ class CaresoftIncremental(Caresoft):
             table=self.table,
             incremental_key=self.keys["incremental_key"],
         )
-        rows = self.client.query(rendered_query).result()
+        rows = BQ_CLIENT.query(rendered_query).result()
         row = [row for row in rows][0]
         max_incre = row.get("incre")
         return max_incre.strftime(TIMESTAMP_FORMAT)
@@ -261,6 +261,16 @@ class CaresoftIncremental(Caresoft):
 
     def _fetch_write_disposition(self):
         return "WRITE_APPEND"
+    
+    def _update(self):
+        template = TEMPLATE_ENV.get_template("update_from_stage.sql.j2")
+        rendered_query = template.render(
+            dataset=DATASET,
+            table=self.table,
+            p_key=self.keys.get('p_key'),
+            incremental_key=self.keys.get("incremental_key"),
+        )
+        BQ_CLIENT.query(rendered_query).result()
 
     @abstractmethod
     def _make_responses(self, loads):
@@ -284,7 +294,10 @@ class CaresoftIncrementalStandard(CaresoftIncremental):
         rows = await self.get_rows(session)
         if len(rows) > 0:
             loads = self.load(rows, self.table)
-        return self._make_responses(loads)
+            self._update()
+        else:
+            loads = None
+        return [self._make_responses(loads)]
 
     def _make_responses(self, loads_rows):
         if loads_rows is None:
@@ -310,6 +323,7 @@ class CaresoftIncrementalDetails(CaresoftIncremental):
         #     rows = json.load(f)
         if len(rows) > 0:
             loads = self.load(rows, self.table)
+            self._update()
             rows_details = CaresoftDetails(
                 f"{self.table}Details", self.detail_key, self.detail_id, rows
             )
@@ -397,6 +411,9 @@ class CaresoftDetails(CaresoftIncremental):
             # rows = json.load(f)
         if len(rows) > 0:
             loads = self.load(rows, self.table)
+            self._update()
+        else:
+            loads = None
         return self._make_responses(loads)
 
     def _make_responses(self, loads_rows):
