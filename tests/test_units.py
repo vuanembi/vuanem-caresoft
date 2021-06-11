@@ -8,8 +8,8 @@ from .utils import assertion, encode_data
 def test_tickets():
     data = {
         "table": "Tickets",
-        "start": "2021-06-05",
-        "end": "2021-06-07",
+        "start": "2021-06-01",
+        "end": "2021-06-02",
     }
     message = encode_data(data)
     req = Mock(get_json=Mock(return_value=message), args=message)
@@ -87,7 +87,7 @@ def test_contacts_custom_fields():
     res = main(req)
     res = res.get("results")
     assertion(res)
-    
+
 
 def test_calls_auto():
     data = {

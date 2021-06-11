@@ -204,7 +204,7 @@ class CaresoftIncremental(Caresoft):
         num_found = await self._initial_get_rows(session, url, params)
         print(num_found)
         calls_needed = math.ceil(num_found / COUNT)
-        calls = min([calls_needed, MAX_ROWS_PER_RUN / COUNT])
+        calls = min([int(calls_needed), int(MAX_ROWS_PER_RUN / COUNT)])
         tasks = [
             asyncio.create_task(self._get_rows(i, session, url, params))
             for i in range(1, calls + 1)
