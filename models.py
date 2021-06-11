@@ -24,7 +24,7 @@ TEMPLATE_LOADER = jinja2.FileSystemLoader(searchpath="./templates")
 TEMPLATE_ENV = jinja2.Environment(loader=TEMPLATE_LOADER)
 COUNT = 500
 CARESOFT_X_RATE_LIMIT = 5000
-MAX_ROWS_PER_RUN = 20000
+MAX_ROWS_PER_RUN = 5000
 
 
 if sys.platform == "win32":
@@ -62,23 +62,27 @@ class Caresoft(metaclass=ABCMeta):
     def get_row_key(self):
         raise NotImplementedError
 
+    @abstractmethod
+    def transform(self, rows):
+        raise NotImplementedError
+
     def load(self, rows, table):
-        # with open(f"{table}.json", "w") as f:
+        # with open(f"tmp/{table}.json", "w") as f:
         #     json.dump(rows, f)
 
         load_target = self._fetch_load_target(table)
         write_disposition = self._fetch_write_disposition()
         try:
             loads = BQ_CLIENT.load_table_from_json(
-            rows,
-            load_target,
-            job_config=bigquery.LoadJobConfig(
-                schema=self.schema,
-                create_disposition="CREATE_IF_NEEDED",
-                write_disposition=write_disposition,
-                ignore_unknown_values=True
-            ),
-        ).result()
+                rows,
+                load_target,
+                job_config=bigquery.LoadJobConfig(
+                    schema=self.schema,
+                    create_disposition="CREATE_IF_NEEDED",
+                    write_disposition=write_disposition,
+                    ignore_unknown_values=True,
+                ),
+            ).result()
         except Exception as e:
             print(e)
         return loads
@@ -95,8 +99,11 @@ class Caresoft(metaclass=ABCMeta):
         return asyncio.run(self._run_wrapper())
 
     async def _run_wrapper(self):
-        connection = aiohttp.TCPConnector(limit=20)
-        async with aiohttp.ClientSession(connector=connection) as session:
+        CONNECTOR = aiohttp.TCPConnector(limit=20)
+        TIMEOUT = aiohttp.ClientTimeout(total=599)
+        async with aiohttp.ClientSession(
+            connector=CONNECTOR, timeout=TIMEOUT
+        ) as session:
             return await self._run(session)
 
     @abstractmethod
@@ -125,6 +132,9 @@ class CaresoftStatic(Caresoft):
     def get_row_key(self):
         raise NotImplementedError
 
+    def transform(self, rows):
+        return rows
+
     def _fetch_load_target(self, table):
         return f"{DATASET}.{table}"
 
@@ -133,6 +143,7 @@ class CaresoftStatic(Caresoft):
 
     async def _run(self, session):
         rows = await self.get_rows(session)
+        rows = self.transform(rows)
         loads = self.load(rows, self.table)
         return [self._make_responses(loads)]
 
@@ -211,6 +222,7 @@ class CaresoftIncremental(Caresoft):
         ]
         _rows = await asyncio.gather(*tasks)
         rows = [item for sublist in _rows for item in sublist]
+        rows
         self.num_processed = len(rows)
         return rows
 
@@ -221,14 +233,12 @@ class CaresoftIncremental(Caresoft):
                 try:
                     async with session.get(url, params=params, headers=HEADERS) as r:
                         res = await r.json()
-                    break
+                    return res["numFound"]
                 except aiohttp.client_exceptions.ServerDisconnectedError:
-                    time.sleep(attempts)
+                    asyncio.sleep(attempts)
                     attempts = attempts + 1
             else:
-                break
-
-        return res["numFound"]
+                raise RuntimeError
 
     async def _get_rows(self, i, session, url, params):
         if not self.LIMIT_SWITCH:
@@ -241,14 +251,26 @@ class CaresoftIncremental(Caresoft):
                             url, params=params, headers=HEADERS
                         ) as r:
                             res = await r.json()
-                        break
+                        _rows = res[self.get_row_key()]
+                        return _rows
                     except aiohttp.client_exceptions.ServerDisconnectedError:
                         await asyncio.sleep(attempts)
                         attempts = attempts + 1
                 else:
                     raise RuntimeError
-            _rows = res[self.get_row_key()]
-            return _rows
+
+    def transform(self, rows):
+        _rows = []
+        for row in rows:
+            _row = {
+                "value": json.dumps(row),
+            }
+            for i in self.keys.get("incremental_key"):
+                _row[i] = row[i]
+            for i in self.keys.get("p_key"):
+                _row[i] = row[i]
+            _rows.append(_row)
+        return _rows
 
     @abstractmethod
     def _make_params(self):
@@ -294,6 +316,7 @@ class CaresoftIncrementalStandard(CaresoftIncremental):
     async def _run(self, session):
         rows = await self.get_rows(session)
         if len(rows) > 0:
+            rows = self.transform(rows)
             loads = self.load(rows, self.table)
             self._update()
         else:
@@ -321,8 +344,9 @@ class CaresoftIncrementalDetails(CaresoftIncremental):
     async def _run(self, session):
         rows = await self.get_rows(session)
         # with open('Tickets.json', 'r') as f:
-            # rows = json.load(f)
+        # rows = json.load(f)
         if len(rows) > 0:
+            rows = self.transform(rows)
             loads = self.load(rows, self.table)
             self._update()
             rows_details = CaresoftDetails(
@@ -394,7 +418,8 @@ class CaresoftDetails(CaresoftIncremental):
                 else:
                     break
             limit_remaining = int(res_headers["X-RateLimit-Remaining"])
-            print(limit_remaining)
+            if limit_remaining % 100 == 0:
+                print(limit_remaining)
             if limit_remaining < CARESOFT_X_RATE_LIMIT:
                 self.LIMIT_SWITCH = True
             _rows = res[self.detail_key]
@@ -407,9 +432,8 @@ class CaresoftDetails(CaresoftIncremental):
 
     async def _run(self, session):
         rows = await self.get_rows(session)
-        # with open('TicketsDetails.json', 'r') as f:
-            # rows = json.load(f)
         if len(rows) > 0:
+            rows = self.transform(rows)
             loads = self.load(rows, self.table)
             self._update()
         else:

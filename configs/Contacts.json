@@ -9,40 +9,12 @@
             "type": "INTEGER"
         },
         {
-            "name": "gender",
+            "name": "value",
             "type": "STRING"
-        },
-        {
-            "name": "created_at",
-            "type": "TIMESTAMP"
         },
         {
             "name": "updated_at",
             "type": "TIMESTAMP"
-        },
-        {
-            "name": "email",
-            "type": "STRING"
-        },
-        {
-            "name": "phone_no",
-            "type": "STRING"
-        },
-        {
-            "name": "email2",
-            "type": "STRING"
-        },
-        {
-            "name": "phone_no3",
-            "type": "STRING"
-        },
-        {
-            "name": "phone_no2",
-            "type": "STRING"
-        },
-        {
-            "name": "username",
-            "type": "STRING"
         }
     ]
 }

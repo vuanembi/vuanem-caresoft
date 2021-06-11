@@ -5,110 +5,16 @@
     },
     "schema": [
         {
-            "name": "account_id",
-            "type": "INTEGER"
-        },
-        {
             "name": "id",
             "type": "INTEGER"
         },
         {
-            "name": "username",
+            "name": "value",
             "type": "STRING"
-        },
-        {
-            "name": "email",
-            "type": "STRING"
-        },
-        {
-            "name": "email2",
-            "type": "STRING"
-        },
-        {
-            "name": "phone_no",
-            "type": "STRING"
-        },
-        {
-            "name": "phone_no2",
-            "type": "STRING"
-        },
-        {
-            "name": "phone_no3",
-            "type": "STRING"
-        },
-        {
-            "name": "facebook",
-            "type": "STRING"
-        },
-        {
-            "name": "gender",
-            "type": "INTEGER"
-        },
-        {
-            "name": "organization_id",
-            "type": "INTEGER"
-        },
-        {
-            "name": "created_at",
-            "type": "TIMESTAMP"
         },
         {
             "name": "updated_at",
             "type": "TIMESTAMP"
-        },
-        {
-            "name": "role_id",
-            "type": "INTEGER"
-        },
-        {
-            "name": "INTEGER",
-            "type": "STRING"
-        },
-        {
-            "name": "custom_fields",
-            "type": "record",
-            "mode": "repeated",
-            "fields": [
-                {
-                    "name": "id",
-                    "type": "INTEGER"
-                },
-                {
-                    "name": "lable",
-                    "type": "STRING"
-                },
-                {
-                    "name": "type",
-                    "type": "STRING"
-                },
-                {
-                    "name": "value",
-                    "type": "STRING"
-                }
-            ]
-        },
-        {
-            "name": "organization",
-            "type": "STRING"
-        },
-        {
-            "name": "campaign_handler_id",
-            "type": "INTEGER"
-        },
-        {
-            "name": "psid",
-            "type": "record",
-            "mode": "repeated",
-            "fields": [
-                {
-                    "name": "page_id",
-                    "type": "STRING"
-                },
-                {
-                    "name": "psid",
-                    "type": "STRING"
-                }
-            ]
         }
     ]
 }
