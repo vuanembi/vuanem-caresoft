@@ -286,12 +286,24 @@ class CaresoftIncremental(Caresoft):
         return "WRITE_APPEND"
 
     def _update(self):
+        self._update_from_stage()
+        self._update_from_raw()
+
+    def _update_from_stage(self):
         template = TEMPLATE_ENV.get_template("update_from_stage.sql.j2")
         rendered_query = template.render(
             dataset=DATASET,
             table=self.table,
             p_key=self.keys.get("p_key"),
             incremental_key=self.keys.get("incremental_key"),
+        )
+        update_job = BQ_CLIENT.query(rendered_query).result()
+    
+    def _update_from_raw(self):
+        template = TEMPLATE_ENV.get_template("update_from_raw.sql.j2")
+        rendered_query = template.render(
+            dataset=DATASET,
+            table=self.table
         )
         BQ_CLIENT.query(rendered_query).result()
 
