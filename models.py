@@ -298,9 +298,7 @@ class CaresoftIncremental(Caresoft):
             p_key=self.keys.get("p_key"),
             incremental_key=self.keys.get("incremental_key"),
         )
-        update_job = BQ_CLIENT.query(rendered_query)
-        update_job.add_done_callback(self._update_from_raw)
-        update_job.result()
+        BQ_CLIENT.query(rendered_query).result()
     
     def _update_from_raw(self):
         template = TEMPLATE_ENV.get_template("update_from_raw.sql.j2")
