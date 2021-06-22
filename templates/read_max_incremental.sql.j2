@@ -8,4 +8,4 @@ SELECT
         {%- endfor %}
         ) AS incre
     FROM
-        `{{ dataset }}.{{ table }}`
+        `{{ dataset }}._raw_{{ table }}`

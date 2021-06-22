@@ -9,6 +9,7 @@ import time
 
 import aiohttp
 from google.cloud import bigquery
+from google.api_core.exceptions import NotFound
 import jinja2
 
 HEADERS = {
@@ -67,9 +68,6 @@ class Caresoft(metaclass=ABCMeta):
         raise NotImplementedError
 
     def load(self, rows, table):
-        # with open(f"tmp/{table}.json", "w") as f:
-        #     json.dump(rows, f)
-
         load_target = self._fetch_load_target(table)
         write_disposition = self._fetch_write_disposition()
         try:
@@ -196,15 +194,18 @@ class CaresoftIncremental(Caresoft):
             str: Latest incremental Value
         """
 
-        template = TEMPLATE_ENV.get_template("read_max_incremental.sql.j2")
-        rendered_query = template.render(
-            dataset=DATASET,
-            table=self.table,
-            incremental_key=self.keys["incremental_key"],
-        )
-        rows = BQ_CLIENT.query(rendered_query).result()
-        row = [row for row in rows][0]
-        max_incre = row.get("incre")
+        try:
+            template = TEMPLATE_ENV.get_template("read_max_incremental.sql.j2")
+            rendered_query = template.render(
+                dataset=DATASET,
+                table=self.table,
+                incremental_key=self.keys["incremental_key"],
+            )
+            rows = BQ_CLIENT.query(rendered_query).result()
+            row = [row for row in rows][0]
+            max_incre = row["incre"]
+        except (KeyError, NotFound):
+            max_incre = datetime(2020, 6, 1)
         return max_incre.strftime(TIMESTAMP_FORMAT)
 
     async def get_rows(self, session):
@@ -297,7 +298,9 @@ class CaresoftIncremental(Caresoft):
             p_key=self.keys.get("p_key"),
             incremental_key=self.keys.get("incremental_key"),
         )
-        update_job = BQ_CLIENT.query(rendered_query).result()
+        update_job = BQ_CLIENT.query(rendered_query)
+        update_job.add_done_callback(self._update_from_raw)
+        update_job.result()
     
     def _update_from_raw(self):
         template = TEMPLATE_ENV.get_template("update_from_raw.sql.j2")
@@ -305,7 +308,7 @@ class CaresoftIncremental(Caresoft):
             dataset=DATASET,
             table=self.table
         )
-        BQ_CLIENT.query(rendered_query).result()
+        BQ_CLIENT.query(rendered_query)
 
     @abstractmethod
     def _make_responses(self, loads):
