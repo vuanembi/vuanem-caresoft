@@ -5,7 +5,6 @@ import asyncio
 import math
 from abc import ABCMeta, abstractmethod
 from datetime import datetime
-import time
 
 import aiohttp
 from google.cloud import bigquery
@@ -25,7 +24,7 @@ TEMPLATE_LOADER = jinja2.FileSystemLoader(searchpath="./templates")
 TEMPLATE_ENV = jinja2.Environment(loader=TEMPLATE_LOADER)
 COUNT = 500
 CARESOFT_X_RATE_LIMIT = 5000
-MAX_ROWS_PER_RUN = 5000
+MAX_ROWS_PER_RUN = 2500
 
 
 if sys.platform == "win32":
