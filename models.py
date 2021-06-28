@@ -24,7 +24,7 @@ TEMPLATE_LOADER = jinja2.FileSystemLoader(searchpath="./templates")
 TEMPLATE_ENV = jinja2.Environment(loader=TEMPLATE_LOADER)
 COUNT = 500
 CARESOFT_X_RATE_LIMIT = 5000
-MAX_ROWS_PER_RUN = 2500
+MAX_ROWS_PER_RUN = 5000
 
 
 if sys.platform == "win32":
@@ -69,19 +69,16 @@ class Caresoft(metaclass=ABCMeta):
     def load(self, rows, table):
         load_target = self._fetch_load_target(table)
         write_disposition = self._fetch_write_disposition()
-        try:
-            loads = BQ_CLIENT.load_table_from_json(
-                rows,
-                load_target,
-                job_config=bigquery.LoadJobConfig(
-                    schema=self.schema,
-                    create_disposition="CREATE_IF_NEEDED",
-                    write_disposition=write_disposition,
-                    ignore_unknown_values=True,
-                ),
-            ).result()
-        except Exception as e:
-            print(e)
+        loads = BQ_CLIENT.load_table_from_json(
+            rows,
+            load_target,
+            job_config=bigquery.LoadJobConfig(
+                schema=self.schema,
+                create_disposition="CREATE_IF_NEEDED",
+                write_disposition=write_disposition,
+                ignore_unknown_values=True,
+            ),
+        ).result()
         return loads
 
     @abstractmethod
@@ -216,6 +213,7 @@ class CaresoftIncremental(Caresoft):
         print(num_found)
         calls_needed = math.ceil(num_found / COUNT)
         calls = min([int(calls_needed), int(MAX_ROWS_PER_RUN / COUNT)])
+        calls
         tasks = [
             asyncio.create_task(self._get_rows(i, session, url, params))
             for i in range(1, calls + 1)
@@ -298,13 +296,10 @@ class CaresoftIncremental(Caresoft):
             incremental_key=self.keys.get("incremental_key"),
         )
         BQ_CLIENT.query(rendered_query).result()
-    
+
     def _update_from_raw(self):
         template = TEMPLATE_ENV.get_template("update_from_raw.sql.j2")
-        rendered_query = template.render(
-            dataset=DATASET,
-            table=self.table
-        )
+        rendered_query = template.render(dataset=DATASET, table=self.table)
         BQ_CLIENT.query(rendered_query)
 
     @abstractmethod
@@ -355,8 +350,9 @@ class CaresoftIncrementalDetails(CaresoftIncremental):
 
     async def _run(self, session):
         rows = await self.get_rows(session)
-        # with open('Tickets.json', 'r') as f:
-        # rows = json.load(f)
+        first_rows = rows[0]
+        last_rows = rows[-1]
+        last_rows
         if len(rows) > 0:
             rows = self.transform(rows)
             loads = self.load(rows, self.table)
@@ -385,6 +381,8 @@ class CaresoftIncrementalDetails(CaresoftIncremental):
         else:
             rows_responses = {
                 "table": self.table,
+                "start": self.start,
+                "end": self.end,
                 "num_processed": self.num_processed,
                 "output_rows": loads.output_rows,
                 "errors": loads.errors,
