@@ -2,6 +2,7 @@ import os
 import json
 import base64
 
+import requests
 from google.cloud import pubsub_v1
 
 from models import Caresoft
@@ -19,7 +20,7 @@ def main(request):
         topic_path = publisher.topic_path(
             os.getenv("PROJECT_ID"), os.getenv("TOPIC_ID")
         )
-        tables = [i.replace('.json', '') for i in os.listdir("configs") if 'Details' not in i]
+        tables = [i.replace('.json', '') for i in os.listdir("configs")]
         for table in tables:
             message_json = json.dumps({"table": table})
             message_bytes = message_json.encode("utf-8")
@@ -30,4 +31,14 @@ def main(request):
         responses = {"pipelines": "Caresoft", "results": job.run()}
 
     print(responses)
+
+    _ = requests.post(
+        "https://api.telegram.org/bot{token}/sendMessage".format(
+            token=os.getenv("TELEGRAM_TOKEN")
+        ),
+        json={
+            "chat_id": os.getenv("TELEGRAM_CHAT_ID"),
+            "text": json.dumps(responses, indent=4),
+        },
+    )
     return responses

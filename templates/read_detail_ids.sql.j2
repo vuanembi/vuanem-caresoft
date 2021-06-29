@@ -1,0 +1,13 @@
+SELECT
+    s.{{ detail_id }} AS id,
+    s.updated_at AS std_updated,
+    d.updated_at AS details_updated
+FROM
+    `{{ dataset }}.{{ parent }}` s
+    LEFT JOIN `{{ dataset }}.{{ table }}` d
+    ON s.{{ detail_id }} = d.{{ detail_id }}
+WHERE
+    s.updated_at <> d.updated_at
+    OR d.updated_at IS NULL
+LIMIT
+    {{ limit }}

@@ -16,47 +16,59 @@ HEADERS = {
     "Content-Type": "application/json",
 }
 BASE_URL = "https://api.caresoft.vn/VUANEM/api/v1/"
+
 BQ_CLIENT = bigquery.Client()
 DATASET = "Caresoft"
+
 DATE_FORMAT = "%Y-%m-%d"
 TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
 TEMPLATE_LOADER = jinja2.FileSystemLoader(searchpath="./templates")
 TEMPLATE_ENV = jinja2.Environment(loader=TEMPLATE_LOADER)
+
 COUNT = 500
 CARESOFT_X_RATE_LIMIT = 5000
-MAX_ROWS_PER_RUN = 5000
-
+STANDARD_LIMIT = 50000
+DETAILS_LIMIT = 2500
 
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
 class Caresoft(metaclass=ABCMeta):
-    def __init__(self, table, endpoint):
+    def __init__(self, table):
         self.table = table
-        self.endpoint = endpoint
-        with open(f"configs/{table}.json", "r") as f:
-            config = json.load(f)
-        self.keys = config["keys"]
-        self.schema = config["schema"]
-        self.LIMIT_SWITCH = False
+        self.endpoint = self.get_endpoint()
+        self.keys, self.schema = self.get_config()
 
     @staticmethod
     def factory(table, start=None, end=None):
         if table in ["Tickets"]:
-            return CaresoftIncrementalDetails(table, "ticket", "ticket_id", start, end)
+            return CaresoftIncrementalDetails(table, start, end)
         elif table in ["Contacts"]:
-            return CaresoftIncrementalDetails(table, "contact", "id", start, end)
+            return CaresoftIncrementalDetails(table, start, end)
         elif table in ["Calls", "Chats"]:
             return CaresoftIncrementalStandard(table, start, end)
         elif table in ["Groups", "Agents", "Services"]:
             return CaresoftDimensions(table)
+        elif table in ["TicketsDetails"]:
+            return CaresoftDetails(table, "tickets", "ticket_id", 'ticket')
+        elif table in ["ContactsDetails"]:
+            return CaresoftDetails(table, "contacts", "id", "contact")
         elif table in ["TicketsCustomFields"]:
-            return CaresoftCustomFields(table, "tickets/custom_fields")
+            return CaresoftCustomFields(table, "tickets")
         elif table in ["ContactsCustomFields"]:
-            return CaresoftCustomFields(table, "contacts/custom_fields")
+            return CaresoftCustomFields(table, "contacts")
         else:
             raise NotImplementedError
+
+    def get_config(self):
+        with open(f"configs/{self.table}.json", "r") as f:
+            config = json.load(f)
+        return config["keys"], config["schema"]
+
+    @abstractmethod
+    def get_endpoint(self):
+        raise NotImplementedError
 
     @abstractmethod
     def get_row_key(self):
@@ -106,13 +118,10 @@ class Caresoft(metaclass=ABCMeta):
 
 
 class CaresoftStatic(Caresoft):
-    def __init__(self, table, endpoint=None):
-        super().__init__(table, endpoint)
+    def __init__(self, table):
+        super().__init__(table)
 
     async def get_rows(self, session):
-        if self.endpoint is None:
-            self.endpoint = self.table.lower()
-
         url = BASE_URL + self.endpoint
 
         async with session.get(url, headers=HEADERS) as r:
@@ -154,13 +163,25 @@ class CaresoftDimensions(CaresoftStatic):
     def __init__(self, table):
         super().__init__(table)
 
+    def get_endpoint(self):
+        return self.table.lower()
+
     def get_row_key(self):
-        return self.endpoint
+        return self.table.lower()
 
 
 class CaresoftCustomFields(CaresoftStatic):
-    def __init__(self, table, endpoint):
-        super().__init__(table, endpoint)
+    def __init__(self, table, parent):
+        self.parent = parent
+        super().__init__(table)
+
+    def get_config(self):
+        with open(f"configs/{self.parent}CustomFields.json", "r") as f:
+            config = json.load(f)
+        return config["keys"], config["schema"]
+
+    def get_endpoint(self):
+        return f"{self.parent}/custom_fields"
 
     def get_row_key(self):
         return "custom_fields"
@@ -168,8 +189,11 @@ class CaresoftCustomFields(CaresoftStatic):
 
 class CaresoftIncremental(Caresoft):
     def __init__(self, table, start, end):
-        super().__init__(table, table.lower())
+        super().__init__(table)
         self.start, self.end = self.get_time_range(start, end)
+
+    def get_endpoint(self):
+        return self.table.lower()
 
     def get_time_range(self, start, end):
         if start and end:
@@ -208,54 +232,30 @@ class CaresoftIncremental(Caresoft):
         url = BASE_URL + self.endpoint
         params = self._make_params()
 
-        rows = []
         num_found = await self._initial_get_rows(session, url, params)
         print(num_found)
         calls_needed = math.ceil(num_found / COUNT)
-        calls = min([int(calls_needed), int(MAX_ROWS_PER_RUN / COUNT)])
-        calls
+        calls = min([int(calls_needed), int(STANDARD_LIMIT / COUNT)])
         tasks = [
             asyncio.create_task(self._get_rows(i, session, url, params))
             for i in range(1, calls + 1)
         ]
         _rows = await asyncio.gather(*tasks)
         rows = [item for sublist in _rows for item in sublist]
-        rows
         self.num_processed = len(rows)
         return rows
 
     async def _initial_get_rows(self, session, url, params):
-        attempts = 1
-        while True:
-            if attempts < 5:
-                try:
-                    async with session.get(url, params=params, headers=HEADERS) as r:
-                        res = await r.json()
-                    return res["numFound"]
-                except aiohttp.client_exceptions.ServerDisconnectedError:
-                    asyncio.sleep(attempts)
-                    attempts = attempts + 1
-            else:
-                raise RuntimeError
+        async with session.get(url, params=params, headers=HEADERS) as r:
+            res = await r.json()
+        return res["numFound"]
 
     async def _get_rows(self, i, session, url, params):
-        if not self.LIMIT_SWITCH:
-            params["page"] = i
-            attempts = 1
-            while True:
-                if attempts < 5:
-                    try:
-                        async with session.get(
-                            url, params=params, headers=HEADERS
-                        ) as r:
-                            res = await r.json()
-                        _rows = res[self.get_row_key()]
-                        return _rows
-                    except aiohttp.client_exceptions.ServerDisconnectedError:
-                        await asyncio.sleep(attempts)
-                        attempts = attempts + 1
-                else:
-                    raise RuntimeError
+        params["page"] = i
+        async with session.get(url, params=params, headers=HEADERS) as r:
+            res = await r.json()
+        _rows = res[self.get_row_key()]
+        return _rows
 
     def transform(self, rows):
         _rows = []
@@ -283,6 +283,16 @@ class CaresoftIncremental(Caresoft):
     def _fetch_write_disposition(self):
         return "WRITE_APPEND"
 
+    async def _run(self, session):
+        rows = await self.get_rows(session)
+        if len(rows) > 0:
+            rows = self.transform(rows)
+            loads = self.load(rows, self.table)
+            self._update()
+        else:
+            loads = None
+        return [self._make_responses(loads)]
+
     def _update(self):
         self._update_from_stage()
         self._update_from_raw()
@@ -302,9 +312,17 @@ class CaresoftIncremental(Caresoft):
         rendered_query = template.render(dataset=DATASET, table=self.table)
         BQ_CLIENT.query(rendered_query)
 
-    @abstractmethod
     def _make_responses(self, loads):
-        raise NotImplementedError
+        if loads is None:
+            rows_responses = {"table": self.table, "num_processed": self.num_processed}
+        else:
+            rows_responses = {
+                "table": self.table,
+                "num_processed": self.num_processed,
+                "output_rows": loads.output_rows,
+                "errors": loads.errors,
+            }
+        return rows_responses
 
 
 class CaresoftIncrementalStandard(CaresoftIncremental):
@@ -320,51 +338,9 @@ class CaresoftIncrementalStandard(CaresoftIncremental):
             "order_type": "asc",
         }
 
-    async def _run(self, session):
-        rows = await self.get_rows(session)
-        if len(rows) > 0:
-            rows = self.transform(rows)
-            loads = self.load(rows, self.table)
-            self._update()
-        else:
-            loads = None
-        return [self._make_responses(loads)]
-
-    def _make_responses(self, loads_rows):
-        if loads_rows is None:
-            return {"table": self.table, "num_processed": self.num_processed}
-        else:
-            return {
-                "table": self.table,
-                "num_processed": self.num_processed,
-                "output_rows": loads_rows.output_rows,
-                "errors": loads_rows.errors,
-            }
-
-
 class CaresoftIncrementalDetails(CaresoftIncremental):
-    def __init__(self, table, detail_key, detail_id, start, end):
-        self.detail_key = detail_key
-        self.detail_id = detail_id
+    def __init__(self, table, start, end):
         super().__init__(table, start, end)
-
-    async def _run(self, session):
-        rows = await self.get_rows(session)
-        first_rows = rows[0]
-        last_rows = rows[-1]
-        last_rows
-        if len(rows) > 0:
-            rows = self.transform(rows)
-            loads = self.load(rows, self.table)
-            self._update()
-            rows_details = CaresoftDetails(
-                f"{self.table}Details", self.detail_key, self.detail_id, rows
-            )
-            rows_details_responses = await rows_details._run(session)
-            rows_responses = self._make_responses(loads)
-            return [rows_responses, rows_details_responses]
-        else:
-            return [self._make_responses(None)]
 
     def _make_params(self):
         return {
@@ -375,34 +351,45 @@ class CaresoftIncrementalDetails(CaresoftIncremental):
             "order_type": "asc",
         }
 
-    def _make_responses(self, loads):
-        if loads is None:
-            rows_responses = {"table": self.table, "num_processed": self.num_processed}
-        else:
-            rows_responses = {
-                "table": self.table,
-                "start": self.start,
-                "end": self.end,
-                "num_processed": self.num_processed,
-                "output_rows": loads.output_rows,
-                "errors": loads.errors,
-            }
-        return rows_responses
-
 
 class CaresoftDetails(CaresoftIncremental):
-    def __init__(self, table, detail_key, detail_id, row_ids):
-        self.detail_key = detail_key
+    def __init__(self, table, parent, detail_id, detail_key):
+        self.parent = parent
         self.detail_id = detail_id
-        self.row_ids = row_ids
+        self.detail_key = detail_key
         super().__init__(table, start=None, end=None)
-        self.endpoint = self.endpoint.replace("details", "")
+
+    def get_config(self):
+        with open(f"configs/{self.parent}Details.json", "r") as f:
+            config = json.load(f)
+        return config["keys"], config["schema"]
+
+    def get_endpoint(self):
+        return self.parent
 
     def get_time_range(self, start, end):
         return start, end
 
+    def get_detail_ids(self):
+        template = TEMPLATE_ENV.get_template("read_detail_ids.sql.j2")
+        query = template.render(
+            dataset=DATASET,
+            parent=self.parent.capitalize(),
+            table=self.table,
+            detail_id=self.detail_id,
+            limit=DETAILS_LIMIT,
+        )
+        results = BQ_CLIENT.query(query).result()
+        results
+        rows = [dict(row.items()) for row in results]
+        ids = [row['id'] for row in rows]
+        return ids
+
+    def _make_params(self):
+        return {}
+
     async def get_rows(self, session):
-        row_ids = [row[self.detail_id] for row in self.row_ids]
+        row_ids = self.get_detail_ids()
         tasks = [
             asyncio.create_task(self._get_rows(session, row_id)) for row_id in row_ids
         ]
@@ -412,51 +399,9 @@ class CaresoftDetails(CaresoftIncremental):
         return rows
 
     async def _get_rows(self, session, row_id):
-        if not self.LIMIT_SWITCH:
-            url = BASE_URL + self.endpoint + "/" + str(row_id)
-            attempts = 1
-            while True:
-                if attempts < 5:
-                    try:
-                        async with session.get(url, headers=HEADERS) as r:
-                            res_headers = dict(r.headers)
-                            res = await r.json()
-                        break
-                    except aiohttp.client_exceptions.ServerDisconnectedError:
-                        await asyncio.sleep(attempts)
-                        attempts = attempts + 1
-                else:
-                    break
-            limit_remaining = int(res_headers["X-RateLimit-Remaining"])
-            if limit_remaining % 100 == 0:
-                print(limit_remaining)
-            if limit_remaining < CARESOFT_X_RATE_LIMIT:
-                self.LIMIT_SWITCH = True
-            _rows = res[self.detail_key]
-            return _rows
-        else:
-            return None
-
-    def _make_params(self):
-        return {}
-
-    async def _run(self, session):
-        rows = await self.get_rows(session)
-        if len(rows) > 0:
-            rows = self.transform(rows)
-            loads = self.load(rows, self.table)
-            self._update()
-        else:
-            loads = None
-        return self._make_responses(loads)
-
-    def _make_responses(self, loads_rows):
-        if loads_rows is None:
-            return {"table": self.table, "num_processed": self.num_processed}
-        else:
-            return {
-                "table": self.table,
-                "num_processed": self.num_processed,
-                "output_rows": loads_rows.output_rows,
-                "errors": loads_rows.errors,
-            }
+        url = BASE_URL + self.endpoint + "/" + str(row_id)
+        async with session.get(url, headers=HEADERS) as r:
+            res = await r.json()
+        res
+        _rows = res[self.detail_key]
+        return _rows
