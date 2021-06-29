@@ -9,6 +9,15 @@ from models import Caresoft
 
 
 def main(request):
+    """API Gateway
+
+    Args:
+        request (flask.request): Incoming Request
+
+    Returns:
+        dict: Responses
+    """
+
     request_json = request.get_json()
     message = request_json["message"]
     data_bytes = message["data"]
@@ -20,7 +29,7 @@ def main(request):
         topic_path = publisher.topic_path(
             os.getenv("PROJECT_ID"), os.getenv("TOPIC_ID")
         )
-        tables = [i.replace('.json', '') for i in os.listdir("configs")]
+        tables = [i.replace(".json", "") for i in os.listdir("configs")]
         for table in tables:
             message_json = json.dumps({"table": table})
             message_bytes = message_json.encode("utf-8")

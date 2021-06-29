@@ -8,7 +8,6 @@ requests = "*"
 aiohttp = "*"
 google-cloud-bigquery = "*"
 python-dotenv = "*"
-tqdm = "*"
 google-cloud-pubsub = "*"
 jinja2 = "*"
 
