@@ -268,7 +268,7 @@ class CaresoftStatic(Caresoft):
             google.cloud.bigquery.job.base_AsyncJob: LoadJob Results
 
         Returns:
-            dict: Job Result
+            dict: Job Results
         """
 
         return {
@@ -296,7 +296,7 @@ class CaresoftCustomFields(CaresoftStatic):
         super().__init__(table)
 
     def get_config(self):
-        with open(f"configs/{self.parent}CustomFields.json", "r") as f:
+        with open(f"configs/{self.parent.capitalize()}CustomFields.json", "r") as f:
             config = json.load(f)
         return config["keys"], config["schema"]
 
@@ -571,7 +571,7 @@ class CaresoftDetails(CaresoftIncremental):
         super().__init__(table, start=None, end=None)
 
     def get_config(self):
-        with open(f"configs/{self.parent}Details.json", "r") as f:
+        with open(f"configs/{self.parent.capitalize()}Details.json", "r") as f:
             config = json.load(f)
         return config["keys"], config["schema"]
 
@@ -614,7 +614,7 @@ class CaresoftDetails(CaresoftIncremental):
         """Get rows
 
         Args:
-            session (aiohttpClientSession): HTTP Client
+            session (aiohttp.ClientSession): HTTP Client
 
         Returns:
             list: List of dicts
