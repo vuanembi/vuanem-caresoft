@@ -7,7 +7,15 @@ FROM
     LEFT JOIN `{{ dataset }}.{{ table }}` d
     ON s.{{ detail_id }} = d.{{ detail_id }}
 WHERE
-    s.updated_at <> d.updated_at
-    OR d.updated_at IS NULL
+    (
+        s.updated_at <> d.updated_at
+        OR d.updated_at IS NULL
+    )
+    AND s.{{ detail_id }} NOT IN (
+        SELECT
+            {{ detail_id }}
+        FROM
+            `{{ dataset }}._stage_Deleted{{ parent }}`
+    )
 LIMIT
     {{ limit }}

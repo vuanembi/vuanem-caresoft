@@ -1,0 +1,13 @@
+{
+    "keys": null,
+    "schema": [
+        {
+            "name": "id",
+            "type": "INTEGER"
+        },
+        {
+            "name": "deleted",
+            "type": "BOOLEAN"
+        }
+    ]
+}

@@ -209,6 +209,29 @@ class Caresoft(metaclass=ABCMeta):
 
         raise NotImplementedError
 
+    def _make_responses(self, rows, loads):
+        """Make responses
+
+        Args:
+            loads (google.cloud.bigquery.job.base_AsyncJob): LoadJob Results
+
+        Returns:
+            dict: Job Results
+        """
+        rows_responses = {
+            "table": self.table,
+            "start": getattr(self, "start", None),
+            "end": getattr(self, "end", None),
+            "num_processed": len(rows),
+        }
+        if loads:
+            rows_responses = {
+                **rows_responses,
+                "output_rows": loads.output_rows,
+                "errors": loads.errors,
+            }
+        return rows_responses
+
 
 class CaresoftStatic(Caresoft):
     def __init__(self, table):
@@ -230,7 +253,6 @@ class CaresoftStatic(Caresoft):
             res = await r.json()
 
         rows = res[self.get_row_key()]
-        self.num_processed = len(rows)
         return rows
 
     @abstractmethod
@@ -259,25 +281,7 @@ class CaresoftStatic(Caresoft):
         rows = await self.get_rows(session)
         rows = self.transform(rows)
         loads = self.load(rows, self.table)
-        return [self._make_responses(loads)]
-
-    def _make_responses(self, loads):
-        """Make responses
-
-        Args:
-            google.cloud.bigquery.job.base_AsyncJob: LoadJob Results
-
-        Returns:
-            dict: Job Results
-        """
-
-        return {
-            "table": self.table,
-            "num_processed": self.num_processed,
-            "output_rows": loads.output_rows,
-            "errors": loads.errors,
-        }
-
+        return [self._make_responses(rows, loads)]
 
 class CaresoftDimensions(CaresoftStatic):
     def __init__(self, table):
@@ -381,7 +385,6 @@ class CaresoftIncremental(Caresoft):
         ]
         _rows = await asyncio.gather(*tasks)
         rows = [item for sublist in _rows for item in sublist]
-        self.num_processed = len(rows)
         return rows
 
     async def _initial_get_rows(self, session, url, params):
@@ -477,7 +480,7 @@ class CaresoftIncremental(Caresoft):
             self._update()
         else:
             loads = None
-        return [self._make_responses(loads)]
+        return [self._make_responses(rows, loads)]
 
     def _update(self):
         """Update rows from stage to raw to main table"""
@@ -503,27 +506,6 @@ class CaresoftIncremental(Caresoft):
         template = TEMPLATE_ENV.get_template("update_from_raw.sql.j2")
         rendered_query = template.render(dataset=DATASET, table=self.table)
         BQ_CLIENT.query(rendered_query)
-
-    def _make_responses(self, loads):
-        """Make responses
-
-        Args:
-            loads (google.cloud.bigquery.job.base_AsyncJob): LoadJob Results
-
-        Returns:
-            dict: Job Results
-        """
-
-        if loads is None:
-            rows_responses = {"table": self.table, "num_processed": self.num_processed}
-        else:
-            rows_responses = {
-                "table": self.table,
-                "num_processed": self.num_processed,
-                "output_rows": loads.output_rows,
-                "errors": loads.errors,
-            }
-        return rows_responses
 
 
 class CaresoftIncrementalStandard(CaresoftIncremental):
@@ -625,9 +607,10 @@ class CaresoftDetails(CaresoftIncremental):
             asyncio.create_task(self._get_rows(session, row_id)) for row_id in row_ids
         ]
         rows = await asyncio.gather(*tasks)
-        rows = [row for row in rows if row is not None]
-        self.num_processed = len(rows)
-        return rows
+        results_rows = [row for row in rows if row.get("deleted") is None]
+        deleted_rows = [row for row in rows if row.get("deleted") is True]
+        self.load(deleted_rows, f"Deleted{self.parent.capitalize()}")
+        return results_rows
 
     async def _get_rows(self, session, row_id):
         """Get individual row
@@ -642,6 +625,9 @@ class CaresoftDetails(CaresoftIncremental):
 
         url = BASE_URL + self.endpoint + "/" + str(row_id)
         async with session.get(url, headers=HEADERS) as r:
-            res = await r.json()
-        _rows = res[self.detail_key]
+            if r.status == 500:
+                _rows = {self.detail_id: row_id, "deleted": True}
+            else:
+                res = await r.json()
+                _rows = res[self.detail_key]
         return _rows
