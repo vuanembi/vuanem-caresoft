@@ -29,7 +29,7 @@ def main(request):
         topic_path = publisher.topic_path(
             os.getenv("PROJECT_ID"), os.getenv("TOPIC_ID")
         )
-        tables = [i.replace(".json", "") for i in os.listdir("configs")]
+        tables = [i.replace(".json", "") for i in os.listdir("configs") if 'Deleted' not in i]
         for table in tables:
             message_json = json.dumps({"table": table})
             message_bytes = message_json.encode("utf-8")

@@ -1,9 +1,8 @@
 SELECT
-    s.{{ detail_id }} AS id,
-    s.updated_at AS std_updated,
-    d.updated_at AS details_updated
+    s.{{ detail_id }} AS id
 FROM
     `{{ dataset }}.{{ parent }}` s
+{% if with_ref -%}
     LEFT JOIN `{{ dataset }}.{{ table }}` d
     ON s.{{ detail_id }} = d.{{ detail_id }}
 WHERE
@@ -17,5 +16,6 @@ WHERE
         FROM
             `{{ dataset }}._stage_Deleted{{ parent }}`
     )
+{%- endif %}
 LIMIT
     {{ limit }}

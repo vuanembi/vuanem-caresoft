@@ -571,14 +571,23 @@ class CaresoftDetails(CaresoftIncremental):
         """
 
         template = TEMPLATE_ENV.get_template("read_detail_ids.sql.j2")
-        query = template.render(
-            dataset=DATASET,
-            parent=self.parent.capitalize(),
-            table=self.table,
-            detail_id=self.detail_id,
-            limit=DETAILS_LIMIT,
-        )
-        results = BQ_CLIENT.query(query).result()
+        with_ref = True
+        attempts = 0
+        while attempts < 2:
+            try:
+                query = template.render(
+                    dataset=DATASET,
+                    parent=self.parent.capitalize(),
+                    table=self.table,
+                    detail_id=self.detail_id,
+                    limit=DETAILS_LIMIT,
+                    with_ref=with_ref
+                )
+                results = BQ_CLIENT.query(query).result()
+                break
+            except NotFound:
+                with_ref = False
+                attempts += 1
         rows = [dict(row.items()) for row in results]
         ids = [row["id"] for row in rows]
         return ids
