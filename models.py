@@ -33,7 +33,6 @@ TEMPLATE_ENV = jinja2.Environment(loader=TEMPLATE_LOADER)
 # API Calls Configs
 COUNT = 500
 CARESOFT_X_RATE_LIMIT = 5000
-STANDARD_LIMIT = 50000
 DETAILS_LIMIT = 2500
 
 if sys.platform == "win32":
@@ -377,11 +376,10 @@ class CaresoftIncremental(Caresoft):
 
         num_found = await self._initial_get_rows(session, url, params)
         print(num_found)
-        calls_needed = math.ceil(num_found / COUNT)
-        calls = min([int(calls_needed), int(STANDARD_LIMIT / COUNT)])
+        calls_needed = int(math.ceil(num_found / COUNT))
         tasks = [
             asyncio.create_task(self._get_rows(i, session, url, params))
-            for i in range(1, calls + 1)
+            for i in range(1, calls_needed + 1)
         ]
         _rows = await asyncio.gather(*tasks)
         rows = [item for sublist in _rows for item in sublist]
