@@ -19,6 +19,7 @@ FROM
                 {% if incremental_key -%}
                 ORDER BY 
                     {{ incremental_key }}
+                    DESC
                 {%- endif %}
             ) AS row_num
         FROM
