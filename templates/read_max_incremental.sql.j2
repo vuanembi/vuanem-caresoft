@@ -1,7 +1,6 @@
 SELECT
-    LEAST({% for key in incremental_key -%}
-        MAX({{ key }}) {% if not loop.last -%},
-        {%- endif %}
-    {%- endfor %}) AS incre
+    MAX(
+        {{ incremental_key }}
+    ) AS incre
 FROM
     `{{ dataset }}._raw_{{ table }}`

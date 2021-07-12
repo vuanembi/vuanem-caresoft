@@ -3,9 +3,7 @@
         "p_key": [
             "ticket_id"
         ],
-        "incremental_key": [
-            "updated_at"
-        ]
+        "incremental_key": "updated_at"
     },
     "schema": [
         {
