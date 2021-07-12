@@ -4,8 +4,8 @@ from .utils import process
 def test_tickets_manual():
     data = {
         "table": "Tickets",
-        "start": "2021-06-01",
-        "end": "2021-06-02",
+        "start": "2021-07-07",
+        "end": "2021-07-10",
     }
     process(data)
 

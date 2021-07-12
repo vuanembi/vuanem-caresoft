@@ -18,12 +18,7 @@ FROM
                     {%- endfor %}
                 {% if incremental_key -%}
                 ORDER BY 
-                    {% for key in incremental_key -%}
-                        {{ key }} DESC
-                        {% if not loop.last -%}
-                            ,
-                        {%- endif %}
-                    {%- endfor %}
+                    {{ incremental_key }}
                 {%- endif %}
             ) AS row_num
         FROM

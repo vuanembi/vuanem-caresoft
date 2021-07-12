@@ -435,7 +435,7 @@ class CaresoftIncremental(Caresoft):
             _row = {
                 "value": json.dumps(row),
             }
-            for i in self.keys.get("incremental_key"):
+            for i in [self.keys.get("incremental_key")]:
                 _row[i] = row[i]
             for i in self.keys.get("p_key"):
                 _row[i] = row[i]
