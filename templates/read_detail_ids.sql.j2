@@ -1,13 +1,35 @@
 SELECT
-    s.{{ detail_id }} AS id
+    s.`{{ detail_id }}` AS id
 FROM
     `{{ dataset }}.{{ parent }}` s
-{% if with_ref -%}
+
+    {% if with_ref -%}
     LEFT JOIN `{{ dataset }}.{{ table }}` d
-    ON s.{{ detail_id }} = d.{{ detail_id }}
+    ON s.`{{ detail_id }}` = d.`{{ detail_id }}`
 WHERE
     (
-        s.updated_at <> d.updated_at
+        (
+            timestamp_trunc(
+                timestamp_add(
+                    s.`updated_at`,
+                    INTERVAL 500 millisecond
+                ),
+                SECOND
+            ) <> timestamp_trunc(
+                timestamp_add(
+                    d.`updated_at`,
+                    INTERVAL 500 millisecond
+                ),
+                SECOND
+            )
+            AND timestamp_trunc(
+                s.`updated_at`,
+                SECOND
+            ) <> timestamp_trunc(
+                d.`updated_at`,
+                SECOND
+            )
+        )
         OR d.updated_at IS NULL
     )
     AND s.{{ detail_id }} NOT IN (

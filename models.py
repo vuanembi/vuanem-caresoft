@@ -32,8 +32,7 @@ TEMPLATE_ENV = jinja2.Environment(loader=TEMPLATE_LOADER)
 
 # API Calls Configs
 COUNT = 500
-CARESOFT_X_RATE_LIMIT = 5000
-DETAILS_LIMIT = 2500
+DETAILS_LIMIT = 10000
 
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
@@ -99,36 +98,21 @@ class Caresoft(metaclass=ABCMeta):
 
     @abstractmethod
     def get_endpoint(self):
-        """Abstract Method to get API endpoint
+        """Abstract Method to get API endpoint"""
 
-        Returns:
-            str: API endpoint
-        """
-
-        raise NotImplementedError
+        pass
 
     @abstractmethod
     def get_row_key(self):
-        """Abstract Method row key
+        """Abstract Method row key"""
 
-        Returns:
-            str: Row key
-        """
-
-        raise NotImplementedError
+        pass
 
     @abstractmethod
     def transform(self, rows):
-        """Abstract Method to transform rows
+        """Abstract Method to transform rows"""
 
-        Args:
-            rows (list): List of dicts
-
-        Returns:
-            list: List of dicts
-        """
-
-        raise NotImplementedError
+        pass
 
     def load(self, rows, table):
         """Load rows to stage table on BigQuery
@@ -138,7 +122,7 @@ class Caresoft(metaclass=ABCMeta):
             table (str): Table name
 
         Returns:
-            google.cloud.bigquery.job.base_AsyncJob: LoadJob Results
+            google.cloud.bigquery.job.LoadJob: LoadJob Results
         """
 
         load_target = self._get_load_target(table)
@@ -157,23 +141,15 @@ class Caresoft(metaclass=ABCMeta):
 
     @abstractmethod
     def _get_load_target(self):
-        """Get load target
+        """Get load target"""
 
-        Returns:
-            str: Load table
-        """
-
-        raise NotImplementedError
+        pass
 
     @abstractmethod
     def _get_write_disposition(self):
-        """Get write_disposition
+        """Get write_disposition"""
 
-        Returns:
-            str: Load table
-        """
-
-        raise NotImplementedError
+        pass
 
     def run(self):
         """Run Job
@@ -200,13 +176,9 @@ class Caresoft(metaclass=ABCMeta):
 
     @abstractmethod
     async def _run(self):
-        """Run Async Job
+        """Run Async Job"""
 
-        Returns:
-            dict: Job Results
-        """
-
-        raise NotImplementedError
+        pass
 
     def _make_responses(self, rows, loads):
         """Make responses
@@ -227,7 +199,6 @@ class Caresoft(metaclass=ABCMeta):
             rows_responses = {
                 **rows_responses,
                 "output_rows": loads.output_rows,
-                "errors": loads.errors,
             }
         return rows_responses
 
@@ -256,7 +227,7 @@ class CaresoftStatic(Caresoft):
 
     @abstractmethod
     def get_row_key(self):
-        raise NotImplementedError
+        pass
 
     def transform(self, rows):
         """No transform is needed
@@ -352,7 +323,7 @@ class CaresoftIncremental(Caresoft):
             rendered_query = template.render(
                 dataset=DATASET,
                 table=self.table,
-                incremental_key=self.keys["incremental_key"],
+                incre_key=self.keys.get("incre_key"),
             )
             rows = BQ_CLIENT.query(rendered_query).result()
             row = [row for row in rows][0]
@@ -372,7 +343,7 @@ class CaresoftIncremental(Caresoft):
         """
 
         url = BASE_URL + self.endpoint
-        params = self._make_params()
+        params = self._get_params()
 
         num_found = await self._initial_get_rows(session, url, params)
         print(num_found)
@@ -435,7 +406,7 @@ class CaresoftIncremental(Caresoft):
             _row = {
                 "value": json.dumps(row),
             }
-            for i in [self.keys.get("incremental_key")]:
+            for i in [self.keys.get("incre_key")]:
                 _row[i] = row[i]
             for i in self.keys.get("p_key"):
                 _row[i] = row[i]
@@ -443,14 +414,10 @@ class CaresoftIncremental(Caresoft):
         return _rows
 
     @abstractmethod
-    def _make_params(self):
-        """Abstract Method to make parameters for calls
+    def _get_params(self):
+        """Abstract Method to make parameters for calls"""
 
-        Returns:
-            dict: Parameters
-        """
-
-        raise NotImplementedError
+        pass
 
     def get_row_key(self):
         return self.endpoint
@@ -493,8 +460,8 @@ class CaresoftIncremental(Caresoft):
         rendered_query = template.render(
             dataset=DATASET,
             table=self.table,
-            p_key=self.keys.get("p_key"),
-            incremental_key=self.keys.get("incremental_key"),
+            p_key=','.join(self.keys.get("p_key")),
+            incre_key=self.keys.get("incre_key"),
         )
         BQ_CLIENT.query(rendered_query).result()
 
@@ -510,7 +477,7 @@ class CaresoftIncrementalStandard(CaresoftIncremental):
     def __init__(self, table, start, end):
         super().__init__(table, start, end)
 
-    def _make_params(self):
+    def _get_params(self):
         return {
             "start_time_since": self.start,
             "start_time_to": self.end,
@@ -524,7 +491,7 @@ class CaresoftIncrementalDetails(CaresoftIncremental):
     def __init__(self, table, start, end):
         super().__init__(table, start, end)
 
-    def _make_params(self):
+    def _get_params(self):
         return {
             "updated_since": self.start,
             "updated_to": self.end,
@@ -590,7 +557,7 @@ class CaresoftDetails(CaresoftIncremental):
         ids = [row["id"] for row in rows]
         return ids
 
-    def _make_params(self):
+    def _get_params(self):
         """No Paramters
 
         Returns:
