@@ -1,6 +1,6 @@
 SELECT
     MAX(
-        {{ incremental_key }}
+        {{ incre_key }}
     ) AS incre
 FROM
-    `{{ dataset }}._raw_{{ table }}`
+    `{{ dataset }}._stage_{{ table }}`

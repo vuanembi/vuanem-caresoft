@@ -1,5 +1,5 @@
 CREATE
-OR REPLACE TABLE `{{ dataset }}._raw_{{ table }}` AS
+OR REPLACE TABLE `{{ dataset }}`.`_stage_{{ table }}` AS
 SELECT
     *
 EXCEPT
@@ -8,22 +8,16 @@ FROM
     (
         SELECT
             *,
-            ROW_NUMBER() OVER (
-                PARTITION BY
-                    {% for key in p_key -%}
-                        {{ key }}
-                        {% if not loop.last -%}
-                            ,
-                        {%- endif %}
-                    {%- endfor %}
-                {% if incremental_key -%}
-                ORDER BY 
-                    {{ incremental_key }}
-                    DESC
+            ROW_NUMBER() over (
+                PARTITION BY {{ p_key }}
+
+                {% if incre_key -%}
+                ORDER BY
+                    {{ incre_key }} DESC
                 {%- endif %}
             ) AS row_num
         FROM
-            `{{ dataset }}._stage_{{ table }}`
+            `{{ dataset }}`.`_stage_{{ table }}`
     )
 WHERE
     row_num = 1

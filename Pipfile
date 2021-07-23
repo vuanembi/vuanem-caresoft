@@ -7,15 +7,12 @@ name = "pypi"
 requests = "*"
 aiohttp = "*"
 google-cloud-bigquery = "*"
-python-dotenv = "*"
 google-cloud-pubsub = "*"
 jinja2 = "*"
 
 [dev-packages]
 black = "*"
-functions-framework = "*"
 pytest = "*"
-pytest-dotenv = "*"
 
 [requires]
 python_version = "3.8"
