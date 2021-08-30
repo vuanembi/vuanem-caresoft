@@ -11,6 +11,11 @@ import aiohttp
 from google.cloud import bigquery
 from google.api_core.exceptions import NotFound
 import jinja2
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
+
+from pg_models import Base
+
 
 # API Headers
 HEADERS = {
@@ -18,6 +23,10 @@ HEADERS = {
     "Content-Type": "application/json",
 }
 BASE_URL = "https://api.caresoft.vn/VUANEM/api/v1"
+
+# API Calls Configs
+COUNT = 500
+DETAILS_LIMIT = 10
 
 # BigQuery Configs
 BQ_CLIENT = bigquery.Client()
@@ -31,9 +40,11 @@ TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
 TEMPLATE_LOADER = jinja2.FileSystemLoader(searchpath="./templates")
 TEMPLATE_ENV = jinja2.Environment(loader=TEMPLATE_LOADER)
 
-# API Calls Configs
-COUNT = 500
-DETAILS_LIMIT = 10
+ENGINE = create_engine(
+    "postgresql+psycopg2://" \
+    + f"{os.getenv('PG_UID')}:{os.getenv('PG_PWD')}@" \
+    + f"{os.getenv('PG_HOST')}/{os.getenv('PG_DB')}",
+)
 
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
@@ -221,8 +232,27 @@ class DetailsGetter(Getter):
 
 
 class Loader(metaclass=ABCMeta):
+    def __init__(self):
+        pass
+
+    @abstractmethod
+    def load(self, rows):
+        pass
+
+
+class BigQueryLoader(Loader):
     def __init__(self, table):
         self.table = table
+
+    @property
+    @abstractmethod
+    def load_target(self):
+        pass
+
+    @property
+    @abstractmethod
+    def write_disposition(self):
+        pass
 
     @property
     def config(self):
@@ -236,31 +266,12 @@ class Loader(metaclass=ABCMeta):
             config = json.load(f)
         return config
 
-
-    @abstractmethod
-    def load(self, rows):
-        pass
-
-
-class BigQueryLoader(Loader):
-    def __init__(self, table):
-        super().__init__(table)
-
-    @property
-    @abstractmethod
-    def load_target(self):
-        pass
-
-    @property
-    @abstractmethod
-    def write_disposition(self):
-        pass
     def _load(self, rows):
         loads = BQ_CLIENT.load_table_from_json(
             rows,
             f"{DATASET}.{self.load_target}",
             job_config=bigquery.LoadJobConfig(
-                schema=self.config['schema'],
+                schema=self.config["schema"],
                 create_disposition="CREATE_IF_NEEDED",
                 write_disposition=self.write_disposition,
             ),
@@ -297,10 +308,11 @@ class BigQueryIncrementalLoader(BigQueryLoader):
         rendered_query = template.render(
             dataset=DATASET,
             table=self.table,
-            p_key=",".join(self.config['keys'].get("p_key")),
-            incre_key=self.config['keys'].get("incre_key"),
+            p_key=",".join(self.config["keys"].get("p_key")),
+            incre_key=self.config["keys"].get("incre_key"),
         )
         BQ_CLIENT.query(rendered_query).result()
+
 
 class BigQueryAppendLoader(BigQueryLoader):
     @property
@@ -314,10 +326,26 @@ class BigQueryAppendLoader(BigQueryLoader):
         return loads
 
 
+class PostgresLoader(Loader):
+    def __init__(self, model):
+        super().__init__()
+        self.model = model
+
+    def load(self, rows):
+        Session = sessionmaker(bind=ENGINE)
+        Base.metadata.create_all(ENGINE)
+        with Session() as session:
+            [session.merge(self.model(**row)) for row in rows]
+            session.commit()
+
+
 class CaresoftStatic(Caresoft):
     def __init__(self):
         self.getter = SimpleGetter(self.endpoint, self.row_key)
-        self.loader = [BigQuerySimpleLoader(self.table)]
+        self.loader = [
+            BigQuerySimpleLoader(self.table),
+            PostgresLoader(self.model),
+        ]
 
 
 class CaresoftIncremental(Caresoft):
@@ -388,7 +416,9 @@ class CaresoftIncrementalDetails(CaresoftIncremental):
 
 class CaresoftDetails(Caresoft):
     def __init__(self):
-        self.getter = DetailsGetter(self.parent, self.table, self.detail_key, self.endpoint, self.row_key)
+        self.getter = DetailsGetter(
+            self.parent, self.table, self.detail_key, self.endpoint, self.row_key
+        )
         self.loader = [BigQueryIncrementalLoader(self.table)]
 
     @property

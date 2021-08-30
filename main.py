@@ -4,7 +4,7 @@ import base64
 
 import requests
 
-from pipelines import CaresoftFactory
+from models import CaresoftFactory
 from broadcast import broadcast
 
 

@@ -6,6 +6,8 @@ from components import (
     CaresoftIncrementalDetails,
     CaresoftDetails,
 )
+import pg_models
+
 
 
 class CaresoftFactory:
@@ -38,6 +40,7 @@ class CaresoftFactory:
 class Agents(CaresoftStatic):
     table = "Agents"
     endpoint = row_key = "agents"
+    model = pg_models.Agents
 
     def __init__(self):
         super().__init__()
@@ -65,6 +68,7 @@ class Agents(CaresoftStatic):
 class Groups(CaresoftStatic):
     table = "Groups"
     endpoint = row_key = "groups"
+    model = pg_models.Groups
 
     def __init__(self):
         super().__init__()
@@ -83,6 +87,7 @@ class Groups(CaresoftStatic):
 class Services(CaresoftStatic):
     table = "Services"
     endpoint = row_key = "services"
+    model = pg_models.Services
 
     def __init__(self):
         super().__init__()
@@ -102,6 +107,7 @@ class ContactsCustomFields(CaresoftStatic):
     table = "ContactsCustomFields"
     endpoint = f"contacts/custom_fields"
     row_key = "custom_fields"
+    model = pg_models.ContactsCustomFields
 
     def __init__(self):
         super().__init__()
@@ -130,6 +136,7 @@ class TicketsCustomFields(CaresoftStatic):
     table = "TicketsCustomFields"
     endpoint = f"tickets/custom_fields"
     row_key = "custom_fields"
+    model = pg_models.TicketsCustomFields
 
     def __init__(self):
         super().__init__()
@@ -139,7 +146,7 @@ class TicketsCustomFields(CaresoftStatic):
             {
                 "custom_field_id": row["custom_field_id"],
                 "custom_field_lable": row["custom_field_lable"],
-                "type": row["type"],
+                "type": row.get("type"),
                 "values": [
                     {
                         "id": value["id"],
