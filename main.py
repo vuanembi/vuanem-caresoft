@@ -3,9 +3,9 @@ import json
 import base64
 
 import requests
-from google.cloud import pubsub_v1
 
-from models import Caresoft
+from pipelines import CaresoftFactory
+from broadcast import broadcast
 
 
 def main(request):
@@ -25,29 +25,29 @@ def main(request):
     print(data)
 
     if "broadcast" in data:
-        publisher = pubsub_v1.PublisherClient()
-        topic_path = publisher.topic_path(
-            os.getenv("PROJECT_ID"), os.getenv("TOPIC_ID")
+        results = broadcast()
+    elif "table" in data:
+        job = CaresoftFactory.factory(
+            data["table"],
+            data.get("start"),
+            data.get("end"),
         )
-        tables = [i.replace(".json", "") for i in os.listdir("configs") if 'Deleted' not in i]
-        for table in tables:
-            message_json = json.dumps({"table": table})
-            message_bytes = message_json.encode("utf-8")
-            publisher.publish(topic_path, data=message_bytes).result()
-        responses = {"message_sent": len(tables)}
-    else:
-        job = Caresoft.factory(data["table"], data.get("start"), data.get("end"))
-        responses = {"pipelines": "Caresoft", "results": job.run()}
+        results = job.run()
 
-    print(responses)
+    response = {
+        "pipelines": "Caresoft",
+        "results": results,
+    }
 
-    _ = requests.post(
+    print(response)
+
+    requests.post(
         "https://api.telegram.org/bot{token}/sendMessage".format(
             token=os.getenv("TELEGRAM_TOKEN")
         ),
         json={
             "chat_id": os.getenv("TELEGRAM_CHAT_ID"),
-            "text": json.dumps(responses, indent=4),
+            "text": json.dumps(response, indent=4),
         },
     )
-    return responses
+    return response

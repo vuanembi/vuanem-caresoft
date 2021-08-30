@@ -9,6 +9,9 @@ aiohttp = "*"
 google-cloud-bigquery = "*"
 google-cloud-pubsub = "*"
 jinja2 = "*"
+pip = "*"
+psycopg2-binary = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 black = "*"

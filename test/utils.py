@@ -25,11 +25,10 @@ def assertion(res):
         res (list): Job Results
     """
 
-    for i in res:
-        assert i["num_processed"] >= 0
-        if i["num_processed"] > 0:
-            assert i["output_rows"] > 0
-            assert i["num_processed"] == i["output_rows"]
+    
+    assert res["num_processed"] >= 0
+    if res["num_processed"] > 0:
+        assert res["num_processed"] == res["output_rows"]
 
 def process(data):
     """Main Test Process

@@ -1,23 +1,20 @@
 CREATE
-OR REPLACE TABLE `{{ dataset }}`.`_stage_{{ table }}` AS
+OR REPLACE TABLE `{{ dataset }}`.`{{ table }}` AS
 SELECT
     *
 EXCEPT
-    (row_num)
+    (`row_num`)
 FROM
     (
         SELECT
             *,
             ROW_NUMBER() over (
                 PARTITION BY {{ p_key }}
-
-                {% if incre_key -%}
                 ORDER BY
                     {{ incre_key }} DESC
-                {%- endif %}
-            ) AS row_num
+            ) AS `row_num`
         FROM
             `{{ dataset }}`.`_stage_{{ table }}`
     )
 WHERE
-    row_num = 1
+    `row_num` = 1

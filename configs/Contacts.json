@@ -1,6 +1,8 @@
 {
     "keys": {
-        "p_key": ["id"],
+        "p_key": [
+            "id"
+        ],
         "incre_key": "updated_at"
     },
     "schema": [
@@ -9,12 +11,28 @@
             "type": "INTEGER"
         },
         {
-            "name": "value",
+            "name": "updated_at",
+            "type": "TIMESTAMP"
+        },
+        {
+            "name": "gender",
+            "type": "INTEGER"
+        },
+        {
+            "name": "created_at",
+            "type": "TIMESTAMP"
+        },
+        {
+            "name": "email",
             "type": "STRING"
         },
         {
-            "name": "updated_at",
-            "type": "TIMESTAMP"
+            "name": "phone_no",
+            "type": "STRING"
+        },
+        {
+            "name": "username",
+            "type": "STRING"
         }
     ]
 }
