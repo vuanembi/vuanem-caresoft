@@ -41,8 +41,8 @@ TEMPLATE_LOADER = jinja2.FileSystemLoader(searchpath="./templates")
 TEMPLATE_ENV = jinja2.Environment(loader=TEMPLATE_LOADER)
 
 ENGINE = create_engine(
-    "postgresql+psycopg2://" \
-    + f"{os.getenv('PG_UID')}:{os.getenv('PG_PWD')}@" \
+    "postgresql+psycopg2://"
+    + f"{os.getenv('PG_UID')}:{os.getenv('PG_PWD')}@"
     + f"{os.getenv('PG_HOST')}/{os.getenv('PG_DB')}",
 )
 
@@ -352,7 +352,10 @@ class CaresoftIncremental(Caresoft):
     def __init__(self, start, end):
         self.start, self.end = self._get_time_range(start, end)
         self.getter = IncrementalGetter(self.params, self.endpoint, self.row_key)
-        self.loader = [BigQueryIncrementalLoader(self.table)]
+        self.loader = [
+            BigQueryIncrementalLoader(self.table),
+            PostgresLoader(self.model),
+        ]
 
     @property
     @abstractmethod

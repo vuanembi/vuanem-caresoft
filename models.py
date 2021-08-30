@@ -9,7 +9,6 @@ from components import (
 import pg_models
 
 
-
 class CaresoftFactory:
     @staticmethod
     def factory(table, start, end):
@@ -164,6 +163,7 @@ class TicketsCustomFields(CaresoftStatic):
 class Calls(CaresoftIncrementalStandard):
     table = "Calls"
     endpoint = row_key = "calls"
+    model = pg_models.Calls
 
     def __init__(self, start, end):
         super().__init__(start, end)
@@ -201,6 +201,7 @@ class Calls(CaresoftIncrementalStandard):
 class Contacts(CaresoftIncrementalDetails):
     table = "Contacts"
     endpoint = row_key = "contacts"
+    model = pg_models.Contacts
 
     def __init__(self, start, end):
         super().__init__(start, end)
@@ -222,6 +223,7 @@ class Contacts(CaresoftIncrementalDetails):
 class Tickets(CaresoftIncrementalDetails):
     table = "Tickets"
     endpoint = row_key = "tickets"
+    model = pg_models.Tickets
 
     def __init__(self, start, end):
         super().__init__(start, end)
