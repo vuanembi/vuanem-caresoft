@@ -47,18 +47,18 @@ class Agents(CaresoftStatic):
     def transform(self, rows):
         return [
             {
-                "id": row["id"],
-                "username": row["username"],
-                "email": row["email"],
-                "phone_no": row["phone_no"],
-                "agent_id": row["agent_id"],
-                "created_at": row["created_at"],
-                "updated_at": row["updated_at"],
-                "group_id": row["group_id"],
-                "group_name": row["group_name"],
-                "role_id": row["role_id"],
-                "login_status": row["login_status"],
-                "call_status": row["call_status"],
+                "id": row.get("id"),
+                "username": row.get("username"),
+                "email": row.get("email"),
+                "phone_no": row.get("phone_no"),
+                "agent_id": row.get("agent_id"),
+                "created_at": row.get("created_at"),
+                "updated_at": row.get("updated_at"),
+                "group_id": row.get("group_id"),
+                "group_name": row.get("group_name"),
+                "role_id": row.get("role_id"),
+                "login_status": row.get("login_status"),
+                "call_status": row.get("call_status"),
             }
             for row in rows
         ]
@@ -75,9 +75,9 @@ class Groups(CaresoftStatic):
     def transform(self, rows):
         return [
             {
-                "group_id": row["group_id"],
-                "group_name": row["group_name"],
-                "created_at": row["created_at"],
+                "group_id": row.get("group_id"),
+                "group_name": row.get("group_name"),
+                "created_at": row.get("created_at"),
             }
             for row in rows
         ]
@@ -94,9 +94,9 @@ class Services(CaresoftStatic):
     def transform(self, rows):
         return [
             {
-                "service_id": row["service_id"],
-                "service_name": row["service_name"],
-                "service_type": row["service_type"],
+                "service_id": row.get("service_id"),
+                "service_name": row.get("service_name"),
+                "service_type": row.get("service_type"),
             }
             for row in rows
         ]
@@ -114,8 +114,8 @@ class ContactsCustomFields(CaresoftStatic):
     def transform(self, rows):
         return [
             {
-                "custom_field_id": row["custom_field_id"],
-                "custom_field_lable": row["custom_field_lable"],
+                "custom_field_id": row.get("custom_field_id"),
+                "custom_field_lable": row.get("custom_field_lable"),
                 "type": row.get("type"),
                 "values": [
                     {
@@ -143,13 +143,13 @@ class TicketsCustomFields(CaresoftStatic):
     def transform(self, rows):
         return [
             {
-                "custom_field_id": row["custom_field_id"],
-                "custom_field_lable": row["custom_field_lable"],
+                "custom_field_id": row.get("custom_field_id"),
+                "custom_field_lable": row.get("custom_field_lable"),
                 "type": row.get("type"),
                 "values": [
                     {
-                        "id": value["id"],
-                        "lable": value["lable"],
+                        "id": value.get("id"),
+                        "lable": value.get("lable"),
                     }
                     for value in row.get("values", [])
                 ]
@@ -172,27 +172,29 @@ class Calls(CaresoftIncrementalStandard):
         return [
             {
                 "id": row["id"],
-                "customer_id": row["customer_id"],
-                "call_id": row["call_id"],
-                "caller": row["caller"],
-                "called": row["called"],
-                "user_id": row["user_id"],
-                "agent_id": row["agent_id"],
-                "group_id": row["group_id"],
-                "call_type": row["call_type"],
-                "start_time": row["start_time"],
-                "call_status": row["call_status"],
-                "end_time": row["end_time"],
-                "wait_time": row["wait_time"],
-                "hold_time": row["hold_time"],
-                "talk_time": row["talk_time"],
-                "end_status": row["end_status"],
-                "ticket_id": row["ticket_id"],
-                "last_agent_id": row["last_agent_id"],
-                "last_user_id": row["last_user_id"],
-                "call_survey": row["call_survey"],
-                "call_survey_result": row["call_survey_result"],
-                "missed_reason": row["missed_reason"],
+                "customer_id": row.get("customer_id"),
+                "call_id": row.get("call_id"),
+                "path": row.get("path"),
+                "path_download": row.get("path_download"),
+                "caller": row.get("caller"),
+                "called": row.get("called"),
+                "user_id": row.get("user_id"),
+                "agent_id": row.get("agent_id"),
+                "group_id": row.get("group_id"),
+                "call_type": row.get("call_type"),
+                "start_time": row.get("start_time"),
+                "call_status": row.get("call_status"),
+                "end_time": row.get("end_time"),
+                "wait_time": row.get("wait_time"),
+                "hold_time": row.get("hold_time"),
+                "talk_time": row.get("talk_time"),
+                "end_status": row.get("end_status"),
+                "ticket_id": row.get("ticket_id"),
+                "last_agent_id": row.get("last_agent_id"),
+                "last_user_id": row.get("last_user_id"),
+                "call_survey": row.get("call_survey"),
+                "call_survey_result": row.get("call_survey_result"),
+                "missed_reason": row.get("missed_reason"),
             }
             for row in rows
         ]
@@ -209,8 +211,8 @@ class Contacts(CaresoftIncrementalDetails):
     def transform(self, rows):
         return [
             {
-                "id": row["id"],
-                "updated_at": row["updated_at"],
+                "id": row.get("id"),
+                "updated_at": row.get("updated_at"),
                 "created_at": row.get("created_at"),
                 "username": row.get("username"),
                 "phone_no": row.get("phone_no"),
@@ -231,8 +233,8 @@ class Tickets(CaresoftIncrementalDetails):
     def transform(self, rows):
         return [
             {
-                "ticket_id": row["ticket_id"],
-                "updated_at": row["updated_at"],
+                "ticket_id": row.get("ticket_id"),
+                "updated_at": row.get("updated_at"),
                 "ticket_no": row.get("ticket_no"),
                 "ticket_subject": row.get("ticket_subject"),
                 "created_at": row.get("created_at"),
@@ -319,8 +321,8 @@ class ContactsDetails(CaresoftDetails):
     def transform(self, rows):
         return [
             {
-                "id": row["id"],
-                "updated_at": row["updated_at"],
+                "id": row.get("id"),
+                "updated_at": row.get("updated_at"),
                 "account_id": row.get("account_id"),
                 "username": row.get("username"),
                 "email": row.get("email"),
@@ -372,8 +374,8 @@ class TicketsDetails(CaresoftDetails):
     def transform(self, rows):
         return [
             {
-                "ticket_id": row["ticket_id"],
-                "updated_at": row["updated_at"],
+                "ticket_id": row.get("ticket_id"),
+                "updated_at": row.get("updated_at"),
                 "account_id": row.get("account_id"),
                 "sla_id": row.get("sla_id"),
                 "ticket_no": row.get("ticket_no"),

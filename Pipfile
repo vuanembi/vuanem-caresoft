@@ -16,6 +16,7 @@ sqlalchemy = "*"
 [dev-packages]
 black = "*"
 pytest = "*"
+pytest-timeout = "*"
 
 [requires]
 python_version = "3.8"

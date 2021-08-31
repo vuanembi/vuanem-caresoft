@@ -59,8 +59,8 @@ class TicketsCustomFields(Base):
 class Calls(Base):
     __tablename__ = "Calls"
 
-    id = Column(Integer, primary_key=True)
-    start_time = Column(DateTime(timezone=True))
+    id = Column(Integer, primary_key=True, index=True)
+    start_time = Column(DateTime(timezone=True), index=True)
     customer_id = Column(Integer)
     call_id = Column(String)
     path = Column(String)
@@ -77,11 +77,11 @@ class Calls(Base):
     hold_time = Column(String)
     talk_time = Column(String)
     end_status = Column(String)
-    ticket_id = Column(Integer)
+    ticket_id = Column(Integer, index=True)
     last_agent_id = Column(String)
     last_user_id = Column(Integer)
     call_survey = Column(String)
-    call_survey_result = Column(String)
+    call_survey_result = Column(Integer)
     missed_reason = Column(String)
 
 

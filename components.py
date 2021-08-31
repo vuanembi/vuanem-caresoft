@@ -13,6 +13,8 @@ from google.api_core.exceptions import NotFound
 import jinja2
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
+from sqlalchemy.dialects.postgresql import insert
+
 
 from pg_models import Base
 
@@ -33,6 +35,7 @@ BQ_CLIENT = bigquery.Client()
 DATASET = "Caresoft2"
 
 # Datetime Formatting
+NOW = datetime.utcnow()
 DATE_FORMAT = "%Y-%m-%d"
 TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
 
@@ -91,12 +94,12 @@ class Caresoft(metaclass=ABCMeta):
             "num_processed": len(rows),
         }
         if getattr(self, "start", None) and getattr(self, "end", None):
-            response["start"] = self.start
-            response["end"] = self.end
+            response["start"] = self.start.strftime(TIMESTAMP_FORMAT)
+            response["end"] = self.end.strftime(TIMESTAMP_FORMAT)
         if len(rows) > 0:
             rows = self.transform(rows)
             loads = [loader.load(rows) for loader in self.loader]
-            response["output_rows"] = loads[0].output_rows
+            response["loads"] = loads
         return response
 
 
@@ -276,7 +279,10 @@ class BigQueryLoader(Loader):
                 write_disposition=self.write_disposition,
             ),
         ).result()
-        return loads
+        return {
+            "load": "BigQuery",
+            "output_rows": loads.output_rows,
+        }
 
 
 class BigQuerySimpleLoader(BigQueryLoader):
@@ -334,22 +340,40 @@ class PostgresLoader(Loader):
     def load(self, rows):
         Session = sessionmaker(bind=ENGINE)
         Base.metadata.create_all(ENGINE)
+        table = self.model.__table__
+        update_cols = [
+            c.name for c in table.c if c not in list(table.primary_key.columns)
+        ]
+        stmt = insert(table).values(rows)
+        stmt = stmt.on_conflict_do_update(
+            index_elements=table.primary_key.columns,
+            set_={k: getattr(stmt.excluded, k) for k in update_cols},
+        )
         with Session() as session:
-            [session.merge(self.model(**row)) for row in rows]
+            # query = session.query(self.model)
+            # result_list = query.merge_result([self.model(**row) for row in rows])
+            # session.bulk_save_objects([self.model(**row) for row in rows])
+            # session.bulk_update_mappings(self.model, rows)
+            loads = session.execute(stmt)
             session.commit()
+        return {
+            "load": "Postgres",
+            "output_rows": loads.rowcount,
+        }
 
 
 class CaresoftStatic(Caresoft):
     def __init__(self):
         self.getter = SimpleGetter(self.endpoint, self.row_key)
         self.loader = [
-            BigQuerySimpleLoader(self.table),
+            # BigQuerySimpleLoader(self.table),
             PostgresLoader(self.model),
         ]
 
 
 class CaresoftIncremental(Caresoft):
     def __init__(self, start, end):
+        super().__init__()
         self.start, self.end = self._get_time_range(start, end)
         self.getter = IncrementalGetter(self.params, self.endpoint, self.row_key)
         self.loader = [
@@ -364,13 +388,9 @@ class CaresoftIncremental(Caresoft):
 
     def _get_time_range(self, start, end):
         if start and end:
-            start, end = [
-                datetime.strptime(i, DATE_FORMAT).strftime(TIMESTAMP_FORMAT)
-                for i in [start, end]
-            ]
+            start, end = [datetime.strptime(i, DATE_FORMAT) for i in [start, end]]
         else:
-            now = datetime.utcnow()
-            end = now.strftime(TIMESTAMP_FORMAT)
+            end = NOW
             try:
                 template = TEMPLATE_ENV.get_template("read_max_incremental.sql.j2")
                 rendered_query = template.render(
@@ -391,8 +411,8 @@ class CaresoftIncrementalStandard(CaresoftIncremental):
     @property
     def params(self):
         return {
-            "start_time_since": self.start,
-            "start_time_to": self.end,
+            "start_time_since": self.start.strftime(TIMESTAMP_FORMAT),
+            "start_time_to": self.end.strftime(TIMESTAMP_FORMAT),
             "count": COUNT,
             "order_by": "start_time",
             "order_type": "asc",
@@ -406,8 +426,8 @@ class CaresoftIncrementalDetails(CaresoftIncremental):
     @property
     def params(self):
         return {
-            "updated_since": self.start,
-            "updated_to": self.end,
+            "updated_since": self.start.strftime(TIMESTAMP_FORMAT),
+            "updated_to": self.end.strftime(TIMESTAMP_FORMAT),
             "count": COUNT,
             "order_by": "updated_at",
             "order_type": "asc",

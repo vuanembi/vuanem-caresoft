@@ -96,7 +96,7 @@
         },
         {
             "name": "call_survey_result",
-            "type": "STRING"
+            "type": "INTEGER"
         },
         {
             "name": "missed_reason",
