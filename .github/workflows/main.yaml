@@ -34,4 +34,4 @@ jobs:
           --runtime=python38
           --trigger-http
           --service-account=${{ secrets.GCP_SA }}
-          --set-env-vars=ACCESS_TOKEN=${{ secrets.ACCESS_TOKEN }},TOPIC_ID=${{ env.TOPIC_ID }},PROJECT_ID=${{ secrets.PROJECT_ID }},TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }},TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
+          --set-env-vars=ACCESS_TOKEN=${{ secrets.ACCESS_TOKEN }},PG_HOST=${{ secrets.PG_HOST }},PG_DB=${{ secrets.PG_DB }},PG_UID=${{ secrets.PG_UID }},PG_PWD=${{ secrets.PG_PWD }},TOPIC_ID=${{ env.TOPIC_ID }},PROJECT_ID=${{ secrets.PROJECT_ID }},TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }},TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
