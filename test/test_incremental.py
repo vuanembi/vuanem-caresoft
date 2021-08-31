@@ -7,8 +7,8 @@ END = "2021-08-02"
 TABLES = (
     "table",
     [
-        # "Tickets",
-        # "Contacts",
+        "Tickets",
+        "Contacts",
         "Calls",
     ],
 )

@@ -8,7 +8,7 @@ Base = declarative_base()
 class Agents(Base):
     __tablename__ = "Agents"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, index=True)
     username = Column(String)
     email = Column(String)
     phone_no = Column(String)
@@ -25,7 +25,7 @@ class Agents(Base):
 class Groups(Base):
     __tablename__ = "Groups"
 
-    group_id = Column(Integer, primary_key=True)
+    group_id = Column(Integer, primary_key=True, index=True)
     group_name = Column(String)
     created_at = Column(DateTime(timezone=True))
 
@@ -33,7 +33,7 @@ class Groups(Base):
 class Services(Base):
     __tablename__ = "Services"
 
-    service_id = Column(Integer, primary_key=True)
+    service_id = Column(Integer, primary_key=True, index=True)
     service_name = Column(String)
     service_type = Column(String)
 
@@ -41,7 +41,7 @@ class Services(Base):
 class ContactsCustomFields(Base):
     __tablename__ = "ContactsCustomFields"
 
-    custom_field_id = Column(Integer, primary_key=True)
+    custom_field_id = Column(Integer, primary_key=True, index=True)
     custom_field_lable = Column(String)
     type = Column(String)
     values = Column(JSONB)
@@ -50,7 +50,7 @@ class ContactsCustomFields(Base):
 class TicketsCustomFields(Base):
     __tablename__ = "TicketsCustomFields"
 
-    custom_field_id = Column(Integer, primary_key=True)
+    custom_field_id = Column(Integer, primary_key=True, index=True)
     custom_field_lable = Column(String)
     type = Column(String)
     values = Column(JSONB)
@@ -88,23 +88,23 @@ class Calls(Base):
 class Contacts(Base):
     __tablename__ = "Contacts"
 
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, index=True)
     updated_at = Column(DateTime(timezone=True))
     gender = Column(Integer)
-    created_at = Column(DateTime(timezone=True))
+    created_at = Column(DateTime(timezone=True, index=True))
     email = Column(String)
-    phone_no = Column(String)
+    phone_no = Column(String, index=True)
     username = Column(String)
 
 
 class Tickets(Base):
     __tablename__ = "Tickets"
 
-    ticket_id = Column(Integer, primary_key=True)
+    ticket_id = Column(Integer, primary_key=True, index=True)
     updated_at = Column(DateTime(timezone=True))
     ticket_no = Column(Integer)
     ticket_subject = Column(String)
-    created_at = Column(DateTime(timezone=True))
+    created_at = Column(DateTime(timezone=True), index=True)
     ticket_status = Column(String)
     ticket_source = Column(String)
     ticket_priority = Column(String)

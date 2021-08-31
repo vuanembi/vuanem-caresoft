@@ -7,10 +7,10 @@ from .utils import process
     "table",
     [
         "Agents",
-        # "Groups",
-        # "Services",
-        # "TicketsCustomFields",
-        # "ContactsCustomFields",
+        "Groups",
+        "Services",
+        "TicketsCustomFields",
+        "ContactsCustomFields",
     ],
 )
 def test_static(table):

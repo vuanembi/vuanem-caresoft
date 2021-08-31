@@ -47,6 +47,7 @@ ENGINE = create_engine(
     "postgresql+psycopg2://"
     + f"{os.getenv('PG_UID')}:{os.getenv('PG_PWD')}@"
     + f"{os.getenv('PG_HOST')}/{os.getenv('PG_DB')}",
+    echo=True,
 )
 
 if sys.platform == "win32":
@@ -350,10 +351,6 @@ class PostgresLoader(Loader):
             set_={k: getattr(stmt.excluded, k) for k in update_cols},
         )
         with Session() as session:
-            # query = session.query(self.model)
-            # result_list = query.merge_result([self.model(**row) for row in rows])
-            # session.bulk_save_objects([self.model(**row) for row in rows])
-            # session.bulk_update_mappings(self.model, rows)
             loads = session.execute(stmt)
             session.commit()
         return {
@@ -366,7 +363,7 @@ class CaresoftStatic(Caresoft):
     def __init__(self):
         self.getter = SimpleGetter(self.endpoint, self.row_key)
         self.loader = [
-            # BigQuerySimpleLoader(self.table),
+            BigQuerySimpleLoader(self.table),
             PostgresLoader(self.model),
         ]
 
@@ -440,7 +437,11 @@ class CaresoftIncrementalDetails(CaresoftIncremental):
 class CaresoftDetails(Caresoft):
     def __init__(self):
         self.getter = DetailsGetter(
-            self.parent, self.table, self.detail_key, self.endpoint, self.row_key
+            self.parent,
+            self.table,
+            self.detail_key,
+            self.endpoint,
+            self.row_key,
         )
         self.loader = [BigQueryIncrementalLoader(self.table)]
 

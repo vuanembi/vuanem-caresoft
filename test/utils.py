@@ -4,6 +4,7 @@ from unittest.mock import Mock
 
 from main import main
 
+
 def encode_data(data):
     """Encode data to publish to PubSub
 
@@ -16,7 +17,12 @@ def encode_data(data):
 
     data_json = json.dumps(data)
     data_encoded = base64.b64encode(data_json.encode("utf-8"))
-    return {"message": {"data": data_encoded}}
+    return {
+        "message": {
+            "data": data_encoded,
+        },
+    }
+
 
 def assertion(res):
     """Assert test
@@ -25,11 +31,11 @@ def assertion(res):
         res (list): Job Results
     """
 
-    
     assert res["num_processed"] >= 0
     if res["num_processed"] > 0:
-        for i in res['loads']:
+        for i in res["loads"]:
             assert res["num_processed"] == i["output_rows"]
+
 
 def process(data):
     """Main Test Process
@@ -37,7 +43,7 @@ def process(data):
     Args:
         data (dict): Data
     """
-        
+
     message = encode_data(data)
     req = Mock(get_json=Mock(return_value=message), args=message)
     res = main(req)
