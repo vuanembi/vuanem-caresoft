@@ -314,6 +314,8 @@ class ContactsDetails(CaresoftDetails):
     endpoint = parent = "contacts"
     row_key = "contact"
     detail_key = "id"
+    model = pg_models.ContactsDetails
+    deleted_model = pg_models.DeletedContacts
 
     def __init__(self):
         super().__init__()

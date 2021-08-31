@@ -11,6 +11,7 @@ import aiohttp
 from google.cloud import bigquery
 from google.api_core.exceptions import NotFound
 import jinja2
+from sqlalchemy.dialects import postgresql
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.dialects.postgresql import insert
@@ -167,12 +168,15 @@ class IncrementalGetter(Getter):
 
 
 class DetailsGetter(Getter):
-    def __init__(self, parent, table, detail_key, endpoint, row_key):
+    def __init__(self, parent, table, detail_key, endpoint, row_key, deleted_model):
         super().__init__(endpoint, row_key)
         self.parent = parent
         self.table = table
         self.detail_key = detail_key
-        self.loader = BigQueryAppendLoader(f"Deleted{self.parent.capitalize()}")
+        self.loader = [
+            BigQueryAppendLoader(f"Deleted{self.parent.capitalize()}"),
+            PostgresLoader(deleted_model),
+        ]
 
     def get(self):
         return asyncio.run(self._get())
@@ -215,7 +219,7 @@ class DetailsGetter(Getter):
             rows = await asyncio.gather(*tasks)
         results_rows = [row for row in rows if row.get("deleted") is None]
         deleted_rows = [row for row in rows if row.get("deleted") is True]
-        self.loader.load(deleted_rows)
+        [loader.load(deleted_rows) for loader in self.loader]
         return results_rows
 
     async def _get_rows(self, session, row_id):
@@ -226,7 +230,7 @@ class DetailsGetter(Getter):
         ) as r:
             if r.status == 500:
                 _rows = {
-                    self.row_key: row_id,
+                    self.detail_key: row_id,
                     "deleted": True,
                 }
             else:
@@ -442,8 +446,12 @@ class CaresoftDetails(Caresoft):
             self.detail_key,
             self.endpoint,
             self.row_key,
+            self.deleted_model,
         )
-        self.loader = [BigQueryIncrementalLoader(self.table)]
+        self.loader = [
+            BigQueryIncrementalLoader(self.table),
+            PostgresLoader(self.model),
+        ]
 
     @property
     @abstractmethod

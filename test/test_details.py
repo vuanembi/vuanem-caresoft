@@ -6,8 +6,8 @@ from .utils import process
 @pytest.mark.parametrize(
     "table",
     [
-        "TicketsDetails",
         "ContactsDetails",
+        # "TicketsDetails",
     ],
 )
 def test_details(table):

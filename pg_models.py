@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import Column, Integer, String, DateTime, Boolean
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.dialects.postgresql import JSONB
 
@@ -91,7 +91,7 @@ class Contacts(Base):
     id = Column(Integer, primary_key=True, index=True)
     updated_at = Column(DateTime(timezone=True))
     gender = Column(Integer)
-    created_at = Column(DateTime(timezone=True, index=True))
+    created_at = Column(DateTime(timezone=True), index=True)
     email = Column(String)
     phone_no = Column(String, index=True)
     username = Column(String)
@@ -116,3 +116,32 @@ class Tickets(Base):
     tags = Column(JSONB)
     ccs = Column(JSONB)
     follows = Column(JSONB)
+
+class ContactsDetails(Base):
+    __tablename__ = "ContactsDetails"
+
+    id = Column(Integer, primary_key=True, index=True)
+    updated_at = Column(DateTime(timezone=True))
+    account_id = Column(Integer)
+    username = Column(String)
+    email = Column(String)
+    email2 = Column(String)
+    phone_no = Column(String, index=True)
+    phone_no2 = Column(String)
+    phone_no3 = Column(String)
+    facebook = Column(String)
+    gender = Column(Integer)
+    organization_id = Column(Integer)
+    created_at = Column(DateTime(timezone=True), index=True)
+    role_id = Column(Integer)
+    campaign_handler_id = Column(Integer)
+    organization = Column(String)
+    custom_fields = Column(JSONB)
+    psid = Column(JSONB)
+
+class DeletedContacts(Base):
+    __tablename__ = "DeletedContacts"
+
+    id = Column(Integer, primary_key=True, index=True)
+    deleted = Column(Boolean, index=True)
+
