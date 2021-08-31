@@ -145,3 +145,43 @@ class DeletedContacts(Base):
     id = Column(Integer, primary_key=True, index=True)
     deleted = Column(Boolean, index=True)
 
+class TicketsDetails(Base):
+    __tablename__ = "TicketsDetails"
+
+    ticket_id = Column(Integer, primary_key=True, index=True)
+    account_id = Column(Integer)
+    sla_id = Column(Integer)
+    ticket_no = Column(Integer, index=True)
+    requester_id = Column(Integer)
+    group_id = Column(Integer)
+    ticket_source_end_status = Column(Integer)
+    assignee_id = Column(Integer)
+    ticket_priority = Column(String)
+    ticket_source = Column(String)
+    ticket_status = Column(String)
+    ticket_subject = Column(String)
+    created_at = Column(DateTime(timezone=True), index=True)
+    duedate = Column(DateTime(timezone=True), index=True)
+    updated_at = Column(DateTime(timezone=True), index=True)
+    satisfaction = Column(Integer)
+    satisfaction_at = Column(String)
+    satisfaction_send = Column(String)
+    satisfaction_content = Column(String)
+    campaign_id = Column(Integer)
+    automessage_id = Column(Integer)
+    feedback_status = Column(String)
+    sla = Column(String)
+    assignee = Column(JSONB)
+    requester = Column(JSONB, index=True)
+    campaign = Column(JSONB)
+    comments = Column(JSONB)
+    custom_fields = Column(JSONB)
+    tags = Column(JSONB)
+    ccs = Column(JSONB)
+    follows = Column(JSONB)
+    
+class DeletedTickets(Base):
+    __tablename__ = "DeletedTickets"
+
+    ticket_id = Column(Integer, primary_key=True, index=True)
+    deleted = Column(Boolean, index=True)

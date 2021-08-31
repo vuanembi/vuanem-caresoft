@@ -7,7 +7,7 @@ from .utils import process
     "table",
     [
         "ContactsDetails",
-        # "TicketsDetails",
+        "TicketsDetails",
     ],
 )
 def test_details(table):

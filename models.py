@@ -369,6 +369,8 @@ class TicketsDetails(CaresoftDetails):
     endpoint = parent = "tickets"
     row_key = "ticket"
     detail_key = "ticket_id"
+    model = pg_models.TicketsDetails
+    deleted_model = pg_models.DeletedTickets
 
     def __init__(self):
         super().__init__()
