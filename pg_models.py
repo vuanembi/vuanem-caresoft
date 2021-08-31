@@ -1,8 +1,13 @@
-from sqlalchemy import Column, Integer, String, DateTime, Boolean
+from sqlalchemy import cast, Column, Integer, String, DateTime, Boolean
 from sqlalchemy.orm import declarative_base
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy.dialects.postgresql import JSONB, ARRAY
 
 Base = declarative_base()
+
+
+class CastingArray(ARRAY):
+    def bind_expression(self, bindvalue):
+        return cast(bindvalue, self)
 
 
 class Agents(Base):
@@ -41,7 +46,7 @@ class Services(Base):
 class ContactsCustomFields(Base):
     __tablename__ = "ContactsCustomFields"
 
-    custom_field_id = Column(Integer, primary_key=True, index=True)
+    custom_field_id = Column(Integer, primary_key=True)
     custom_field_lable = Column(String)
     type = Column(String)
     values = Column(JSONB)
@@ -50,7 +55,7 @@ class ContactsCustomFields(Base):
 class TicketsCustomFields(Base):
     __tablename__ = "TicketsCustomFields"
 
-    custom_field_id = Column(Integer, primary_key=True, index=True)
+    custom_field_id = Column(Integer, primary_key=True)
     custom_field_lable = Column(String)
     type = Column(String)
     values = Column(JSONB)
@@ -117,6 +122,7 @@ class Tickets(Base):
     ccs = Column(JSONB)
     follows = Column(JSONB)
 
+
 class ContactsDetails(Base):
     __tablename__ = "ContactsDetails"
 
@@ -139,11 +145,13 @@ class ContactsDetails(Base):
     custom_fields = Column(JSONB)
     psid = Column(JSONB)
 
+
 class DeletedContacts(Base):
     __tablename__ = "DeletedContacts"
 
     id = Column(Integer, primary_key=True, index=True)
     deleted = Column(Boolean, index=True)
+
 
 class TicketsDetails(Base):
     __tablename__ = "TicketsDetails"
@@ -179,7 +187,8 @@ class TicketsDetails(Base):
     tags = Column(JSONB)
     ccs = Column(JSONB)
     follows = Column(JSONB)
-    
+
+
 class DeletedTickets(Base):
     __tablename__ = "DeletedTickets"
 

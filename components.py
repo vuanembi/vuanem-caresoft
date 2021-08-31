@@ -48,7 +48,7 @@ ENGINE = create_engine(
     "postgresql+psycopg2://"
     + f"{os.getenv('PG_UID')}:{os.getenv('PG_PWD')}@"
     + f"{os.getenv('PG_HOST')}/{os.getenv('PG_DB')}",
-    echo=True,
+    # echo=True,
 )
 
 if sys.platform == "win32":
@@ -346,13 +346,11 @@ class PostgresLoader(Loader):
         Session = sessionmaker(bind=ENGINE)
         Base.metadata.create_all(ENGINE)
         table = self.model.__table__
-        update_cols = [
-            c.name for c in table.c if c not in list(table.primary_key.columns)
-        ]
         stmt = insert(table).values(rows)
+        update_dict = {c.name: c for c in stmt.excluded if not c.primary_key}
         stmt = stmt.on_conflict_do_update(
             index_elements=table.primary_key.columns,
-            set_={k: getattr(stmt.excluded, k) for k in update_cols},
+            set_=update_dict,
         )
         with Session() as session:
             loads = session.execute(stmt)

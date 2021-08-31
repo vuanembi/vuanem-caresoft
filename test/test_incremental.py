@@ -2,8 +2,8 @@ import pytest
 
 from .utils import process
 
-START = "2021-08-01"
-END = "2021-08-02"
+START = "2021-01-01"
+END = "2021-01-02"
 TABLES = (
     "table",
     [
