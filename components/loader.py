@@ -1,17 +1,11 @@
-import os
 from abc import ABCMeta, abstractmethod
 
 from google.cloud import bigquery
 from sqlalchemy import delete, and_, insert
 
-
-# from pg_models import Base
 from components.utils import BQ_CLIENT, DATASET, TEMPLATE_ENV, ENGINE
 
 class Loader(metaclass=ABCMeta):
-    def __init__(self, model):
-        pass
-
     @abstractmethod
     def load(self, rows):
         pass
@@ -21,6 +15,7 @@ class BigQueryLoader(Loader):
     def __init__(self, model):
         self.table = model.table
         self.schema = model.schema
+        self.keys = model.keys
 
     @property
     @abstractmethod
@@ -131,8 +126,8 @@ class PostgresIncrementalLoader(PostgresLoader):
         delete_stmt = delete(self.model).where(
             and_(
                 *[
-                    self.model.c[rank_key].in_([row[rank_key] for row in rows])
-                    for rank_key in self.keys["rank_key"]
+                    self.model.c[p_key].in_([row[p_key] for row in rows])
+                    for p_key in self.keys["p_key"]
                 ]
             )
         )

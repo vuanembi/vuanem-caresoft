@@ -36,44 +36,6 @@ class CaresoftFactory:
             raise NotImplementedError(table)
 
 
-class Calls(CaresoftIncrementalStandard):
-    table = "Calls"
-    endpoint = row_key = "calls"
-    model = pg_models.Calls
-
-    def __init__(self, start, end):
-        super().__init__(start, end)
-
-    def transform(self, rows):
-        return [
-            {
-                "id": row["id"],
-                "customer_id": row.get("customer_id"),
-                "call_id": row.get("call_id"),
-                "path": row.get("path"),
-                "path_download": row.get("path_download"),
-                "caller": row.get("caller"),
-                "called": row.get("called"),
-                "user_id": row.get("user_id"),
-                "agent_id": row.get("agent_id"),
-                "group_id": row.get("group_id"),
-                "call_type": row.get("call_type"),
-                "start_time": row.get("start_time"),
-                "call_status": row.get("call_status"),
-                "end_time": row.get("end_time"),
-                "wait_time": row.get("wait_time"),
-                "hold_time": row.get("hold_time"),
-                "talk_time": row.get("talk_time"),
-                "end_status": row.get("end_status"),
-                "ticket_id": row.get("ticket_id"),
-                "last_agent_id": row.get("last_agent_id"),
-                "last_user_id": row.get("last_user_id"),
-                "call_survey": row.get("call_survey"),
-                "call_survey_result": row.get("call_survey_result"),
-                "missed_reason": row.get("missed_reason"),
-            }
-            for row in rows
-        ]
 
 
 class Contacts(CaresoftIncrementalDetails):

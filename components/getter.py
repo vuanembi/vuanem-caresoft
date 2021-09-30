@@ -18,7 +18,8 @@ from components.utils import (
     DATASET,
     DETAILS_LIMIT,
     NOW,
-    DATE_FORMAT
+    DATE_FORMAT,
+    TIMESTAMP_FORMAT,
 )
 
 if sys.platform == "win32":
@@ -48,7 +49,14 @@ class SimpleGetter(Getter):
 class IncrementalGetter(Getter):
     def __init__(self, model):
         super().__init__(model)
-        self.params = model.params
+        self.table = model.table
+        self.keys = model.keys
+        self.start, self.end = self._get_time_range(model.start, model.end)
+
+    @property
+    @abstractmethod
+    def params(self):
+        pass
 
     def get(self):
         return asyncio.run(self._get())
@@ -113,6 +121,27 @@ class IncrementalGetter(Getter):
             res = await r.json()
         return res[self.row_key]
 
+class IncrementalStandardGetter(IncrementalGetter):
+    @property
+    def params(self):
+        return {
+            "start_time_since": self.start.strftime(TIMESTAMP_FORMAT),
+            "start_time_to": self.end.strftime(TIMESTAMP_FORMAT),
+            "count": COUNT,
+            "order_by": "start_time",
+            "order_type": "asc",
+        }
+
+class IncrementalDetailsGetter(IncrementalGetter):
+    @property
+    def params(self):
+        return {
+            "updated_since": self.start.strftime(TIMESTAMP_FORMAT),
+            "updated_to": self.end.strftime(TIMESTAMP_FORMAT),
+            "count": COUNT,
+            "order_by": "updated_at",
+            "order_type": "asc",
+        }
 
 class DetailsGetter(Getter):
     def __init__(self, model):

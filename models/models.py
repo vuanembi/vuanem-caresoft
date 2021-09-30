@@ -3,7 +3,7 @@ import importlib
 
 from sqlalchemy import Table, MetaData
 
-from components.getter import SimpleGetter, IncrementalGetter, DetailsGetter
+from components.getter import IncrementalDetailsGetter, IncrementalStandardGetter, SimpleGetter, IncrementalGetter, DetailsGetter
 from components.loader import (
     BigQuerySimpleLoader,
     BigQueryIncrementalLoader,
@@ -63,9 +63,9 @@ class Caresoft(metaclass=ABCMeta):
             "table": self.table,
             "num_processed": len(rows),
         }
-        if getattr(self, "start", None) and getattr(self, "end", None):
-            response["start"] = self.start.strftime(TIMESTAMP_FORMAT)
-            response["end"] = self.end.strftime(TIMESTAMP_FORMAT)
+        if getattr(self._getter, "start", None) and getattr(self._getter, "end", None):
+            response["start"] = self._getter.start.strftime(TIMESTAMP_FORMAT)
+            response["end"] = self._getter.end.strftime(TIMESTAMP_FORMAT)
         if len(rows) > 0:
             rows = self.transform(rows)
             loads = [loader.load(rows) for loader in self._loader]
@@ -82,8 +82,7 @@ class CaresoftStatic(Caresoft):
 
 
 class CaresoftIncremental(Caresoft):
-    getter = IncrementalGetter
-    load = [
+    loader = [
         BigQueryIncrementalLoader,
         PostgresIncrementalLoader,
     ]
@@ -97,34 +96,12 @@ class CaresoftIncremental(Caresoft):
     def keys(self):
         pass
 
-    @property
-    @abstractmethod
-    def params(self):
-        pass
-
-
 class CaresoftIncrementalStandard(CaresoftIncremental):
-    @property
-    def params(self):
-        return {
-            "start_time_since": self.start.strftime(TIMESTAMP_FORMAT),
-            "start_time_to": self.end.strftime(TIMESTAMP_FORMAT),
-            "count": COUNT,
-            "order_by": "start_time",
-            "order_type": "asc",
-        }
+    getter = IncrementalStandardGetter
 
 
 class CaresoftIncrementalDetails(CaresoftIncremental):
-    @property
-    def params(self):
-        return {
-            "updated_since": self.start.strftime(TIMESTAMP_FORMAT),
-            "updated_to": self.end.strftime(TIMESTAMP_FORMAT),
-            "count": COUNT,
-            "order_by": "updated_at",
-            "order_type": "asc",
-        }
+    getter = IncrementalDetailsGetter
 
 
 class CaresoftDetails(Caresoft):

@@ -11,22 +11,6 @@ class CastingArray(ARRAY):
 
 
 
-class ContactsCustomFields(Base):
-    __tablename__ = "ContactsCustomFields"
-
-    custom_field_id = Column(Integer, primary_key=True)
-    custom_field_lable = Column(String)
-    type = Column(String)
-    values = Column(JSONB)
-
-
-class TicketsCustomFields(Base):
-    __tablename__ = "TicketsCustomFields"
-
-    custom_field_id = Column(Integer, primary_key=True)
-    custom_field_lable = Column(String)
-    type = Column(String)
-    values = Column(JSONB)
 
 
 class Calls(Base):
