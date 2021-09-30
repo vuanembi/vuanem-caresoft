@@ -6,11 +6,6 @@ from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 
 
 class Groups(CaresoftStatic):
-    getter = SimpleGetter
-    loader = [
-        BigQuerySimpleLoader,
-        PostgresStandardLoader,
-    ]
     endpoint = row_key = "groups"
     schema = [
         {"name": "group_id", "type": "INTEGER"},

@@ -6,11 +6,6 @@ from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 
 
 class Services(CaresoftStatic):
-    getter = SimpleGetter
-    loader = [
-        BigQuerySimpleLoader,
-        PostgresStandardLoader,
-    ]
     endpoint = row_key = "services"
     schema = [
         {"name": "service_id", "type": "INTEGER"},

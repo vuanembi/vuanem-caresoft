@@ -5,11 +5,6 @@ from components.getter import SimpleGetter
 from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 
 class Agents(CaresoftStatic):
-    getter = SimpleGetter
-    loader = [
-        BigQuerySimpleLoader,
-        PostgresStandardLoader,
-    ]
     endpoint = row_key = "agents"
     schema = [
         {"name": "id", "type": "INTEGER"},

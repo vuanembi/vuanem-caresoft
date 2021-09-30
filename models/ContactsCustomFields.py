@@ -7,11 +7,6 @@ from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 
 
 class ContactsCustomFields(CaresoftStatic):
-    getter = SimpleGetter
-    loader = [
-        BigQuerySimpleLoader,
-        PostgresStandardLoader,
-    ]
     endpoint = f"contacts/custom_fields"
     row_key = "custom_fields"
     schema = [

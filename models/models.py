@@ -7,7 +7,8 @@ from components.getter import SimpleGetter, IncrementalGetter, DetailsGetter
 from components.loader import (
     BigQuerySimpleLoader,
     BigQueryIncrementalLoader,
-    PostgresLoader,
+    PostgresIncrementalLoader,
+    PostgresStandardLoader,
 )
 
 from components.utils import TIMESTAMP_FORMAT, COUNT
@@ -76,7 +77,7 @@ class CaresoftStatic(Caresoft):
     getter = SimpleGetter
     loader = [
         BigQuerySimpleLoader,
-        PostgresLoader,
+        PostgresStandardLoader,
     ]
 
 
@@ -84,7 +85,7 @@ class CaresoftIncremental(Caresoft):
     getter = IncrementalGetter
     load = [
         BigQueryIncrementalLoader,
-        PostgresLoader,
+        PostgresIncrementalLoader,
     ]
 
     def __init__(self, start, end):
@@ -130,7 +131,7 @@ class CaresoftDetails(Caresoft):
     getter = DetailsGetter
     loader = [
         BigQueryIncrementalLoader,
-        PostgresLoader,
+        PostgresIncrementalLoader,
     ]
 
     @property
