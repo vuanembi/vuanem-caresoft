@@ -147,3 +147,23 @@ class CaresoftDetails(Caresoft):
     @abstractmethod
     def detail_key(self):
         pass
+
+
+TABLES = {
+    "static": [
+        "Agents",
+        "Groups",
+        "Services",
+        "ContactsCustomFields",
+        "TicketsCustomFields",
+    ],
+    "incre": [
+        "Calls",
+        "Contacts",
+        "Tickets",
+    ],
+    "details": [
+        "ContactsDetails",
+        "TicketsDetails",
+    ]
+}

@@ -1,6 +1,5 @@
 import os
 import json
-import base64
 
 import requests
 
@@ -18,10 +17,7 @@ def main(request):
         dict: Responses
     """
 
-    request_json = request.get_json()
-    message = request_json["message"]
-    data_bytes = message["data"]
-    data = json.loads(base64.b64decode(data_bytes).decode("utf-8"))
+    data = request.get_json()
     print(data)
 
     if "broadcast" in data:
