@@ -4,8 +4,8 @@ import base64
 
 import requests
 
-from models import CaresoftFactory
-from broadcast import broadcast
+from models.models import Caresoft
+# from broadcast import broadcast
 
 
 def main(request):
@@ -25,9 +25,10 @@ def main(request):
     print(data)
 
     if "broadcast" in data:
-        results = broadcast()
+        # results = broadcast()
+        pass
     elif "table" in data:
-        job = CaresoftFactory.factory(
+        job = Caresoft.factory(
             data["table"],
             data.get("start"),
             data.get("end"),

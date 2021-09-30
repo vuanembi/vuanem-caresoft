@@ -1,0 +1,34 @@
+from sqlalchemy import Column, Integer, String
+
+from models.models import CaresoftStatic
+from components.getter import SimpleGetter
+from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
+
+
+class Services(CaresoftStatic):
+    getter = SimpleGetter
+    loader = [
+        BigQuerySimpleLoader,
+        PostgresStandardLoader,
+    ]
+    endpoint = row_key = "services"
+    schema = [
+        {"name": "service_id", "type": "INTEGER"},
+        {"name": "service_name", "type": "STRING"},
+        {"name": "service_type", "type": "STRING"},
+    ]
+    columns = [
+        Column("service_id", Integer, primary_key=True),
+        Column("service_name", String),
+        Column("service_type", String),
+    ]
+
+    def transform(self, rows):
+        return [
+            {
+                "service_id": row.get("service_id"),
+                "service_name": row.get("service_name"),
+                "service_type": row.get("service_type"),
+            }
+            for row in rows
+        ]
