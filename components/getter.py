@@ -8,7 +8,6 @@ import requests
 import aiohttp
 from google.api_core.exceptions import NotFound
 
-from components.loader import BigQueryAppendLoader, PostgresLoader
 from components.utils import (
     BASE_URL,
     HEADERS,
@@ -60,7 +59,7 @@ class IncrementalGetter(Getter):
 
     def get(self):
         return asyncio.run(self._get())
-    
+
     def _get_time_range(self, start, end):
         if start and end:
             start, end = [datetime.strptime(i, DATE_FORMAT) for i in [start, end]]
@@ -121,6 +120,7 @@ class IncrementalGetter(Getter):
             res = await r.json()
         return res[self.row_key]
 
+
 class IncrementalStandardGetter(IncrementalGetter):
     @property
     def params(self):
@@ -131,6 +131,7 @@ class IncrementalStandardGetter(IncrementalGetter):
             "order_by": "start_time",
             "order_type": "asc",
         }
+
 
 class IncrementalDetailsGetter(IncrementalGetter):
     @property
@@ -143,18 +144,19 @@ class IncrementalDetailsGetter(IncrementalGetter):
             "order_type": "asc",
         }
 
+
 class DetailsGetter(Getter):
     def __init__(self, model):
+        super().__init__(model)
         self.parent = model.parent
         self.table = model.table
         self.detail_key = model.detail_key
-        self.loader = [
-            BigQueryAppendLoader(f"Deleted{self.parent.capitalize()}"),
-            PostgresLoader(model.deleted_model),
-        ]
+        self.deleted_model = model.deleted_model
 
     def get(self):
-        return asyncio.run(self._get())
+        results, deleted = asyncio.run(self._get())
+        self.deleted_model(rows=deleted).run()
+        return results
 
     def _get_detail_ids(self):
         template = TEMPLATE_ENV.get_template("read_detail_ids.sql.j2")
@@ -194,8 +196,8 @@ class DetailsGetter(Getter):
             rows = await asyncio.gather(*tasks)
         results_rows = [row for row in rows if row.get("deleted") is None]
         deleted_rows = [row for row in rows if row.get("deleted") is True]
-        [loader.load(deleted_rows) for loader in self.loader]
-        return results_rows
+        deleted_rows = [row for row in rows if row.get("deleted") is None]
+        return results_rows, deleted_rows
 
     async def _get_rows(self, session, row_id):
         async with session.get(
@@ -210,3 +212,12 @@ class DetailsGetter(Getter):
             else:
                 res = await r.json()
                 return res[self.row_key]
+
+
+class DeletedGetter(Getter):
+    def __init__(self, model):
+        super().__init__(model)
+        self.rows = model.rows
+
+    def get(self):
+        return self.rows
