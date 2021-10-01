@@ -1,11 +1,16 @@
 from sqlalchemy import Column, Integer, String, DateTime
 
-from models.models import CaresoftStatic
+from models.models import Caresoft
 from components.getter import SimpleGetter
 from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 
 
-class Groups(CaresoftStatic):
+class Groups(Caresoft):
+    getter = SimpleGetter
+    loader = [
+        BigQuerySimpleLoader,
+        PostgresStandardLoader,
+    ]
     endpoint = row_key = "groups"
     schema = [
         {"name": "group_id", "type": "INTEGER"},

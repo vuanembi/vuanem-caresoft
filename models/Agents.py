@@ -1,10 +1,15 @@
 from sqlalchemy import Column, Integer, String, DateTime
 
-from models.models import CaresoftStatic
+from models.models import Caresoft
 from components.getter import SimpleGetter
 from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 
-class Agents(CaresoftStatic):
+class Agents(Caresoft):
+    getter = SimpleGetter
+    loader = [
+        BigQuerySimpleLoader,
+        PostgresStandardLoader,
+    ]
     endpoint = row_key = "agents"
     schema = [
         {"name": "id", "type": "INTEGER"},

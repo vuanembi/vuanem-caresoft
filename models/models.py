@@ -3,7 +3,13 @@ import importlib
 
 from sqlalchemy import Table, MetaData
 
-from components.getter import IncrementalDetailsGetter, IncrementalStandardGetter, SimpleGetter, IncrementalGetter, DetailsGetter
+from components.getter import (
+    IncrementalDetailsGetter,
+    IncrementalStandardGetter,
+    SimpleGetter,
+    IncrementalGetter,
+    DetailsGetter,
+)
 from components.loader import (
     BigQuerySimpleLoader,
     BigQueryIncrementalLoader,
@@ -11,7 +17,7 @@ from components.loader import (
     PostgresStandardLoader,
 )
 
-from components.utils import TIMESTAMP_FORMAT, COUNT
+from components.utils import TIMESTAMP_FORMAT
 
 
 metadata = MetaData(schema="Caresoft")
@@ -23,13 +29,14 @@ class Caresoft(metaclass=ABCMeta):
         try:
             module = importlib.import_module(f"models.{table}")
             model = getattr(module, table)
-            return model(start, end)
+            return model(start=start, end=end)
         except (ImportError, AttributeError):
             raise ValueError(table)
 
-    def __init__(self, *args):
+    def __init__(self, **kwargs):
         self.table = self.__class__.__name__
         self.model = Table(self.table, metadata, *self.columns)
+        self.start, self.end = kwargs.get("start"), kwargs.get("end")
         self._getter = self.getter(self)
         self._loader = [loader(self) for loader in self.loader]
 
@@ -73,14 +80,6 @@ class Caresoft(metaclass=ABCMeta):
         return response
 
 
-class CaresoftStatic(Caresoft):
-    getter = SimpleGetter
-    loader = [
-        BigQuerySimpleLoader,
-        PostgresStandardLoader,
-    ]
-
-
 class CaresoftIncremental(Caresoft):
     loader = [
         BigQueryIncrementalLoader,
@@ -95,6 +94,7 @@ class CaresoftIncremental(Caresoft):
     @abstractmethod
     def keys(self):
         pass
+
 
 class CaresoftIncrementalStandard(CaresoftIncremental):
     getter = IncrementalStandardGetter
@@ -143,5 +143,5 @@ TABLES = {
     "details": [
         "ContactsDetails",
         "TicketsDetails",
-    ]
+    ],
 }

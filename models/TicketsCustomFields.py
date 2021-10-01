@@ -1,12 +1,17 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.dialects.postgresql import JSONB
 
-from models.models import CaresoftStatic
+from models.models import Caresoft
 from components.getter import SimpleGetter
 from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 
 
-class TicketsCustomFields(CaresoftStatic):
+class TicketsCustomFields(Caresoft):
+    getter = SimpleGetter
+    loader = [
+        BigQuerySimpleLoader,
+        PostgresStandardLoader,
+    ]
     endpoint = "tickets/custom_fields"
     row_key = "custom_fields"
     schema = [

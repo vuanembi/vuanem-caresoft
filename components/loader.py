@@ -15,7 +15,6 @@ class BigQueryLoader(Loader):
     def __init__(self, model):
         self.table = model.table
         self.schema = model.schema
-        self.keys = model.keys
 
     @property
     @abstractmethod
@@ -56,6 +55,10 @@ class BigQuerySimpleLoader(BigQueryLoader):
 
 
 class BigQueryIncrementalLoader(BigQueryLoader):
+    def __init__(self, model):
+        super().__init__(model)
+        self.keys = model.keys
+
     @property
     def load_target(self):
         return f"_stage_{self.table}"
@@ -79,6 +82,10 @@ class BigQueryIncrementalLoader(BigQueryLoader):
 
 
 class BigQueryAppendLoader(BigQueryLoader):
+    def __init__(self, model):
+        super().__init__(model)
+        self.keys = model.keys
+        
     @property
     def load_target(self):
         return f"_stage_{self.table}"
