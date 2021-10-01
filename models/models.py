@@ -6,15 +6,11 @@ from sqlalchemy import Table, MetaData
 from components.getter import (
     IncrementalDetailsGetter,
     IncrementalStandardGetter,
-    SimpleGetter,
-    IncrementalGetter,
     DetailsGetter,
 )
 from components.loader import (
-    BigQuerySimpleLoader,
     BigQueryIncrementalLoader,
     PostgresIncrementalLoader,
-    PostgresStandardLoader,
 )
 
 from components.utils import TIMESTAMP_FORMAT

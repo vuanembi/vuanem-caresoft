@@ -1,11 +1,21 @@
 from sqlalchemy import Column, Integer, String, DateTime
 
-from models.models import CaresoftIncrementalStandard
+from models.models import Caresoft
+from components.getter import IncrementalStandardGetter
+from components.loader import BigQueryIncrementalLoader, PostgresIncrementalLoader
 
 
-class Calls(CaresoftIncrementalStandard):
+class Calls(Caresoft):
+    getter = IncrementalStandardGetter
+    loader = [
+        BigQueryIncrementalLoader,
+        PostgresIncrementalLoader,
+    ]
     endpoint = row_key = "calls"
-    keys = {"p_key": ["id"], "incre_key": "start_time"}
+    keys = {
+        "p_key": ["id"],
+        "incre_key": "start_time",
+    }
     schema = [
         {"name": "id", "type": "INTEGER"},
         {"name": "start_time", "type": "TIMESTAMP"},
