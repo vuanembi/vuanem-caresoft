@@ -4,7 +4,7 @@ import json
 import requests
 
 from models.models import Caresoft
-# from broadcast import broadcast
+from tasks import create_tasks
 
 
 def main(request):
@@ -20,9 +20,8 @@ def main(request):
     data = request.get_json()
     print(data)
 
-    if "broadcast" in data:
-        # results = broadcast()
-        pass
+    if "tasks" in data:
+        results = create_tasks(data)
     elif "table" in data:
         job = Caresoft.factory(
             data["table"],
