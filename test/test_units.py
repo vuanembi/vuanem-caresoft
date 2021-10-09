@@ -5,7 +5,7 @@ from unittest.mock import Mock
 from main import main
 from models.models import TABLES
 
-START, END = ("2021-01-01", "2021-01-02")
+START, END = ("2021-10-09", "2021-10-10")
 
 
 def run(data):

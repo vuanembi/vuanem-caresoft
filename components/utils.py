@@ -1,7 +1,6 @@
 import os
 from datetime import datetime
 
-import jinja2
 from google.cloud import bigquery
 
 from sqlalchemy import create_engine
@@ -26,10 +25,6 @@ DATASET = "Caresoft"
 NOW = datetime.utcnow()
 DATE_FORMAT = "%Y-%m-%d"
 TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
-
-# Jinja2 Configs
-TEMPLATE_LOADER = jinja2.FileSystemLoader(searchpath="./templates")
-TEMPLATE_ENV = jinja2.Environment(loader=TEMPLATE_LOADER)
 
 ENGINE = create_engine(
     URL.create(
