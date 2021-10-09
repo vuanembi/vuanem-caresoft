@@ -12,7 +12,6 @@ from components.utils import (
     BASE_URL,
     HEADERS,
     COUNT,
-    TEMPLATE_ENV,
     BQ_CLIENT,
     DATASET,
     DETAILS_LIMIT,
@@ -66,13 +65,11 @@ class IncrementalGetter(Getter):
         else:
             end = NOW
             try:
-                template = TEMPLATE_ENV.get_template("read_max_incremental.sql.j2")
-                rendered_query = template.render(
-                    dataset=DATASET,
-                    table=self.table,
-                    incre_key=self.keys.get("incre_key"),
-                )
-                rows = BQ_CLIENT.query(rendered_query).result()
+                query = f"""
+                SELECT MAX({self.keys['incre_key']}) AS incre
+                FROM `{DATASET}.{self.table}`
+                """
+                rows = BQ_CLIENT.query(query).result()
                 row = [row for row in rows][0]
                 max_incre = row["incre"]
             except (KeyError, NotFound):
@@ -159,24 +156,36 @@ class DetailsGetter(Getter):
         return results
 
     def _get_detail_ids(self):
-        template = TEMPLATE_ENV.get_template("read_detail_ids.sql.j2")
-        with_ref = True
-        attempts = 0
-        while attempts < 2:
-            try:
-                query = template.render(
-                    dataset=DATASET,
-                    parent=self.parent.capitalize(),
-                    table=self.table,
-                    detail_id=self.detail_key,
-                    limit=DETAILS_LIMIT,
-                    with_ref=with_ref,
+        query = f"""
+        SELECT
+            s.`{self.detail_key}` AS id
+        FROM
+            `{DATASET}.{self.parent.capitalize()}` s
+        LEFT JOIN `{DATASET}.{self.table}` d
+            ON s.`{self.detail_key}` = d.`{self.detail_key}`
+        WHERE
+            (
+                (
+                    timestamp_trunc(timestamp_add(s.`updated_at`, INTERVAL 500 millisecond), SECOND)
+                    <>
+                    timestamp_trunc(timestamp_add(d.`updated_at`, INTERVAL 500 millisecond), SECOND)
+                    AND
+                    timestamp_trunc(s.`updated_at`, SECOND) 
+                    <>
+                    timestamp_trunc(d.`updated_at`, SECOND)
                 )
-                results = BQ_CLIENT.query(query).result()
-                break
-            except NotFound:
-                with_ref = False
-                attempts += 1
+                OR d.updated_at IS NULL
+            )
+            AND s.{self.detail_key} NOT IN (
+                SELECT
+                    {self.detail_key}
+                FROM
+                    `{DATASET}.Deleted{self.parent.capitalize()}`
+            )
+        LIMIT
+            {DETAILS_LIMIT}
+        """
+        results = BQ_CLIENT.query(query).result()
         rows = [dict(row.items()) for row in results]
         ids = [row["id"] for row in rows]
         return ids
