@@ -3,7 +3,7 @@ from abc import ABCMeta, abstractmethod
 from google.cloud import bigquery
 from sqlalchemy import delete, and_, insert
 
-from components.utils import BQ_CLIENT, DATASET, TEMPLATE_ENV, ENGINE
+from components.utils import BQ_CLIENT, DATASET, ENGINE
 
 class Loader(metaclass=ABCMeta):
     @abstractmethod
@@ -18,18 +18,13 @@ class BigQueryLoader(Loader):
 
     @property
     @abstractmethod
-    def load_target(self):
-        pass
-
-    @property
-    @abstractmethod
     def write_disposition(self):
         pass
 
     def _load(self, rows):
         output_rows = BQ_CLIENT.load_table_from_json(
             rows,
-            f"{DATASET}.{self.load_target}",
+            f"{DATASET}.{self.table}",
             job_config=bigquery.LoadJobConfig(
                 schema=self.schema,
                 create_disposition="CREATE_IF_NEEDED",
@@ -43,10 +38,6 @@ class BigQueryLoader(Loader):
 
 
 class BigQuerySimpleLoader(BigQueryLoader):
-    @property
-    def load_target(self):
-        return f"{self.table}"
-
     write_disposition = "WRITE_TRUNCATE"
 
     def load(self, rows):
@@ -59,10 +50,6 @@ class BigQueryIncrementalLoader(BigQueryLoader):
         super().__init__(model)
         self.keys = model.keys
 
-    @property
-    def load_target(self):
-        return f"_stage_{self.table}"
-
     write_disposition = "WRITE_APPEND"
 
     def load(self, rows):
@@ -71,24 +58,30 @@ class BigQueryIncrementalLoader(BigQueryLoader):
         return loads
 
     def _update(self):
-        template = TEMPLATE_ENV.get_template("update_from_stage.sql.j2")
-        rendered_query = template.render(
-            dataset=DATASET,
-            table=self.table,
-            p_key=",".join(self.keys["p_key"]),
-            incre_key=self.keys["incre_key"],
-        )
-        BQ_CLIENT.query(rendered_query).result()
+        query = f"""
+        CREATE OR REPLACE TABLE `{DATASET}`.`{self.table}` AS
+        SELECT * EXCEPT (`row_num`)
+        FROM
+            (
+                SELECT
+                    *,
+                    ROW_NUMBER() over (
+                        PARTITION BY {','.join(self.keys['p_key'])}
+                        ORDER BY {self.keys['incre_key']} DESC
+                    ) AS `row_num`
+                FROM
+                    `{DATASET}`.`{self.table}`
+            )
+        WHERE
+            `row_num` = 1
+        """
+        BQ_CLIENT.query(query).result()
 
 
 class BigQueryAppendLoader(BigQueryLoader):
     def __init__(self, model):
         super().__init__(model)
         self.keys = model.keys
-        
-    @property
-    def load_target(self):
-        return f"_stage_{self.table}"
 
     write_disposition = "WRITE_APPEND"
 
