@@ -16,11 +16,11 @@ BASE_URL = "https://api.caresoft.vn/VUANEM/api/v1"
 
 # API Calls Configs
 COUNT = 500
-DETAILS_LIMIT = 10
+DETAILS_LIMIT = 2500
 
 # BigQuery Configs
 BQ_CLIENT = bigquery.Client()
-DATASET = "Caresoft2"
+DATASET = "Caresoft"
 
 # Datetime Formatting
 NOW = datetime.utcnow()
