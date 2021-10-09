@@ -196,7 +196,6 @@ class DetailsGetter(Getter):
             rows = await asyncio.gather(*tasks)
         results_rows = [row for row in rows if row.get("deleted") is None]
         deleted_rows = [row for row in rows if row.get("deleted") is True]
-        deleted_rows = [row for row in rows if row.get("deleted") is None]
         return results_rows, deleted_rows
 
     async def _get_rows(self, session, row_id):
