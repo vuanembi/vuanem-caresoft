@@ -63,3 +63,34 @@ class TestPipelines:
             "table": table,
         }
         self.assert_pipelines(run(data))
+
+
+@pytest.mark.parametrize(
+    "tasks",
+    [
+        "static",
+        "incre",
+    ],
+)
+@pytest.mark.parametrize(
+    ("start", "end"),
+    [
+        (None, None),
+        (START, END),
+    ],
+    ids=[
+        "auto",
+        "manual",
+    ],
+)
+def test_tasks(tasks, start, end):
+    if tasks == 'static' and (start and end):
+        pytest.skip()
+    res = run(
+        {
+            "tasks": tasks,
+            "start": start,
+            "end": end,
+        }
+    )
+    assert res["tasks"] > 0

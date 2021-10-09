@@ -18,13 +18,13 @@ PARENT = TASKS_CLIENT.queue_path(**CLOUD_TASKS_PATH)
 
 
 def create_tasks(data):
-    mode = data["mode"]
-    if mode == "incre":
+    tasks = data["tasks"]
+    if tasks == "incre":
         tables = [*TABLES["incre"], *TABLES["details"]]
-    elif mode == "standard":
+    elif tasks == "static":
         tables = TABLES["static"]
     else:
-        raise ValueError(mode)
+        raise ValueError(tasks)
 
     payloads = [
         {
