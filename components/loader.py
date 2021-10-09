@@ -3,7 +3,7 @@ from abc import ABCMeta, abstractmethod
 from google.cloud import bigquery
 from sqlalchemy import delete, and_, insert
 
-from components.utils import BQ_CLIENT, DATASET, ENGINE
+from config import BQ_CLIENT, DATASET, ENGINE
 
 class Loader(metaclass=ABCMeta):
     @abstractmethod

@@ -8,7 +8,7 @@ import requests
 import aiohttp
 from google.api_core.exceptions import NotFound
 
-from components.utils import (
+from config import (
     BASE_URL,
     HEADERS,
     COUNT,

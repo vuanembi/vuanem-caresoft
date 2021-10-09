@@ -13,7 +13,7 @@ from components.loader import (
     PostgresIncrementalLoader,
 )
 
-from components.utils import TIMESTAMP_FORMAT
+from config import TIMESTAMP_FORMAT
 
 
 metadata = MetaData(schema="Caresoft")
