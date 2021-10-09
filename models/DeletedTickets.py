@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Boolean
+from sqlalchemy import Column, Integer
 
 from models.models import Caresoft
 from components.getter import DeletedGetter
@@ -18,12 +18,10 @@ class DeletedTickets(Caresoft):
 
     schema = [
         {"name": "ticket_id", "type": "INTEGER"},
-        {"name": "deleted", "type": "BOOLEAN"},
     ]
 
     columns = [
-        Column("ticket_id", Integer, primary_key=True),
-        Column("deleted", Boolean),
+        Column("ticket_id", Integer),
     ]
 
     def __init__(self, rows):
@@ -34,7 +32,6 @@ class DeletedTickets(Caresoft):
         return [
             {
                 "ticket_id": row["ticket_id"],
-                "deleted": row.get("deleted"),
             }
             for row in rows
         ]
