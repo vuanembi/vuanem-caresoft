@@ -1,5 +1,5 @@
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from google.cloud import bigquery
 
@@ -22,7 +22,7 @@ BQ_CLIENT = bigquery.Client()
 DATASET = "Caresoft"
 
 # Datetime Formatting
-NOW = datetime.utcnow()
+NOW = datetime.utcnow() + timedelta(hours=7)
 DATE_FORMAT = "%Y-%m-%d"
 TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
 
