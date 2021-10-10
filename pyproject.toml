@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "vuanem_caresoft"
-version = "0.1.0"
+version = "2.0"
 description = ""
 authors = ["HM <hieumdd@gmail.com>"]
 
@@ -9,7 +9,6 @@ python = "~3.9"
 requests = "^2.26.0"
 aiohttp = "^3.7.4"
 google-cloud-bigquery = "^2.27.1"
-google-cloud-pubsub = "^2.8.0"
 psycopg2-binary = "^2.9.1"
 SQLAlchemy = "^1.4.25"
 google-cloud-tasks = "^2.5.2"
