@@ -6,7 +6,6 @@ on:
 
 env:
   FUNCTION_NAME: vuanem_caresoft
-  REGION: us-central1
 
 jobs:
   setup:
@@ -25,11 +24,11 @@ jobs:
         run: >-
           gcloud functions deploy ${{ env.FUNCTION_NAME }}
           --entry-point=main
-          --region=${{ env.REGION }}
+          --region=us-central1
           --timeout=530
           --project=${{ secrets.PROJECT_ID }}
           --memory=4096MB
-          --runtime=python38
+          --runtime=python39
           --trigger-http
           --service-account=${{ secrets.GCP_SA }}
           --set-env-vars=ACCESS_TOKEN=${{ secrets.ACCESS_TOKEN }},PG_HOST=${{ secrets.PG_HOST }},PG_DB=${{ secrets.PG_DB }},PG_UID=${{ secrets.PG_UID }},PG_PWD="${{ secrets.PG_PWD }}",PROJECT_ID=${{ secrets.PROJECT_ID }},GCP_SA=${{ secrets.GCP_SA }},PUBLIC_URL=${{ secrets.PUBLIC_URL}},TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }},TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}
