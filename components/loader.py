@@ -95,7 +95,7 @@ class PostgresLoader(Loader):
         self.model = model.model
 
     def load(self, rows):
-        with ENGINE.connect().execution_options(autocommit=True) as conn:
+        with ENGINE.connect() as conn:
             loads = self._load(conn, rows)
         return {
             "load": "Postgres",
