@@ -9,8 +9,8 @@ from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 class TicketsCustomFields(Caresoft):
     getter = SimpleGetter
     loader = [
-        BigQuerySimpleLoader,
         PostgresStandardLoader,
+        BigQuerySimpleLoader,
     ]
     endpoint = "tickets/custom_fields"
     row_key = "custom_fields"

@@ -10,8 +10,8 @@ from components.loader import BigQueryIncrementalLoader, PostgresIncrementalLoad
 class TicketsDetails(Caresoft):
     getter = DetailsGetter
     loader = [
-        BigQueryIncrementalLoader,
         PostgresIncrementalLoader,
+        BigQueryIncrementalLoader,
     ]
     deleted_model = DeletedTickets
     endpoint = parent = "tickets"

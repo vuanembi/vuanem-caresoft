@@ -8,8 +8,8 @@ from components.loader import BigQueryIncrementalLoader, PostgresIncrementalLoad
 class Contacts(Caresoft):
     getter = IncrementalDetailsGetter
     loader = [
-        BigQueryIncrementalLoader,
         PostgresIncrementalLoader,
+        BigQueryIncrementalLoader,
     ]
     endpoint = row_key = "contacts"
     keys = {
@@ -27,7 +27,7 @@ class Contacts(Caresoft):
     ]
 
     columns = [
-        Column("id", Integer, primary_key=True),
+        Column("id", Integer),
         Column("updated_at", DateTime(timezone=True)),
         Column("gender", Integer),
         Column("created_at", DateTime(timezone=True)),

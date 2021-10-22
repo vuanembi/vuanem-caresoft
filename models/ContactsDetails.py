@@ -12,8 +12,8 @@ from components.loader import BigQueryIncrementalLoader, PostgresIncrementalLoad
 class ContactsDetails(Caresoft):
     getter = DetailsGetter
     loader = [
-        BigQueryIncrementalLoader,
         PostgresIncrementalLoader,
+        BigQueryIncrementalLoader,
     ]
     deleted_model = DeletedContacts
     endpoint = parent = "contacts"

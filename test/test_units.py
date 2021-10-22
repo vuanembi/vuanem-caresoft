@@ -5,7 +5,7 @@ from unittest.mock import Mock
 from main import main
 from models.models import TABLES
 
-START, END = ("2021-10-09", "2021-10-10")
+START, END = ("2021-10-16", "2021-10-22")
 
 
 def run(data):
@@ -39,11 +39,11 @@ class TestPipelines:
         ("start", "end"),
         [
             (None, None),
-            (START, END),
+            # (START, END),
         ],
         ids=[
             "auto",
-            "manual",
+            # "manual",
         ],
     )
     def test_incre(self, table, start, end):

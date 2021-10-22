@@ -9,8 +9,8 @@ from components.loader import BigQueryIncrementalLoader, PostgresIncrementalLoad
 class Tickets(Caresoft):
     getter = IncrementalDetailsGetter
     loader = [
-        BigQueryIncrementalLoader,
         PostgresIncrementalLoader,
+        BigQueryIncrementalLoader,
     ]
     endpoint = row_key = "tickets"
     keys = {
@@ -93,7 +93,7 @@ class Tickets(Caresoft):
     ]
 
     columns = [
-        Column("ticket_id", Integer, primary_key=True),
+        Column("ticket_id", Integer),
         Column("updated_at", DateTime(timezone=True)),
         Column("ticket_no", Integer),
         Column("ticket_subject", String),

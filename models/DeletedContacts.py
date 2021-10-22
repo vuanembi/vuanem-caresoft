@@ -9,8 +9,8 @@ class DeletedContacts(Caresoft):
     getter = DeletedGetter
     endpoint = row_key = None
     loader = [
-        BigQueryAppendLoader,
         PostgresIncrementalLoader,
+        BigQueryAppendLoader,
     ]
     keys = {
         "p_key": ["id"],

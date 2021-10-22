@@ -9,8 +9,8 @@ from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 class ContactsCustomFields(Caresoft):
     getter = SimpleGetter
     loader = [
-        BigQuerySimpleLoader,
         PostgresStandardLoader,
+        BigQuerySimpleLoader,
     ]
     endpoint = f"contacts/custom_fields"
     row_key = "custom_fields"

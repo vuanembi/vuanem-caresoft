@@ -8,8 +8,8 @@ from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 class Groups(Caresoft):
     getter = SimpleGetter
     loader = [
-        BigQuerySimpleLoader,
         PostgresStandardLoader,
+        BigQuerySimpleLoader,
     ]
     endpoint = row_key = "groups"
     schema = [

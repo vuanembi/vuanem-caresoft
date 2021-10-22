@@ -7,8 +7,8 @@ from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
 class Agents(Caresoft):
     getter = SimpleGetter
     loader = [
-        BigQuerySimpleLoader,
         PostgresStandardLoader,
+        BigQuerySimpleLoader,
     ]
     endpoint = row_key = "agents"
     schema = [
