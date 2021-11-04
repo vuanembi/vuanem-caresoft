@@ -64,7 +64,7 @@ class ContactsDetails(Caresoft):
     ]
 
     columns = [
-        Column("id", Integer, primary_key=True),
+        Column("id", Integer),
         Column("updated_at", DateTime(timezone=True)),
         Column("account_id", Integer),
         Column("username", String),

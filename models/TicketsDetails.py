@@ -133,7 +133,7 @@ class TicketsDetails(Caresoft):
     ]
 
     columns = [
-        Column("ticket_id", Integer, primary_key=True),
+        Column("ticket_id", Integer),
         Column("account_id", Integer),
         Column("sla_id", Integer),
         Column("ticket_no", Integer, index=True),
