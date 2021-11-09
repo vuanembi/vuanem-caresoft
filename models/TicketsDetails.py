@@ -108,7 +108,9 @@ class TicketsDetails(Caresoft):
             "name": "tags",
             "type": "RECORD",
             "mode": "REPEATED",
-            "fields": [{"name": "name", "type": "STRING"}],
+            "fields": [
+                {"name": "name", "type": "STRING"},
+            ],
         },
         {
             "name": "ccs",
@@ -193,30 +195,30 @@ class TicketsDetails(Caresoft):
                 "feedback_status": row.get("feedback_status"),
                 "sla": row.get("sla"),
                 "assignee": {
-                    "id": row.get("id"),
-                    "username": row.get("username"),
-                    "email": row.get("email"),
-                    "phone_no": row.get("phone_no"),
-                    "agent_id": row.get("agent_id"),
-                    "role_id": row.get("role_id"),
-                    "group_id": row.get("group_id"),
-                    "group_name": row.get("group_name"),
+                    "id": row["assignee"].get("id"),
+                    "username": row["assignee"].get("username"),
+                    "email": row["assignee"].get("email"),
+                    "phone_no": row["assignee"].get("phone_no"),
+                    "agent_id": row["assignee"].get("agent_id"),
+                    "role_id": row["assignee"].get("role_id"),
+                    "group_id": row["assignee"].get("group_id"),
+                    "group_name": row["assignee"].get("group_name"),
                 }
                 if row.get("assignee")
                 else {},
                 "requester": {
-                    "id": row.get("id"),
-                    "username": row.get("username"),
-                    "email": row.get("email"),
-                    "phone_no": row.get("phone_no"),
-                    "organization_id": row.get("organization_id"),
+                    "id": row["requester"].get("id"),
+                    "username": row["requester"].get("username"),
+                    "email": row["requester"].get("email"),
+                    "phone_no": row["requester"].get("phone_no"),
+                    "organization_id": row["requester"].get("organization_id"),
                 }
                 if row.get("requester")
                 else {},
                 "campaign": {
-                    "id": row.get("id"),
-                    "campaign_name": row.get("campaign_name"),
-                    "status": row.get("status"),
+                    "id": row["campaign"].get("id"),
+                    "campaign_name": row["campaign"].get("campaign_name"),
+                    "status": row["campaign"].get("status"),
                 }
                 if row.get("campaign")
                 else {},
