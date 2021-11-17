@@ -212,7 +212,7 @@ class DetailsGetter(Getter):
             f"{BASE_URL}/{self.endpoint}/{row_id}",
             headers=HEADERS,
         ) as r:
-            if r.status == 500:
+            if r.status == 500 or r.status == 404:
                 return {
                     self.detail_key: row_id,
                     "deleted": True,

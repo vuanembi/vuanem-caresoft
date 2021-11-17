@@ -13,7 +13,7 @@ class DeletedTickets(Caresoft):
         BigQueryAppendLoader,
     ]
     keys = {
-        "p_key": "ticket_id",
+        "p_key": ["ticket_id"],
     }
 
     schema = [
