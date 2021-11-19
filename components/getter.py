@@ -79,7 +79,7 @@ class IncrementalGetter(Getter):
 
     async def _get(self):
         url = f"{BASE_URL}/{self.endpoint}"
-        connector = aiohttp.TCPConnector(limit=50)
+        connector = aiohttp.TCPConnector(limit=3)
         timeout = aiohttp.ClientTimeout(total=540)
         async with aiohttp.ClientSession(
             connector=connector,
@@ -182,8 +182,7 @@ class DetailsGetter(Getter):
                 FROM
                     `{DATASET}.Deleted{self.parent.capitalize()}`
             )
-        LIMIT
-            {DETAILS_LIMIT}
+        LIMIT {DETAILS_LIMIT}
         """
         results = BQ_CLIENT.query(query).result()
         rows = [dict(row.items()) for row in results]
@@ -192,7 +191,7 @@ class DetailsGetter(Getter):
 
     async def _get(self):
         row_ids = self._get_detail_ids()
-        connector = aiohttp.TCPConnector(limit=50)
+        connector = aiohttp.TCPConnector(limit=3)
         timeout = aiohttp.ClientTimeout(total=540)
         async with aiohttp.ClientSession(
             connector=connector,
