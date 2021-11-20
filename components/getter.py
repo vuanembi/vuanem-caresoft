@@ -218,7 +218,7 @@ class DetailsGetter(Getter):
 
     async def _get_rows(self, session, throttler, row_id):
         async with throttler:
-            print(row_id)
+            # print(row_id)
             async with session.get(
                 f"{BASE_URL}/{self.endpoint}/{row_id}",
                 headers=HEADERS,
