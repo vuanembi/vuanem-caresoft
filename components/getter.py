@@ -1,3 +1,4 @@
+import time
 import sys
 import asyncio
 import math
@@ -7,6 +8,7 @@ from datetime import datetime
 import requests
 import aiohttp
 from google.api_core.exceptions import NotFound
+from asyncio_throttle import Throttler
 
 from config import (
     BASE_URL,
@@ -191,34 +193,47 @@ class DetailsGetter(Getter):
 
     async def _get(self):
         row_ids = self._get_detail_ids()
-        connector = aiohttp.TCPConnector(limit=3)
+        throttler = Throttler(rate_limit=20, period=1)
+        # row_ids_chunk = [row_ids[i: i+20] for i in range(0, len(row_ids), 20)]
+        # a = []
+        # for i, value in enumerate(row_ids_chunk):
+        connector = aiohttp.TCPConnector(limit=50)
         timeout = aiohttp.ClientTimeout(total=540)
         async with aiohttp.ClientSession(
             connector=connector,
             timeout=timeout,
         ) as session:
             tasks = [
-                asyncio.create_task(self._get_rows(session, row_id))
+                asyncio.create_task(self._get_rows(session, throttler, row_id))
                 for row_id in row_ids
             ]
             rows = await asyncio.gather(*tasks)
+            # a.append(rows)
+            # print(i)
+            # time.sleep(0.5)
+        # b = [i for j in a for i in j]
         results_rows = [row for row in rows if row.get("deleted") is None]
         deleted_rows = [row for row in rows if row.get("deleted") is True]
         return results_rows, deleted_rows
 
-    async def _get_rows(self, session, row_id):
-        async with session.get(
-            f"{BASE_URL}/{self.endpoint}/{row_id}",
-            headers=HEADERS,
-        ) as r:
-            if r.status == 500 or r.status == 404:
-                return {
-                    self.detail_key: row_id,
-                    "deleted": True,
-                }
-            else:
-                res = await r.json()
-                return res[self.row_key]
+    async def _get_rows(self, session, throttler, row_id):
+        async with throttler:
+            print(row_id)
+            async with session.get(
+                f"{BASE_URL}/{self.endpoint}/{row_id}",
+                headers=HEADERS,
+            ) as r:
+                if r.status == 500 or r.status == 404:
+                    return {
+                        self.detail_key: row_id,
+                        "deleted": True,
+                    }
+                elif r.status == 429:
+                    asyncio.sleep(0.5)
+                    return await self._get_rows(session, throttler, row_id)
+                else:
+                    res = await r.json()
+                    return res[self.row_key]
 
 
 class DeletedGetter(Getter):

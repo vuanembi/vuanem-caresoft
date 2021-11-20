@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from google.cloud import bigquery
 
 from sqlalchemy import create_engine
+from sqlalchemy.pool import NullPool
 from sqlalchemy.engine import URL
 
 # API Headers
@@ -15,7 +16,7 @@ BASE_URL = "https://api.caresoft.vn/VUANEM/api/v1"
 
 # API Calls Configs
 COUNT = 500
-DETAILS_LIMIT = 2000
+DETAILS_LIMIT = 5000
 
 # BigQuery Configs
 BQ_CLIENT = bigquery.Client()
@@ -38,4 +39,5 @@ def get_engine():
         ),
         executemany_mode="values",
         executemany_values_page_size=1000,
+        poolclass=NullPool,
     )
