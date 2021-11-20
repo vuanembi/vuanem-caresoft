@@ -132,12 +132,12 @@ TABLES = {
         "TicketsCustomFields",
     ],
     "incre": [
-        "Calls",
-        "Contacts",
-        "Tickets",
+        # "Calls",
+        # "Contacts",
+        # "Tickets",
     ],
     "details": [
-        "ContactsDetails",
+        # "ContactsDetails",
         "TicketsDetails",
     ],
 }
