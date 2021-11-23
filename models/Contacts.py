@@ -1,4 +1,4 @@
-from libs.caresoft import time_params_builder
+from libs.caresoft import updated_params_builder
 from models.base import incremental_pipelines
 
 Contacts = incremental_pipelines(
@@ -26,7 +26,7 @@ Contacts = incremental_pipelines(
             {"name": "phone_no", "type": "STRING"},
             {"name": "username", "type": "STRING"},
         ],
-        "params_builder": time_params_builder,
+        "params_builder": updated_params_builder,
         "keys": {
             "p_key": "id",
             "incre_key": "updated_at",
