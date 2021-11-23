@@ -33,16 +33,14 @@ def create_tasks(payloads):
         }
         for payload in payloads
     ]
-    responses = [
-        TASKS_CLIENT.create_task(
-            request={
-                "parent": PARENT,
-                "task": task,
-            }
-        )
-        for task in tasks
-    ]
-    return {
-        "tasks": len(responses),
-        "data": payloads,
-    }
+    return len(
+        [
+            TASKS_CLIENT.create_task(
+                request={
+                    "parent": PARENT,
+                    "task": task,
+                }
+            )
+            for task in tasks
+        ]
+    )

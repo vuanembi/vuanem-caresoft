@@ -4,7 +4,7 @@ from unittest.mock import Mock
 import pytest
 
 from main import main
-from controller.orchestrator import TABLES
+from controller.tasks import TABLES
 
 test_details_data: list[dict[str, Any]] = [
     {
@@ -43,12 +43,12 @@ test_details_data: list[dict[str, Any]] = [
 ]
 
 
-def run(data):
+def run(data: dict) -> dict:
     return main(Mock(get_json=Mock(return_value=data), args=data))["results"]
 
 
 class TestPipelines:
-    def assert_pipelines(self, res):
+    def assert_pipelines(self, res: dict):
         assert res["num_processed"] >= 0
         if res["num_processed"] > 0:
             assert res["num_processed"] == res["output_rows"]
@@ -74,7 +74,7 @@ class TestPipelines:
         ("start", "end"),
         [
             (None, None),
-            ("2021-11-01", "2021-11-02"),
+            ("2021-11-01", "2021-11-05"),
         ],
         ids=[
             "auto",
@@ -99,3 +99,19 @@ class TestPipelines:
     )
     def test_details(self, data):
         self.assert_pipelines(run(data))
+
+
+@pytest.mark.parametrize(
+    "tasks",
+    [
+        "dimensions",
+        "incremental",
+    ],
+)
+def test_tasks(tasks):
+    res = run(
+        {
+            "tasks": tasks,
+        }
+    )
+    assert res["tasks_created"] > 0
