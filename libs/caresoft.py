@@ -1,4 +1,5 @@
 import os
+import sys
 from typing import Callable
 from datetime import datetime
 import asyncio
@@ -16,6 +17,8 @@ TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
 API_COUNT = 500
 API_REQ_PER_SEC = 15
 
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 def get_simple(endpoint, row_key) -> list[dict]:
     with requests.get(f"{BASE_URL}/{endpoint}", headers=HEADERS) as r:

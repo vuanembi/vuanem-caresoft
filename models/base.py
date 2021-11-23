@@ -4,6 +4,7 @@ from datetime import datetime
 
 from libs.caresoft import get_simple, get_incremental, get_many_details
 from libs.bigquery import get_time_range, load_simple, load_incremental
+from libs.tasks import create_tasks
 
 
 class Caresoft(TypedDict):
@@ -58,30 +59,31 @@ def incremental_pipelines(model: CaresoftIncremental) -> Pipelines:
             *get_time_range(
                 dataset,
                 model["name"],
-                model["keys"]["p_key"],
+                model["keys"]["incre_key"],
                 request_data.get("start"),
                 request_data.get("end"),
             ),
         )
-        output_rows = load_incremental(
-            dataset,
-            model["name"],
-            model["schema"],
-            model["keys"],
-            model["transform"](data),
-        )
         ids = [i[model["keys"]["p_key"]] for i in data]
-        tasks = [
-            {
-                "table": f"{model['name']}Details",
-                "ids": ids[i : i + DETAIS_LIMIT],
-            }
-            for i in range(0, len(ids), DETAIS_LIMIT)
-        ]
-        # create_tasks()
         return {
             "table": model["name"],
-            "output_rows": output_rows,
+            "num_processed": len(data),
+            "output_rows": load_incremental(
+                dataset,
+                model["name"],
+                model["schema"],
+                model["keys"],
+                model["transform"](data),
+            ),
+            "task_created": create_tasks(
+                [
+                    {
+                        "table": f"{model['name']}Details",
+                        "ids": ids[i : i + DETAIS_LIMIT],
+                    }
+                    for i in range(0, len(ids), DETAIS_LIMIT)
+                ]
+            ),
         }
 
     return run
@@ -89,22 +91,22 @@ def incremental_pipelines(model: CaresoftIncremental) -> Pipelines:
 
 def details_pipelines(model: CaresoftDetails) -> Pipelines:
     def run(dataset, request_data) -> dict:
+        data = asyncio.run(
+            get_many_details(
+                model["endpoint"],
+                model["row_key"],
+                request_data["ids"],
+            )
+        )
         return {
             "table": model["name"],
+            "num_processed": len(data),
             "output_rows": load_incremental(
                 dataset,
                 model["name"],
                 model["schema"],
                 model["keys"],
-                model["transform"](
-                    asyncio.run(
-                        get_many_details(
-                            model["endpoint"],
-                            model["row_key"],
-                            request_data["ids"],
-                        )
-                    )
-                ),
+                model["transform"](data),
             ),
         }
 

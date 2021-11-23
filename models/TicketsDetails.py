@@ -4,7 +4,7 @@ TicketsDetails = details_pipelines(
     {
         "name": "TicketsDetails",
         "endpoint": "tickets",
-        "row_key": "tickets",
+        "row_key": "ticket",
         "transform": lambda rows: [
             {
                 "ticket_id": row.get("ticket_id"),

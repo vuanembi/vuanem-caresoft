@@ -1,11 +1,46 @@
-import pytest
-
+from typing import Any
 from unittest.mock import Mock
+
+import pytest
 
 from main import main
 from controller.orchestrator import TABLES
 
-START, END = ("2021-10-16", "2021-10-22")
+test_details_data: list[dict[str, Any]] = [
+    {
+        "table": "TicketsDetails",
+        "ids": [
+            264603737,
+            264603709,
+            264603635,
+            264603585,
+            264603520,
+            264603377,
+            264603370,
+            264603344,
+            264603328,
+        ],
+    },
+    {
+        "table": "ContactsDetails",
+        "ids": [
+            125095287,
+            125095286,
+            125095133,
+            125095021,
+            125094927,
+            125094920,
+            125094905,
+            125094859,
+            125094788,
+            125094699,
+            125094604,
+            125094555,
+            125094548,
+            125094468,
+        ],
+    },
+]
 
 
 def run(data):
@@ -57,67 +92,10 @@ class TestPipelines:
             )
         )
 
-
-#     @pytest.mark.parametrize(
-#         "table",
-#         TABLES["incre"],
-#     )
-#     @pytest.mark.parametrize(
-#         ("start", "end"),
-#         [
-#             (None, None),
-#             # (START, END),
-#         ],
-#         ids=[
-#             "auto",
-#             # "manual",
-#         ],
-#     )
-#     def test_incre(self, table, start, end):
-#         data = {
-#             "table": table,
-#             "start": start,
-#             "end": end,
-#         }
-#         self.assert_pipelines(run(data))
-
-#     @pytest.mark.parametrize(
-#         "table",
-#         TABLES["details"],
-#     )
-#     def test_details(self, table):
-#         data = {
-#             "table": table,
-#         }
-#         self.assert_pipelines(run(data))
-
-
-# @pytest.mark.parametrize(
-#     "tasks",
-#     [
-#         "static",
-#         "incre",
-#     ],
-# )
-# @pytest.mark.parametrize(
-#     ("start", "end"),
-#     [
-#         (None, None),
-#         (START, END),
-#     ],
-#     ids=[
-#         "auto",
-#         "manual",
-#     ],
-# )
-# def test_tasks(tasks, start, end):
-#     if tasks == 'static' and (start and end):
-#         pytest.skip()
-#     res = run(
-#         {
-#             "tasks": tasks,
-#             "start": start,
-#             "end": end,
-#         }
-#     )
-#     assert res["tasks"] > 0
+    @pytest.mark.parametrize(
+        "data",
+        test_details_data,
+        ids=[i["table"] for i in test_details_data],
+    )
+    def test_details(self, data):
+        self.assert_pipelines(run(data))
