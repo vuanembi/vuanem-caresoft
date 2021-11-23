@@ -1,34 +1,22 @@
-from sqlalchemy import Column, Integer, String, DateTime
+from models.base import simple_pipelines
 
-from models.models import Caresoft
-from components.getter import SimpleGetter
-from components.loader import BigQuerySimpleLoader, PostgresStandardLoader
-
-
-class Groups(Caresoft):
-    getter = SimpleGetter
-    loader = [
-        PostgresStandardLoader,
-        BigQuerySimpleLoader,
-    ]
-    endpoint = row_key = "groups"
-    schema = [
-        {"name": "group_id", "type": "INTEGER"},
-        {"name": "group_name", "type": "STRING"},
-        {"name": "created_at", "type": "TIMESTAMP"},
-    ]
-    columns = [
-        Column("group_id", Integer, primary_key=True, index=True),
-        Column("group_name", String),
-        Column("created_at", DateTime(timezone=True)),
-    ]
-
-    def transform(self, rows):
-        return [
+Groups = simple_pipelines(
+    {
+        "name": "Groups",
+        "endpoint": "groups",
+        "row_key": "groups",
+        "transform": lambda rows: [
             {
                 "group_id": row.get("group_id"),
                 "group_name": row.get("group_name"),
                 "created_at": row.get("created_at"),
             }
             for row in rows
-        ]
+        ],
+        "schema": [
+            {"name": "group_id", "type": "INTEGER"},
+            {"name": "group_name", "type": "STRING"},
+            {"name": "created_at", "type": "TIMESTAMP"},
+        ],
+    }
+)

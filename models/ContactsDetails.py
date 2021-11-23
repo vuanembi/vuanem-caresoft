@@ -1,91 +1,13 @@
 import json
 
-from sqlalchemy import Column, Integer, String, DateTime
-from sqlalchemy.dialects.postgresql import JSONB
+from models.base import details_pipelines
 
-from models.models import Caresoft
-from models.DeletedContacts import DeletedContacts
-from components.getter import DetailsGetter
-from components.loader import BigQueryIncrementalLoader, PostgresIncrementalLoader
-
-
-class ContactsDetails(Caresoft):
-    getter = DetailsGetter
-    loader = [
-        PostgresIncrementalLoader,
-        BigQueryIncrementalLoader,
-    ]
-    deleted_model = DeletedContacts
-    endpoint = parent = "contacts"
-    row_key = "contact"
-    detail_key = "id"
-    keys = {
-        "p_key": ["id"],
-        "incre_key": "updated_at",
-    }
-
-    schema = [
-        {"name": "id", "type": "INTEGER"},
-        {"name": "updated_at", "type": "TIMESTAMP"},
-        {"name": "account_id", "type": "INTEGER"},
-        {"name": "username", "type": "STRING"},
-        {"name": "email", "type": "STRING"},
-        {"name": "email2", "type": "STRING"},
-        {"name": "phone_no", "type": "STRING"},
-        {"name": "phone_no2", "type": "STRING"},
-        {"name": "phone_no3", "type": "STRING"},
-        {"name": "facebook", "type": "STRING"},
-        {"name": "gender", "type": "INTEGER"},
-        {"name": "organization_id", "type": "INTEGER"},
-        {"name": "created_at", "type": "TIMESTAMP"},
-        {"name": "role_id", "type": "INTEGER"},
-        {"name": "campaign_handler_id", "type": "INTEGER"},
-        {"name": "organization", "type": "STRING"},
-        {
-            "name": "custom_fields",
-            "type": "RECORD",
-            "mode": "REPEATED",
-            "fields": [
-                {"name": "id", "type": "INTEGER"},
-                {"name": "lable", "type": "STRING"},
-                {"name": "type", "type": "STRING"},
-                {"name": "value", "type": "STRING"},
-            ],
-        },
-        {
-            "name": "psid",
-            "type": "RECORD",
-            "mode": "REPEATED",
-            "fields": [
-                {"name": "page_id", "type": "STRING"},
-                {"name": "psid", "type": "INTEGER"},
-            ],
-        },
-    ]
-
-    columns = [
-        Column("id", Integer),
-        Column("updated_at", DateTime(timezone=True)),
-        Column("account_id", Integer),
-        Column("username", String),
-        Column("email", String),
-        Column("email2", String),
-        Column("phone_no", String),
-        Column("phone_no2", String),
-        Column("phone_no3", String),
-        Column("facebook", String),
-        Column("gender", Integer),
-        Column("organization_id", Integer),
-        Column("created_at", DateTime(timezone=True)),
-        Column("role_id", Integer),
-        Column("campaign_handler_id", Integer),
-        Column("organization", String),
-        Column("custom_fields", JSONB),
-        Column("psid", JSONB),
-    ]
-
-    def transform(self, rows):
-        return [
+ContactsDetails = details_pipelines(
+    {
+        "name": "ContactsDetails",
+        "endpoint": "contacts",
+        "row_key": "contact",
+        "transform": lambda rows: [
             {
                 "id": row.get("id"),
                 "updated_at": row.get("updated_at"),
@@ -125,4 +47,48 @@ class ContactsDetails(Caresoft):
                 else [],
             }
             for row in rows
-        ]
+        ],
+        "schema": [
+            {"name": "id", "type": "INTEGER"},
+            {"name": "updated_at", "type": "TIMESTAMP"},
+            {"name": "account_id", "type": "INTEGER"},
+            {"name": "username", "type": "STRING"},
+            {"name": "email", "type": "STRING"},
+            {"name": "email2", "type": "STRING"},
+            {"name": "phone_no", "type": "STRING"},
+            {"name": "phone_no2", "type": "STRING"},
+            {"name": "phone_no3", "type": "STRING"},
+            {"name": "facebook", "type": "STRING"},
+            {"name": "gender", "type": "INTEGER"},
+            {"name": "organization_id", "type": "INTEGER"},
+            {"name": "created_at", "type": "TIMESTAMP"},
+            {"name": "role_id", "type": "INTEGER"},
+            {"name": "campaign_handler_id", "type": "INTEGER"},
+            {"name": "organization", "type": "STRING"},
+            {
+                "name": "custom_fields",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {"name": "id", "type": "INTEGER"},
+                    {"name": "lable", "type": "STRING"},
+                    {"name": "type", "type": "STRING"},
+                    {"name": "value", "type": "STRING"},
+                ],
+            },
+            {
+                "name": "psid",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {"name": "page_id", "type": "STRING"},
+                    {"name": "psid", "type": "INTEGER"},
+                ],
+            },
+        ],
+        "keys": {
+            "p_key": "id",
+            "incre_key": "updated_at",
+        },
+    }
+)

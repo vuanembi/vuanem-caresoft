@@ -1,118 +1,12 @@
-from sqlalchemy import Column, Integer, String, DateTime
-from sqlalchemy.dialects.postgresql import JSONB
+from libs.caresoft import updated_params_builder
+from models.base import incremental_pipelines
 
-from models.models import Caresoft
-from components.getter import IncrementalDetailsGetter
-from components.loader import BigQueryIncrementalLoader, PostgresIncrementalLoader
-
-
-class Tickets(Caresoft):
-    getter = IncrementalDetailsGetter
-    loader = [
-        PostgresIncrementalLoader,
-        BigQueryIncrementalLoader,
-    ]
-    endpoint = row_key = "tickets"
-    keys = {
-        "p_key": ["ticket_id"],
-        "incre_key": "updated_at",
-    }
-    schema = [
-        {"name": "ticket_id", "type": "INTEGER"},
-        {"name": "updated_at", "type": "TIMESTAMP"},
-        {"name": "ticket_no", "type": "INTEGER"},
-        {"name": "ticket_subject", "type": "STRING"},
-        {"name": "created_at", "type": "TIMESTAMP"},
-        {"name": "ticket_status", "type": "STRING"},
-        {"name": "ticket_source", "type": "STRING"},
-        {"name": "ticket_priority", "type": "STRING"},
-        {"name": "requester_id", "type": "INTEGER"},
-        {"name": "assignee_id", "type": "INTEGER"},
-        {
-            "name": "assignee",
-            "type": "RECORD",
-            "fields": [
-                {"name": "id", "type": "INTEGER"},
-                {"name": "username", "type": "STRING"},
-                {"name": "email", "type": "STRING"},
-                {"name": "phone_no", "type": "STRING"},
-                {"name": "agent_id", "type": "STRING"},
-                {"name": "role_id", "type": "INTEGER"},
-                {"name": "group_id", "type": "INTEGER"},
-                {"name": "group_name", "type": "STRING"},
-            ],
-        },
-        {
-            "name": "requester",
-            "type": "RECORD",
-            "fields": [
-                {"name": "id", "type": "INTEGER"},
-                {"name": "username", "type": "STRING"},
-                {"name": "email", "type": "STRING"},
-                {"name": "phone_no", "type": "STRING"},
-                {"name": "organization_id", "type": "INTEGER"},
-            ],
-        },
-        {
-            "name": "custom_fields",
-            "type": "RECORD",
-            "mode": "REPEATED",
-            "fields": [
-                {"name": "id", "type": "INTEGER"},
-                {"name": "lable", "type": "STRING"},
-                {"name": "type", "type": "STRING"},
-                {"name": "value", "type": "STRING"},
-            ],
-        },
-        {
-            "name": "tags",
-            "type": "RECORD",
-            "mode": "REPEATED",
-            "fields": [{"name": "name", "type": "STRING"}],
-        },
-        {
-            "name": "ccs",
-            "type": "RECORD",
-            "mode": "REPEATED",
-            "fields": [
-                {"name": "id", "type": "INTEGER"},
-                {"name": "username", "type": "STRING"},
-                {"name": "email", "type": "STRING"},
-            ],
-        },
-        {
-            "name": "follows",
-            "type": "RECORD",
-            "mode": "REPEATED",
-            "fields": [
-                {"name": "id", "type": "INTEGER"},
-                {"name": "username", "type": "STRING"},
-                {"name": "email", "type": "STRING"},
-            ],
-        },
-    ]
-
-    columns = [
-        Column("ticket_id", Integer),
-        Column("updated_at", DateTime(timezone=True)),
-        Column("ticket_no", Integer),
-        Column("ticket_subject", String),
-        Column("created_at", DateTime(timezone=True)),
-        Column("ticket_status", String),
-        Column("ticket_source", String),
-        Column("ticket_priority", String),
-        Column("requester_id", Integer),
-        Column("assignee_id", Integer),
-        Column("assignee", JSONB),
-        Column("requester", JSONB),
-        Column("custom_fields", JSONB),
-        Column("tags", JSONB),
-        Column("ccs", JSONB),
-        Column("follows", JSONB),
-    ]
-
-    def transform(self, rows):
-        return [
+Tickets = incremental_pipelines(
+    {
+        "name": "Tickets",
+        "endpoint": "tickets",
+        "row_key": "tickets",
+        "transform": lambda rows: [
             {
                 "ticket_id": row.get("ticket_id"),
                 "updated_at": row.get("updated_at"),
@@ -187,4 +81,85 @@ class Tickets(Caresoft):
                 else [],
             }
             for row in rows
-        ]
+        ],
+        "schema": [
+            {"name": "ticket_id", "type": "INTEGER"},
+            {"name": "updated_at", "type": "TIMESTAMP"},
+            {"name": "ticket_no", "type": "INTEGER"},
+            {"name": "ticket_subject", "type": "STRING"},
+            {"name": "created_at", "type": "TIMESTAMP"},
+            {"name": "ticket_status", "type": "STRING"},
+            {"name": "ticket_source", "type": "STRING"},
+            {"name": "ticket_priority", "type": "STRING"},
+            {"name": "requester_id", "type": "INTEGER"},
+            {"name": "assignee_id", "type": "INTEGER"},
+            {
+                "name": "assignee",
+                "type": "RECORD",
+                "fields": [
+                    {"name": "id", "type": "INTEGER"},
+                    {"name": "username", "type": "STRING"},
+                    {"name": "email", "type": "STRING"},
+                    {"name": "phone_no", "type": "STRING"},
+                    {"name": "agent_id", "type": "STRING"},
+                    {"name": "role_id", "type": "INTEGER"},
+                    {"name": "group_id", "type": "INTEGER"},
+                    {"name": "group_name", "type": "STRING"},
+                ],
+            },
+            {
+                "name": "requester",
+                "type": "RECORD",
+                "fields": [
+                    {"name": "id", "type": "INTEGER"},
+                    {"name": "username", "type": "STRING"},
+                    {"name": "email", "type": "STRING"},
+                    {"name": "phone_no", "type": "STRING"},
+                    {"name": "organization_id", "type": "INTEGER"},
+                ],
+            },
+            {
+                "name": "custom_fields",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {"name": "id", "type": "INTEGER"},
+                    {"name": "lable", "type": "STRING"},
+                    {"name": "type", "type": "STRING"},
+                    {"name": "value", "type": "STRING"},
+                ],
+            },
+            {
+                "name": "tags",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [{"name": "name", "type": "STRING"}],
+            },
+            {
+                "name": "ccs",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {"name": "id", "type": "INTEGER"},
+                    {"name": "username", "type": "STRING"},
+                    {"name": "email", "type": "STRING"},
+                ],
+            },
+            {
+                "name": "follows",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {"name": "id", "type": "INTEGER"},
+                    {"name": "username", "type": "STRING"},
+                    {"name": "email", "type": "STRING"},
+                ],
+            },
+        ],
+        "params_builder": updated_params_builder,
+        "keys": {
+            "p_key": "ticket_id",
+            "incre_key": "updated_at",
+        },
+    }
+)

@@ -3,8 +3,10 @@ import json
 
 import requests
 
-from models.models import Caresoft
-from tasks import create_tasks
+from controller.pipelines import factory, run
+# from tasks import create_tasks
+
+DATASET = "Caresoft"
 
 
 def main(request):
@@ -21,14 +23,10 @@ def main(request):
     print(data)
 
     if "tasks" in data:
-        results = create_tasks(data)
+        # results = create_tasks(data)
+        pass
     elif "table" in data:
-        job = Caresoft.factory(
-            data["table"],
-            data.get("start"),
-            data.get("end"),
-        )
-        results = job.run()
+        results = run(DATASET, factory(data["table"]), data)
 
     response = {
         "pipelines": "Caresoft",
