@@ -46,7 +46,7 @@ Tickets = incremental_pipelines(
                         "type": custom_field.get("type"),
                         "value": custom_field.get("value"),
                     }
-                    for custom_field in row.get("custom_fields", [])
+                    for custom_field in row["custom_fields"]
                 ]
                 if row.get("custom_fields")
                 else [],
@@ -55,7 +55,7 @@ Tickets = incremental_pipelines(
                         "name": tag.get("name"),
                         "tags": tag.get("tags"),
                     }
-                    for tag in row.get("tags", [])
+                    for tag in row["tags"]
                 ]
                 if row.get("tags")
                 else [],
@@ -65,7 +65,7 @@ Tickets = incremental_pipelines(
                         "username": cc.get("username"),
                         "email": cc.get("email"),
                     }
-                    for cc in row.get("ccs", [])
+                    for cc in row["ccs"]
                 ]
                 if row.get("ccs")
                 else [],
@@ -75,7 +75,7 @@ Tickets = incremental_pipelines(
                         "username": cc.get("username"),
                         "email": cc.get("email"),
                     }
-                    for cc in row.get("follows", [])
+                    for cc in row["follows"]
                 ]
                 if row.get("follows")
                 else [],
