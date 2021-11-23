@@ -74,7 +74,7 @@ class TestPipelines:
         ("start", "end"),
         [
             (None, None),
-            ("2021-10-01", "2021-10-05"),
+            ("2021-10-01", "2021-10-02"),
         ],
         ids=[
             "auto",
