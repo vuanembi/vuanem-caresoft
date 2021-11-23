@@ -12,13 +12,13 @@ CLOUD_TASKS_PATH = (PROJECT_ID, "asia-southeast2", "vuanem-caresoft-tasks")
 PARENT = TASKS_CLIENT.queue_path(*CLOUD_TASKS_PATH)
 
 
-def create_tasks(payloads):
+def create_tasks(payloads: list[dict]) -> int:
     tasks = [
         {
             "name": TASKS_CLIENT.task_path(
                 *CLOUD_TASKS_PATH, task=f"{payload['table']}-{uuid.uuid4()}"
             ),
-            "dispatch_deadline": Duration().FromSeconds(530),
+            "dispatch_deadline": Duration().FromSeconds(530),  # type: ignore
             "http_request": {
                 "http_method": tasks_v2.HttpMethod.POST,
                 "url": os.getenv("PUBLIC_URL"),

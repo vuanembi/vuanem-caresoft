@@ -12,11 +12,12 @@ def main(request) -> dict:
         results = orchestrate(data['tasks'])
     elif "table" in data:
         results = run(DATASET, factory(data["table"]), data)
+    else:
+        raise ValueError(data)
 
     response = {
         "pipelines": "Caresoft",
         "results": results,
     }
-
     print(response)
     return response

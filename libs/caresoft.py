@@ -20,7 +20,8 @@ API_REQ_PER_SEC = 15
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-def get_simple(endpoint, row_key) -> list[dict]:
+
+def get_simple(endpoint: str, row_key: str) -> list[dict]:
     with requests.get(f"{BASE_URL}/{endpoint}", headers=HEADERS) as r:
         return r.json()[row_key]
 
@@ -84,15 +85,20 @@ async def get_many_details(endpoint: str, row_key: str, ids: list[int]) -> list[
         rows = await asyncio.gather(*tasks)
         return [i for i in rows if i]
 
-def params_builder(start_key: str, end_key: str) -> Callable[[datetime, datetime], dict]:
+
+def params_builder(
+    start_key: str,
+    end_key: str,
+) -> Callable[[datetime, datetime], dict]:
     def build(start: datetime, end: datetime) -> dict:
         return {
             start_key: start.strftime(TIMESTAMP_FORMAT),
             end_key: end.strftime(TIMESTAMP_FORMAT),
             "count": API_COUNT,
         }
+
     return build
+
 
 time_params_builder = params_builder("start_time_since", "start_time_to")
 updated_params_builder = params_builder("updated_since", "updated_to")
-

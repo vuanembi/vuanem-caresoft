@@ -7,10 +7,8 @@ on:
   workflow_dispatch:
 
 env:
-  # FUNCTION_NAME: vuanem_caresoft
   PROJECT_ID: voltaic-country-280607
   GCP_SA: bivuanem@voltaic-country-280607.iam.gserviceaccount.com
-  # PUBLIC_URL: https://us-central1-voltaic-country-280607.cloudfunctions.net/vuanem_caresoft
 
 jobs:
   deploy:
@@ -29,13 +27,13 @@ jobs:
         if: endsWith(github.ref, '/dev')
         run: |
           echo "FUNCTION_NAME=vuanem-caresoft-dev" >> $GITHUB_ENV
-          echo "PUBLIC_URL=https://us-central1-voltaic-country-280607.cloudfunctions.net/vuanem_caresoft_dev" >> $GITHUB_ENV
+          echo "PUBLIC_URL=https://us-central1-voltaic-country-280607.cloudfunctions.net/vuanem-caresoft-dev" >> $GITHUB_ENV
 
       - name: Set env vars (prod)
         if: endsWith(github.ref, '/master')
         run: |
           echo "FUNCTION_NAME=vuanem-caresoft" >> $GITHUB_ENV
-          echo "PUBLIC_URL=https://us-central1-voltaic-country-280607.cloudfunctions.net/vuanem_caresoft" >> $GITHUB_ENV
+          echo "PUBLIC_URL=https://us-central1-voltaic-country-280607.cloudfunctions.net/vuanem-caresoft" >> $GITHUB_ENV
 
       - name: Deploy to Cloud Functions
         run: >-

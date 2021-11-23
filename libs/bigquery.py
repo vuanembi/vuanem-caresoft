@@ -20,7 +20,7 @@ def get_time_range(
     else:
         _end = datetime.utcnow()
         rows = BQ_CLIENT.query(
-            f"""SELECT MAX({incre_key}) AS incre FROM {dataset}.{table}"""
+            f"SELECT MAX({incre_key}) AS incre FROM {dataset}.{table}"
         ).result()
         _start = [row for row in rows][0]["incre"]
     return _start, _end

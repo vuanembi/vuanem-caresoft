@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "vuanem_caresoft"
-version = "2.0"
+version = "3.0"
 description = ""
 authors = ["HM <hieumdd@gmail.com>"]
 
@@ -9,8 +9,6 @@ python = "~3.9"
 requests = "^2.26.0"
 aiohttp = "^3.7.4"
 google-cloud-bigquery = "^2.27.1"
-psycopg2-binary = "^2.9.1"
-SQLAlchemy = "^1.4.25"
 google-cloud-tasks = "^2.5.2"
 asyncio-throttle = "^1.0.2"
 
@@ -30,4 +28,4 @@ addopts = "-p no:warnings -s --durations=0"
 testpaths = [
     "test",
 ]
-# timeout = 530
+timeout = 530

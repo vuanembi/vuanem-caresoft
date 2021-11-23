@@ -19,7 +19,7 @@ TABLES = {
 }
 
 
-def orchestrate(tasks):
+def orchestrate(tasks: str) -> dict:
     return {
         "tasks": tasks,
         "tasks_created": create_tasks(
