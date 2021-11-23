@@ -581,6 +581,25 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "types-futures"
+version = "3.3.1"
+description = "Typing stubs for futures"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "types-protobuf"
+version = "3.18.1"
+description = "Typing stubs for protobuf"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+types-futures = "*"
+
+[[package]]
 name = "types-requests"
 version = "2.26.0"
 description = "Typing stubs for requests"
@@ -624,7 +643,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.9"
-content-hash = "569a6ab44acd55ea69e1363bd204d1fa445947e652468d9b54d2626294796c50"
+content-hash = "94b661463b9fd1d0d237f1da916ca4ed2f856bffd4d89f3f2b947d0d68be372e"
 
 [metadata.files]
 aiohttp = [
@@ -1222,6 +1241,14 @@ toml = [
 tomli = [
     {file = "tomli-1.2.2-py3-none-any.whl", hash = "sha256:f04066f68f5554911363063a30b108d2b5a5b1a010aa8b6132af78489fe3aade"},
     {file = "tomli-1.2.2.tar.gz", hash = "sha256:c6ce0015eb38820eaf32b5db832dbc26deb3dd427bd5f6556cf0acac2c214fee"},
+]
+types-futures = [
+    {file = "types-futures-3.3.1.tar.gz", hash = "sha256:bbdad92cec642693bac10fbbecf834776009db7782d91dc293bdd123be73186d"},
+    {file = "types_futures-3.3.1-py3-none-any.whl", hash = "sha256:b4bb97d1a028679929a8da2e9e63a5caccc6f68d0d6a456c41fd00e32764f144"},
+]
+types-protobuf = [
+    {file = "types-protobuf-3.18.1.tar.gz", hash = "sha256:6696bf3cabc51dcc076e8de025c405dbdea7488c5268c2febd14527dac82c233"},
+    {file = "types_protobuf-3.18.1-py3-none-any.whl", hash = "sha256:364f6437238a99a2f868bc60777c6a149d8540c902e4dba581ad71e5687735c8"},
 ]
 types-requests = [
     {file = "types-requests-2.26.0.tar.gz", hash = "sha256:df5ec8c34b413a42ebb38e4f96bdeb68090b875bdfcc5138dc82989c95445883"},

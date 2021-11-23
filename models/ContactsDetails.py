@@ -32,7 +32,7 @@ ContactsDetails = details_pipelines(
                         "type": custom_field.get("type"),
                         "value": custom_field.get("value"),
                     }
-                    for custom_field in row.get("custom_fields", [])
+                    for custom_field in row["custom_fields"]
                 ]
                 if row.get("custom_fields")
                 else [],
@@ -41,9 +41,9 @@ ContactsDetails = details_pipelines(
                         "page_id": psid.get("page_id"),
                         "psid": psid.get("psid"),
                     }
-                    for psid in row.get("psid", [])
+                    for psid in row["psid"]
                 ]
-                if row.get("psid")
+                if row.get("psid", [])
                 else [],
             }
             for row in rows
