@@ -1,7 +1,6 @@
-from libs.caresoft import updated_params_builder
-from models.base import incremental_pipelines
+from models.base import incremental_updated_pipelines
 
-Tickets = incremental_pipelines(
+Tickets = incremental_updated_pipelines(
     {
         "name": "Tickets",
         "endpoint": "tickets",
@@ -19,23 +18,23 @@ Tickets = incremental_pipelines(
                 "requester_id": row.get("requester_id"),
                 "assignee_id": row.get("assignee_id"),
                 "assignee": {
-                    "id": row['assignee'].get("id"),
-                    "username": row['assignee'].get("username"),
-                    "email": row['assignee'].get("email"),
-                    "phone_no": row['assignee'].get("phone_no"),
-                    "agent_id": row['assignee'].get("agent_id"),
-                    "role_id": row['assignee'].get("role_id"),
-                    "group_id": row['assignee'].get("group_id"),
-                    "group_name": row['assignee'].get("group_name"),
+                    "id": row["assignee"].get("id"),
+                    "username": row["assignee"].get("username"),
+                    "email": row["assignee"].get("email"),
+                    "phone_no": row["assignee"].get("phone_no"),
+                    "agent_id": row["assignee"].get("agent_id"),
+                    "role_id": row["assignee"].get("role_id"),
+                    "group_id": row["assignee"].get("group_id"),
+                    "group_name": row["assignee"].get("group_name"),
                 }
                 if row.get("assignee", {})
                 else {},
                 "requester": {
-                    "id": row['requester'].get("id"),
-                    "username": row['requester'].get("username"),
-                    "email": row['requester'].get("email"),
-                    "phone_no": row['requester'].get("phone_no"),
-                    "organization_id": row['requester'].get("organization_id"),
+                    "id": row["requester"].get("id"),
+                    "username": row["requester"].get("username"),
+                    "email": row["requester"].get("email"),
+                    "phone_no": row["requester"].get("phone_no"),
+                    "organization_id": row["requester"].get("organization_id"),
                 }
                 if row.get("requester", {})
                 else {},
@@ -135,7 +134,7 @@ Tickets = incremental_pipelines(
                 "mode": "REPEATED",
                 "fields": [
                     {"name": "name", "type": "STRING"},
-                    {"name": "tags", "type": "STRING"}
+                    {"name": "tags", "type": "STRING"},
                 ],
             },
             {
@@ -159,7 +158,6 @@ Tickets = incremental_pipelines(
                 ],
             },
         ],
-        "params_builder": updated_params_builder,
         "keys": {
             "p_key": "ticket_id",
             "incre_key": "updated_at",

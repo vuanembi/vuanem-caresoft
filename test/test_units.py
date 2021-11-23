@@ -73,11 +73,11 @@ class TestPipelines:
     @pytest.mark.parametrize(
         ("start", "end"),
         [
-            (None, None),
+            # (None, None),
             ("2021-10-01", "2021-10-02"),
         ],
         ids=[
-            "auto",
+            # "auto",
             "manual",
         ],
     )

@@ -1,7 +1,7 @@
 from controller.pipelines import factory, run
 from controller.tasks import orchestrate
 
-DATASET = "IP_Caresoft"
+DATASET = "Caresoft"
 
 
 def main(request) -> dict:

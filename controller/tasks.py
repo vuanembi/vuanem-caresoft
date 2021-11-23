@@ -11,6 +11,7 @@ TABLES = {
     "incremental": [
         "Tickets",
         "Contacts",
+        "Calls",
     ],
     "details": [
         "TicketsDetails",

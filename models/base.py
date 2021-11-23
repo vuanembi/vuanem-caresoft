@@ -2,7 +2,13 @@ from typing import Callable, TypedDict
 import asyncio
 from datetime import datetime
 
-from libs.caresoft import get_simple, get_incremental, get_many_details
+from libs.caresoft import (
+    get_simple,
+    get_incremental,
+    get_many_details,
+    updated_params_builder,
+    time_params_builder,
+)
 from libs.bigquery import get_time_range, load_simple, load_incremental
 from libs.tasks import create_tasks
 
@@ -21,11 +27,6 @@ class Keys(TypedDict):
 
 
 class CaresoftIncremental(Caresoft):
-    params_builder: Callable[[datetime, datetime], dict]
-    keys: Keys
-
-
-class CaresoftDetails(Caresoft):
     keys: Keys
 
 
@@ -50,21 +51,42 @@ def simple_pipelines(model: Caresoft) -> Pipelines:
     return run
 
 
-def incremental_pipelines(model: CaresoftIncremental) -> Pipelines:
+def get_incremental_model(
+    params_builder: Callable[[datetime, datetime], dict],
+    dataset: str,
+    model: CaresoftIncremental,
+    request_data: dict,
+) -> list[dict]:
+    return get_incremental(
+        model["endpoint"],
+        model["row_key"],
+        params_builder,
+        *get_time_range(
+            dataset,
+            model["name"],
+            model["keys"]["incre_key"],
+            request_data.get("start"),
+            request_data.get("end"),
+        ),
+    )
+
+
+def create_details_tasks(model: CaresoftIncremental, data: list[dict]):
+    ids = [i[model["keys"]["p_key"]] for i in data]
+    return create_tasks(
+        [
+            {
+                "table": f"{model['name']}Details",
+                "ids": ids[i : i + DETAIS_LIMIT],
+            }
+            for i in range(0, len(ids), DETAIS_LIMIT)
+        ]
+    )
+
+
+def incremental_time_pipelines(model: CaresoftIncremental) -> Pipelines:
     def run(dataset, request_data) -> dict:
-        data = get_incremental(
-            model["endpoint"],
-            model["row_key"],
-            model["params_builder"],
-            *get_time_range(
-                dataset,
-                model["name"],
-                model["keys"]["incre_key"],
-                request_data.get("start"),
-                request_data.get("end"),
-            ),
-        )
-        ids = [i[model["keys"]["p_key"]] for i in data]
+        data = get_incremental_model(time_params_builder, dataset, model, request_data)
         return {
             "table": model["name"],
             "num_processed": len(data),
@@ -75,21 +97,36 @@ def incremental_pipelines(model: CaresoftIncremental) -> Pipelines:
                 model["keys"],
                 model["transform"](data),
             ),
-            "task_created": create_tasks(
-                [
-                    {
-                        "table": f"{model['name']}Details",
-                        "ids": ids[i : i + DETAIS_LIMIT],
-                    }
-                    for i in range(0, len(ids), DETAIS_LIMIT)
-                ]
-            ),
         }
 
     return run
 
 
-def details_pipelines(model: CaresoftDetails) -> Pipelines:
+def incremental_updated_pipelines(model: CaresoftIncremental) -> Pipelines:
+    def run(dataset, request_data) -> dict:
+        data = get_incremental_model(
+            updated_params_builder,
+            dataset,
+            model,
+            request_data,
+        )
+        return {
+            "table": model["name"],
+            "num_processed": len(data),
+            "output_rows": load_incremental(
+                dataset,
+                model["name"],
+                model["schema"],
+                model["keys"],
+                model["transform"](data),
+            ),
+            "task_created": create_details_tasks(model, data),
+        }
+
+    return run
+
+
+def details_pipelines(model: CaresoftIncremental) -> Pipelines:
     def run(dataset, request_data) -> dict:
         data = asyncio.run(
             get_many_details(
@@ -98,6 +135,7 @@ def details_pipelines(model: CaresoftDetails) -> Pipelines:
                 request_data["ids"],
             )
         )
+        data
         return {
             "table": model["name"],
             "num_processed": len(data),
