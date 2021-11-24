@@ -170,6 +170,7 @@ TicketsDetails = details_pipelines(
                 "mode": "REPEATED",
                 "fields": [
                     {"name": "name", "type": "STRING"},
+                    {"name": "tags", "type": "STRING"},
                 ],
             },
             {
