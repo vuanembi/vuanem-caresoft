@@ -73,12 +73,12 @@ class TestPipelines:
     @pytest.mark.parametrize(
         ("start", "end"),
         [
-            # (None, None),
-            ("2021-10-01", "2021-10-02"),
+            (None, None),
+            # ("2021-10-01", "2021-10-02"),
         ],
         ids=[
-            # "auto",
-            "manual",
+            "auto",
+            # "manual",
         ],
     )
     def test_incremental(self, table, start, end):

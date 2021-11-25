@@ -135,7 +135,6 @@ def details_pipelines(model: CaresoftIncremental) -> Pipelines:
                 request_data["ids"],
             )
         )
-        data
         return {
             "table": model["name"],
             "num_processed": len(data),
