@@ -10,7 +10,7 @@ from libs.caresoft import (
     time_params_builder,
 )
 from libs.bigquery import get_time_range, load_simple, load_incremental
-from libs.tasks import create_tasks
+from libs.tasks import create_details_tasks
 
 
 class Caresoft(TypedDict):
@@ -71,9 +71,9 @@ def get_incremental_model(
     )
 
 
-def create_details_tasks(model: CaresoftIncremental, data: list[dict]):
+def enqueue_details_tasks(model: CaresoftIncremental, data: list[dict]):
     ids = [i[model["keys"]["p_key"]] for i in data]
-    return create_tasks(
+    return create_details_tasks(
         [
             {
                 "table": f"{model['name']}Details",
@@ -120,7 +120,7 @@ def incremental_updated_pipelines(model: CaresoftIncremental) -> Pipelines:
                 model["keys"],
                 model["transform"](data),
             ),
-            "task_created": create_details_tasks(model, data),
+            "task_created": enqueue_details_tasks(model, data),
         }
 
     return run
