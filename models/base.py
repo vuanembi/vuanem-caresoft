@@ -57,7 +57,7 @@ def get_incremental_model(
     model: CaresoftIncremental,
     request_data: dict,
 ) -> list[dict]:
-    return get_incremental(
+    return asyncio.run(get_incremental(
         model["endpoint"],
         model["row_key"],
         params_builder,
@@ -68,7 +68,7 @@ def get_incremental_model(
             request_data.get("start"),
             request_data.get("end"),
         ),
-    )
+    ))
 
 
 def enqueue_details_tasks(model: CaresoftIncremental, data: list[dict]):

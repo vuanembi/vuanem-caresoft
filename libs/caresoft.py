@@ -1,8 +1,9 @@
 import os
 import sys
-from typing import Callable
+from typing import Callable, Optional
 from datetime import datetime
 import asyncio
+import math
 
 import requests
 import aiohttp
@@ -26,28 +27,60 @@ def get_simple(endpoint: str, row_key: str) -> list[dict]:
         return r.json()[row_key]
 
 
-def get_incremental(
+async def get_incremental(
     endpoint: str,
     row_key: str,
     params_builder: Callable[[datetime, datetime], dict],
     start: datetime,
     end: datetime,
 ) -> list[dict]:
-    def get(session: requests.Session, page: int = 1):
-        with session.get(
+    throttler = Throttler(rate_limit=API_REQ_PER_SEC, period=1)
+    timeout = aiohttp.ClientTimeout(total=540)
+    async with aiohttp.ClientSession(timeout=timeout) as session:
+        first_page = await get_one_incremental(
+            session,
+            throttler,
+            endpoint,
+            row_key,
+            params_builder(start, end),
+        )
+        num_found = first_page["numFound"]
+        tasks = [
+            asyncio.create_task(
+                get_one_incremental(
+                    session,
+                    throttler,
+                    endpoint,
+                    row_key,
+                    params_builder(start, end),
+                    page,
+                )
+            )
+            for page in range(1, int(math.ceil(num_found / API_COUNT)) + 1)
+        ]
+        rows = await asyncio.gather(*tasks)
+        return [i for j in [i[row_key] for i in rows] for i in j]
+
+
+async def get_one_incremental(
+    session: aiohttp.ClientSession,
+    throttler: Throttler,
+    endpoint: str,
+    row_key: str,
+    params: dict,
+    page: int = 1,
+) -> dict:
+    async with throttler:
+        async with session.get(
             f"{BASE_URL}/{endpoint}",
-            params={
-                **params_builder(start, end),
-                "page": page,
-            },
+            params={**params, "page": page},
             headers=HEADERS,
         ) as r:
-            res = r.json()
-        data = res[row_key]
-        return data + get(session, page + 1) if data else data
-
-    with requests.Session() as session:
-        return get(session)
+            if r.status == 429:
+                await asyncio.sleep(0.5)
+                return await get_one_incremental(session, throttler, endpoint, row_key, params, page) 
+            else:
+                return await r.json()
 
 
 async def get_one_details(
@@ -56,7 +89,7 @@ async def get_one_details(
     endpoint: str,
     row_key: str,
     id: int,
-):
+) -> Optional[dict]:
     async with throttler:
         async with session.get(
             f"{BASE_URL}/{endpoint}/{id}",
@@ -66,7 +99,7 @@ async def get_one_details(
                 return None
             elif r.status == 429:
                 await asyncio.sleep(0.5)
-                return get_one_details(session, throttler, endpoint, row_key, id)
+                return await get_one_details(session, throttler, endpoint, row_key, id)
             else:
                 res = await r.json()
                 return res[row_key]
