@@ -16,7 +16,8 @@ HEADERS = {
 BASE_URL = "https://api.caresoft.vn/VUANEM/api/v1"
 TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
 API_COUNT = 500
-API_REQ_PER_SEC = 15
+LISTING_API_REQ_PER_SEC = 6
+DETAILS_API_REQ_PER_SEC = 12
 
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
@@ -34,7 +35,7 @@ async def get_incremental(
     start: datetime,
     end: datetime,
 ) -> list[dict]:
-    throttler = Throttler(rate_limit=API_REQ_PER_SEC, period=1)
+    throttler = Throttler(rate_limit=LISTING_API_REQ_PER_SEC, period=1)
     timeout = aiohttp.ClientTimeout(total=540)
     async with aiohttp.ClientSession(timeout=timeout) as session:
         first_page = await get_one_incremental(
@@ -106,7 +107,7 @@ async def get_one_details(
 
 
 async def get_many_details(endpoint: str, row_key: str, ids: list[int]) -> list[dict]:
-    throttler = Throttler(rate_limit=API_REQ_PER_SEC, period=1)
+    throttler = Throttler(rate_limit=DETAILS_API_REQ_PER_SEC, period=1)
     timeout = aiohttp.ClientTimeout(total=540)
     async with aiohttp.ClientSession(timeout=timeout) as session:
         tasks = [

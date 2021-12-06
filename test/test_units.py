@@ -75,11 +75,11 @@ class TestPipelines:
         ("start", "end"),
         [
             (None, None),
-            # ("2021-10-01", "2021-10-02"),
+            ("2021-11-15", "2021-12-01"),
         ],
         ids=[
             "auto",
-            # "manual",
+            "manual",
         ],
     )
     def test_incremental(self, table, start, end):
