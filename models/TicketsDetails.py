@@ -38,6 +38,13 @@ TicketsDetails = details_pipelines(
                 }
                 if row.get("requester", {})
                 else {},
+                "campaign": {
+                    "id": row["campaign"].get("id"),
+                    "campaign_name": row["campaign"].get("campaign_name"),
+                    "status": row["campaign"].get("status"),
+                }
+                if row.get("campaign", {})
+                else {},
                 "custom_fields": [
                     {
                         "id": custom_field.get("id"),
