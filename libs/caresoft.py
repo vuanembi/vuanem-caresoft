@@ -79,8 +79,11 @@ async def get_one_incremental(
         ) as r:
             if r.status == 429:
                 await asyncio.sleep(0.5)
-                return await get_one_incremental(session, throttler, endpoint, row_key, params, page) 
+                return await get_one_incremental(
+                    session, throttler, endpoint, row_key, params, page
+                )
             else:
+                r.raise_for_status()
                 return await r.json()
 
 

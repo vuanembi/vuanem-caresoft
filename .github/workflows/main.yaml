@@ -42,7 +42,7 @@ jobs:
           --region=us-central1
           --timeout=530
           --project=${{ env.PROJECT_ID }}
-          --memory=4096MB
+          --memory=8192MB
           --runtime=python39
           --trigger-http
           --service-account=${{ env.GCP_SA }}
