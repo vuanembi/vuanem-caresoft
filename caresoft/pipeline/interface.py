@@ -14,3 +14,4 @@ class Pipeline:
     schema: list[dict[str, Any]]
     id_key: Optional[str] = None
     cursor_key: Optional[str] = None
+    callback_fn: Callable[[Data], Optional[dict[str, Any]]] = lambda *args: None

@@ -7,7 +7,7 @@ from caresoft.repo import Data
 from db.bigquery import load
 
 
-def load_callback_service(pipeline, callback_fn):
+def load_callback_service(pipeline: Pipeline):
     def _svc(rows: Data) -> dict[str, Any]:
         return {
             "output_rows": load(
@@ -17,7 +17,7 @@ def load_callback_service(pipeline, callback_fn):
                 pipeline.cursor_key,
                 rows,
             ),
-            "callback_res": callback_fn(rows),
+            "callback_res": pipeline.callback_fn(pipeline.table, rows),
         }
     
     return _svc
@@ -25,6 +25,8 @@ def load_callback_service(pipeline, callback_fn):
 
 def pipeline_service(pipeline: Pipeline, body: dict[str, Any]):
     return compose(
-        pipeline.params_fn,
+        load_callback_service(pipeline),
+        pipeline.transform,
         pipeline.get,
+        pipeline.params_fn,
     )(body)

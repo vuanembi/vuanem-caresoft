@@ -11,6 +11,7 @@ TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
 API_COUNT = 500
 LISTING_API_REQ_PER_SEC = 6
 DETAILS_API_REQ_PER_SEC = 12
+DETAILS_LIMIT = 2500
 
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
