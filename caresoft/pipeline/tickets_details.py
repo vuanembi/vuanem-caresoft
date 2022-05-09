@@ -204,4 +204,5 @@ pipeline = Pipeline(
     ],
     id_key="ticket_id",
     cursor_key="updated_at",
+    partition_key="created_at",
 )

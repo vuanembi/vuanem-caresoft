@@ -63,4 +63,5 @@ pipeline = Pipeline(
     ],
     id_key="id",
     cursor_key="start_time",
+    partition_key="start_time",
 )

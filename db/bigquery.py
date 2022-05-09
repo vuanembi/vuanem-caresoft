@@ -18,43 +18,28 @@ def load(
     table: str,
     schema: list[dict],
     id_key: Optional[str],
-    cursor_key: Optional[str],
+    partition_key: Optional[str],
     rows: list[dict],
 ) -> int:
+    _table = table if not partition_key else f"p_{table}"
     output_rows = (
         client.load_table_from_json(
             rows,
-            f"{DATASET}.{table}",
+            f"{DATASET}.{_table}",
             job_config=bigquery.LoadJobConfig(
                 schema=schema,
                 create_disposition="CREATE_IF_NEEDED",
                 write_disposition="WRITE_APPEND" if id_key else "WRITE_TRUNCATE",
+                time_partitioning=bigquery.TimePartitioning(
+                    type_="DAY",
+                    field=partition_key,
+                )
+                if partition_key
+                else None,
             ),
         )
         .result()
         .output_rows
     )
 
-    if id_key and cursor_key:
-        _update(table, id_key, cursor_key)
-
     return output_rows
-
-
-def _update(table: str, id_key: str, cursor_key: str) -> None:
-    client.query(
-        f"""
-        CREATE OR REPLACE TABLE {DATASET}.{table} AS
-        SELECT * EXCEPT (row_num)
-        FROM
-        (
-            SELECT
-                *,
-                ROW_NUMBER() over (
-                    PARTITION BY {id_key}
-                    ORDER BY {cursor_key} DESC
-                ) AS row_num
-            FROM {DATASET}.{table}
-        ) WHERE row_num = 1
-        """
-    ).result()

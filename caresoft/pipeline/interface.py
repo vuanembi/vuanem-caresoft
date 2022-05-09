@@ -18,4 +18,5 @@ class Pipeline:
     schema: list[dict[str, Any]]
     id_key: Optional[str] = None
     cursor_key: Optional[str] = None
+    partition_key: Optional[str] = None
     queue_task: bool = False

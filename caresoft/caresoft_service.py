@@ -15,7 +15,7 @@ def load_callback_service(pipeline: Pipeline):
                 pipeline.name,
                 pipeline.schema,
                 pipeline.id_key,
-                pipeline.cursor_key,
+                pipeline.partition_key,
                 rows,
             ),
             **(
