@@ -5,7 +5,7 @@ from caresoft.request_parser import updated
 pipeline = Pipeline(
     name="Tickets",
     params_fn=updated,
-    get=get_listing("tickets",lambda x: x["tickets"]),
+    get=get_listing("tickets", lambda x: x["tickets"]),
     transform=lambda rows: [
         {
             "ticket_id": row.get("ticket_id"),

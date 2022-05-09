@@ -5,7 +5,7 @@ from caresoft.request_parser import dimension
 pipeline = Pipeline(
     name="TicketsCustomFields",
     params_fn=dimension,
-    get=get_dimension("tickets/custom_fields",lambda x: x["custom_fields"]),
+    get=get_dimension("tickets/custom_fields", lambda x: x["custom_fields"]),
     transform=lambda rows: [
         {
             "custom_field_id": row.get("custom_field_id"),

@@ -5,7 +5,7 @@ from caresoft.request_parser import dimension
 pipeline = Pipeline(
     name="Services",
     params_fn=dimension,
-    get=get_dimension("services",lambda x: x["services"]),
+    get=get_dimension("services", lambda x: x["services"]),
     transform=lambda rows: [
         {
             "service_id": row.get("service_id"),

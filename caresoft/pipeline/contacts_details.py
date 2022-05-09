@@ -7,7 +7,7 @@ from caresoft.request_parser import details
 pipeline = Pipeline(
     name="ContactsDetails",
     params_fn=details,
-    get=get_details("contacts",lambda x: x["contact"]),
+    get=get_details("contacts", lambda x: x["contact"]),
     transform=lambda rows: [
         {
             "id": row.get("id"),

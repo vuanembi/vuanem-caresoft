@@ -22,7 +22,7 @@ listing = [calls, contacts, tickets]
 details = [contacts_details, tickets_details]
 
 dimension_pipelines, listing_pipelines, details_pipelines = [
-    {i.name: i for i in [j.pipeline for j in l]}
+    {i.name: i for i in [j.pipeline for j in l]}  # type: ignore
     for l in [
         dimension,
         listing,
