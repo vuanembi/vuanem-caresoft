@@ -1,6 +1,6 @@
 import pytest
 
-from caresoft import pipeline
+from caresoft.pipeline import dimension_pipelines, listing_pipelines, details_pipelines
 from caresoft.caresoft_service import pipeline_service
 from tasks.tasks_service import create_cron_tasks_service
 
@@ -36,8 +36,8 @@ test_details_data = {
 }
 
 TIMEFRAME = (
-    ("auto", (None, None)),
-    ("manual", ("2021-11-15", "2021-12-01")),
+    # ("auto", (None, None)),
+    ("manual", ("2021-11-15", "2021-11-16")),
 )
 
 
@@ -52,22 +52,20 @@ def timeframe(request):
 class TestCaresoft:
     def assert_pipelines(self, pipeline, body):
         res = pipeline_service(pipeline, body)
-        assert res["num_processed"] >= 0
-        if res["num_processed"] > 0:
-            assert res["num_processed"] == res["output_rows"]
+        assert res["output_rows"] >= 0
 
     @pytest.mark.parametrize(
         "pipeline",
-        argvalues=pipeline.dimension_pipelines.values(),
-        ids=pipeline.dimension_pipelines.keys(),
+        argvalues=dimension_pipelines.values(),
+        ids=dimension_pipelines.keys(),
     )
     def test_dimensions(self, pipeline):
         self.assert_pipelines(pipeline, {})
 
     @pytest.mark.parametrize(
         "pipeline",
-        argvalues=pipeline.listing_pipelines.values(),
-        ids=pipeline.listing_pipelines.keys(),
+        argvalues=listing_pipelines.values(),
+        ids=listing_pipelines.keys(),
     )
     def test_incremental(self, pipeline, timeframe):
         self.assert_pipelines(
@@ -80,8 +78,8 @@ class TestCaresoft:
 
     @pytest.mark.parametrize(
         "pipeline",
-        argvalues=pipeline.details_pipelines.values(),
-        ids=pipeline.details_pipelines.keys(),
+        argvalues=details_pipelines.values(),
+        ids=details_pipelines.keys(),
     )
     def test_details(self, pipeline):
         self.assert_pipelines(

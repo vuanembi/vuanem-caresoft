@@ -2,7 +2,7 @@ from caresoft.pipeline.interface import Pipeline
 from caresoft.repo import get_dimension
 from caresoft.request_parser import dimension
 
-Services = Pipeline(
+pipeline = Pipeline(
     name="Services",
     params_fn=dimension,
     get=get_dimension("services",lambda x: x["services"]),

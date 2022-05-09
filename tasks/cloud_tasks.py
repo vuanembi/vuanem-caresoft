@@ -38,14 +38,14 @@ def create_tasks(
             }
             for payload in payloads
         ]
-    return len(
-        [
-            client.create_task(
-                request={
-                    "parent": parent,
-                    "task": task,
-                }
-            )
-            for task in tasks
-        ]
-    )
+        return len(
+            [
+                client.create_task(
+                    request={
+                        "parent": parent,
+                        "task": task,
+                    }
+                )
+                for task in tasks
+            ]
+        )

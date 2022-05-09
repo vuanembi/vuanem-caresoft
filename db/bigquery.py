@@ -3,7 +3,7 @@ from datetime import datetime
 
 from google.cloud import bigquery
 
-DATASET = "IP_Caresoft"
+DATASET = "Caresoft"
 client = bigquery.Client()
 
 

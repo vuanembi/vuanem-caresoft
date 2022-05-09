@@ -22,21 +22,18 @@ def create_cron_tasks_service(body: dict[str, str]) -> dict[str, int]:
     }
 
 
-def create_details_tasks_service(id_fn: Callable[[dict[str, Any]], int]):
-    def _svc(table: str, rows: Data):
-        ids = [id_fn(id) for id in rows]
-        return {
-            "tasks": create_tasks(
-                "caresoft-details",
-                [
-                    {
-                        "table": table,
-                        "ids": ids[i : i + DETAILS_LIMIT],
-                    }
-                    for i in range(0, len(ids), DETAILS_LIMIT)
-                ],
-                lambda x: x["table"],
-            )
-        }
-
-    return _svc
+def create_details_tasks_service(table: str, id_key: str, rows: Data):
+    ids = [id[id_key] for id in rows]
+    return {
+        "tasks": create_tasks(
+            "caresoft-details",
+            [
+                {
+                    "table": table,
+                    "ids": ids[i : i + DETAILS_LIMIT],
+                }
+                for i in range(0, len(ids), DETAILS_LIMIT)
+            ],
+            lambda x: x["table"],
+        )
+    }

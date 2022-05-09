@@ -1,9 +1,8 @@
 from caresoft.pipeline.interface import Pipeline
 from caresoft.repo import get_listing
 from caresoft.request_parser import updated
-from tasks.tasks_service import create_details_tasks_service
 
-Tickets = Pipeline(
+pipeline = Pipeline(
     name="Tickets",
     params_fn=updated,
     get=get_listing("tickets",lambda x: x["tickets"]),
@@ -162,5 +161,5 @@ Tickets = Pipeline(
     ],
     id_key="ticket_id",
     cursor_key="updated_at",
-    callback_fn=create_details_tasks_service,
+    queue_task=True,
 )

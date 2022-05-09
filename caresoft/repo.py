@@ -17,7 +17,7 @@ if sys.platform == "win32":
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 
-def get_client() -> httpx.AsyncClient:
+def _get_client() -> httpx.AsyncClient:
     return httpx.AsyncClient(
         base_url="https://api.caresoft.vn/VUANEM/api/v1/",
         headers={
@@ -36,7 +36,7 @@ ResFn = Callable[[dict[str, Any]], Any]
 def get_dimension(uri: str, res_fn: ResFn):
     def _get(*args):
         async def __get() -> Data:
-            async with get_client() as client:
+            async with _get_client() as client:
                 r = await client.get(uri)
                 res = r.json()
                 return res_fn(res)
@@ -46,7 +46,7 @@ def get_dimension(uri: str, res_fn: ResFn):
     return _get
 
 
-async def get_one_listing(
+async def _get_one_listing(
     client: httpx.AsyncClient,
     throttler: Throttler,
     params: dict[str, Any],
@@ -58,7 +58,7 @@ async def get_one_listing(
         r = await client.get(uri, params={**params, "page": page})
         if r.status_code == 429:
             await asyncio.sleep(0.5)
-            return await get_one_listing(client, throttler, params, uri, res_fn, page)
+            return await _get_one_listing(client, throttler, params, uri, res_fn, page)
         elif r.status_code == 500:
             return []
         else:
@@ -67,12 +67,12 @@ async def get_one_listing(
             return res_fn(res)
 
 
-async def get_listing(uri: str, res_fn: ResFn):
+def get_listing(uri: str, res_fn: ResFn):
     def _get(params: dict[str, str]):
         async def __get() -> Data:
             throttler = Throttler(rate_limit=LISTING_API_REQ_PER_SEC, period=1)
-            async with get_client() as client:
-                num_found: int = await get_one_listing(  # type: ignore
+            async with _get_client() as client:
+                num_found: int = await _get_one_listing(  # type: ignore
                     client,
                     throttler,
                     params,
@@ -81,7 +81,7 @@ async def get_listing(uri: str, res_fn: ResFn):
                 )
                 tasks = [
                     asyncio.create_task(
-                        get_one_listing(
+                        _get_one_listing(
                             client,
                             throttler,
                             params,
@@ -100,7 +100,7 @@ async def get_listing(uri: str, res_fn: ResFn):
     return _get
 
 
-async def get_one_id(
+async def _get_one_id(
     client: httpx.AsyncClient,
     throttler: Throttler,
     uri: str,
@@ -113,7 +113,7 @@ async def get_one_id(
             return {}
         elif r.status_code == 429:
             await asyncio.sleep(0.5)
-            return await get_one_id(client, throttler, uri, id, res_fn)
+            return await _get_one_id(client, throttler, uri, id, res_fn)
         else:
             res = r.json()
             return res_fn(res)
@@ -123,9 +123,9 @@ def get_details(uri: str, res_fn: ResFn):
     def _get(ids: list[int]) -> Data:
         async def __get():
             throttler = Throttler(rate_limit=DETAILS_API_REQ_PER_SEC, period=1)
-            async with get_client() as client:
+            async with _get_client() as client:
                 tasks = [
-                    asyncio.create_task(get_one_id(client, throttler, uri, id, res_fn))
+                    asyncio.create_task(_get_one_id(client, throttler, uri, id, res_fn))
                     for id in ids
                 ]
                 pages = await asyncio.gather(*tasks)
