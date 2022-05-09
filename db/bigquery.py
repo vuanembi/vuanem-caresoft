@@ -1,30 +1,19 @@
-from typing import Callable, Optional
+from typing import Callable
 from datetime import datetime
 
 from google.cloud import bigquery
 
 BQ_CLIENT = bigquery.Client()
+DATASET = "IP_Caresoft"
 
 DATE_FORMAT = "%Y-%m-%d"
 
 
-def get_time_range(
-    dataset: str,
-    table: str,
-    incre_key: dict,
-    start: Optional[str],
-    end: Optional[str],
-) -> tuple[datetime, datetime]:
-    if start and end:
-        _start, _end = [datetime.strptime(i, DATE_FORMAT) for i in [start, end]]
-    else:
-        _end = datetime.utcnow()
-        rows = BQ_CLIENT.query(
-            f"SELECT MAX({incre_key}) AS incre FROM {dataset}.{table}"
-        ).result()
-        _start = [row for row in rows][0]["incre"]
-    return _start, _end
-
+def get_last_timestamp(table: str, cursor_key: str) -> datetime:
+    rows = BQ_CLIENT.query(
+        f"SELECT MAX({cursor_key}) AS incre FROM {DATASET}.{table}"
+    ).result()
+    return [row for row in rows][0]["incre"]
 
 def load(write_disposition: str) -> Callable[[str, str, list[dict], list[dict]], int]:
     def _load(dataset: str, table: str, schema: list[dict], rows: list[dict]) -> int:
