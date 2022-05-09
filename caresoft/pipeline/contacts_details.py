@@ -1,13 +1,13 @@
 import json
 
 from caresoft.pipeline.interface import Pipeline
-from caresoft.request_parser import details_request_parser
+from caresoft.repo import get_details
+from caresoft.request_parser import details
 
 pipeline = Pipeline(
     name="ContactsDetails",
-    uri="contacts",
-    res_fn=lambda x: x["contacts"],
-    params_fn=details_request_parser,
+    params_fn=details,
+    get=get_details("contacts",lambda x: x["contacts"]),
     transform=lambda rows: [
         {
             "id": row.get("id"),

@@ -1,7 +1,6 @@
 import os
 import sys
-from typing import Callable, Any, TypeVar, Union
-from datetime import datetime
+from typing import Callable, Any, Union
 import asyncio
 import math
 
@@ -27,10 +26,10 @@ def get_client() -> httpx.AsyncClient:
         timeout=None,
     )
 
-ReturnType = TypeVar("ReturnType")
+
 Row = dict
 Data = list[Row]
-ResFn = Callable[[dict[str, Any]], ReturnType]
+ResFn = Callable[[dict[str, Any]], Any]
 
 
 def get_dimension(uri: str, res_fn: ResFn):
@@ -134,21 +133,3 @@ def get_details(uri: str, res_fn: ResFn):
         return asyncio.run(__get())
 
     return _get
-
-
-def params_builder(
-    start_key: str,
-    end_key: str,
-) -> Callable[[datetime, datetime], dict]:
-    def build(start: datetime, end: datetime) -> dict:
-        return {
-            start_key: start.strftime(TIMESTAMP_FORMAT),
-            end_key: end.strftime(TIMESTAMP_FORMAT),
-            "count": API_COUNT,
-        }
-
-    return build
-
-
-time_params_builder = params_builder("start_time_since", "start_time_to")
-updated_params_builder = params_builder("updated_since", "updated_to")

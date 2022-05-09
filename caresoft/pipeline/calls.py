@@ -1,11 +1,11 @@
 from caresoft.pipeline.interface import Pipeline
-from caresoft.request_parser import time_request_parser
+from caresoft.repo import get_listing
+from caresoft.request_parser import time
 
 pipeline = Pipeline(
     name="Calls",
-    uri="calls",
-    res_fn=lambda x: x["calls"],
-    params_fn=time_request_parser,
+    params_fn=time,
+    get=get_listing("calls", lambda x: x["calls"]),
     transform=lambda rows: [
         {
             "id": row["id"],

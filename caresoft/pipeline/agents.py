@@ -1,11 +1,12 @@
 from caresoft.pipeline.interface import Pipeline
-from caresoft.request_parser import dimension_request_parser
+from caresoft.repo import get_dimension
+
+from caresoft.request_parser import dimension
 
 pipeline = Pipeline(
     name="Agents",
-    uri="agents",
-    res_fn=lambda x: x["agents"],
-    params_fn=dimension_request_parser,
+    params_fn=dimension,
+    get=get_dimension("agents",lambda x: x["agents"] ),
     transform=lambda rows: [
         {
             "id": row.get("id"),

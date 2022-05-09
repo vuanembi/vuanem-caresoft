@@ -7,7 +7,7 @@ DATE_FORMAT = "%Y-%m-%d"
 API_COUNT = 500
 
 
-def dimension_request_parser(*args):
+def dimension(*args):
     def _parse(*args):
         return None
 
@@ -35,11 +35,11 @@ def _listing_request_parser(start_key: str, end_key: str):
     return _parse
 
 
-time_request_parser = _listing_request_parser("start_time_since", "start_time_to")
-updated_request_parser = _listing_request_parser("updated_since", "updated_to")
+time = _listing_request_parser("start_time_since", "start_time_to")
+updated = _listing_request_parser("updated_since", "updated_to")
 
 
-def details_request_parser(*args):
+def details(*args):
     def _parse(body: dict[str, list[int]]):
         return body["ids"]
 

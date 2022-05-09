@@ -1,11 +1,11 @@
 from caresoft.pipeline.interface import Pipeline
-from caresoft.request_parser import updated_request_parser
+from caresoft.repo import get_listing
+from caresoft.request_parser import updated
 
 Tickets = Pipeline(
     name="Tickets",
-    uri="tickets",
-    res_fn=lambda x: x["tickets"],
-    params_fn=updated_request_parser,
+    params_fn=updated,
+    get=get_listing("tickets",lambda x: x["tickets"]),
     transform=lambda rows: [
         {
             "ticket_id": row.get("ticket_id"),

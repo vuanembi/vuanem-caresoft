@@ -1,11 +1,11 @@
 from caresoft.pipeline.interface import Pipeline
-from caresoft.request_parser import dimension_request_parser
+from caresoft.repo import get_dimension
+from caresoft.request_parser import dimension
 
 pipeline = Pipeline(
     name="TicketsCustomFields",
-    uri="tickets/custom_fields",
-    res_fn=lambda x: x["custom_fields"],
-    params_fn=dimension_request_parser,
+    params_fn=dimension,
+    get=get_dimension("tickets/custom_fields",lambda x: x["custom_fields"]),
     transform=lambda rows: [
         {
             "custom_field_id": row.get("custom_field_id"),
