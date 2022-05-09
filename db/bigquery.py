@@ -1,73 +1,60 @@
-from typing import Callable
+from typing import Optional
 from datetime import datetime
 
 from google.cloud import bigquery
 
-BQ_CLIENT = bigquery.Client()
 DATASET = "IP_Caresoft"
-
-DATE_FORMAT = "%Y-%m-%d"
+client = bigquery.Client()
 
 
 def get_last_timestamp(table: str, cursor_key: str) -> datetime:
-    rows = BQ_CLIENT.query(
+    rows = client.query(
         f"SELECT MAX({cursor_key}) AS incre FROM {DATASET}.{table}"
     ).result()
     return [row for row in rows][0]["incre"]
 
-def load(write_disposition: str) -> Callable[[str, str, list[dict], list[dict]], int]:
-    def _load(dataset: str, table: str, schema: list[dict], rows: list[dict]) -> int:
-        return (
-            BQ_CLIENT.load_table_from_json(
-                rows,
-                f"{dataset}.{table}",
-                job_config=bigquery.LoadJobConfig(
-                    schema=schema,
-                    create_disposition="CREATE_IF_NEEDED",
-                    write_disposition=write_disposition,
-                ),
-            )
-            .result()
-            .output_rows
+
+def load(
+    table: str,
+    schema: list[dict],
+    id_key: Optional[str],
+    cursor_key: Optional[str],
+    rows: list[dict],
+) -> int:
+    output_rows = (
+        client.load_table_from_json(
+            rows,
+            f"{DATASET}.{table}",
+            job_config=bigquery.LoadJobConfig(
+                schema=schema,
+                create_disposition="CREATE_IF_NEEDED",
+                write_disposition="WRITE_APPEND" if id_key else "WRITE_TRUNCATE",
+            ),
         )
+        .result()
+        .output_rows
+    )
 
-    return _load
+    if id_key and cursor_key:
+        _update(table, id_key, cursor_key)
+
+    return output_rows
 
 
-def update(dataset: str, table: str, keys: dict) -> None:
-    BQ_CLIENT.query(
+def _update(table: str, id_key: str, cursor_key: str) -> None:
+    client.query(
         f"""
-        CREATE OR REPLACE TABLE {dataset}.{table} AS
+        CREATE OR REPLACE TABLE {DATASET}.{table} AS
         SELECT * EXCEPT (row_num)
         FROM
         (
             SELECT
                 *,
                 ROW_NUMBER() over (
-                    PARTITION BY {keys['p_key']}
-                    ORDER BY {keys['incre_key']} DESC
+                    PARTITION BY {id_key}
+                    ORDER BY {cursor_key} DESC
                 ) AS row_num
-            FROM {dataset}.{table}
+            FROM {DATASET}.{table}
         ) WHERE row_num = 1
         """
     ).result()
-
-
-load_truncate = load("WRITE_TRUNCATE")
-load_append = load("WRITE_APPEND")
-
-
-def load_simple(dataset: str, table: str, schema: list[dict], rows: list[dict]) -> int:
-    return load_truncate(dataset, table, schema, rows)
-
-
-def load_incremental(
-    dataset: str,
-    table: str,
-    schema: list[dict],
-    keys: dict,
-    rows: list[dict],
-) -> int:
-    output_rows = load_append(dataset, table, schema, rows)
-    update(dataset, table, keys)
-    return output_rows
