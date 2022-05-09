@@ -1,77 +1,11 @@
-from sqlalchemy import Column, Integer, String, DateTime
+from models.base import incremental_time_pipelines
 
-from models.models import Caresoft
-from components.getter import IncrementalStandardGetter
-from components.loader import BigQueryIncrementalLoader, PostgresIncrementalLoader
-
-
-class Calls(Caresoft):
-    getter = IncrementalStandardGetter
-    loader = [
-        PostgresIncrementalLoader,
-        BigQueryIncrementalLoader,
-    ]
-    endpoint = row_key = "calls"
-    keys = {
-        "p_key": ["id"],
-        "incre_key": "start_time",
-    }
-    schema = [
-        {"name": "id", "type": "INTEGER"},
-        {"name": "start_time", "type": "TIMESTAMP"},
-        {"name": "customer_id", "type": "INTEGER"},
-        {"name": "call_id", "type": "STRING"},
-        {"name": "path", "type": "STRING"},
-        {"name": "path_download", "type": "STRING"},
-        {"name": "caller", "type": "STRING"},
-        {"name": "called", "type": "STRING"},
-        {"name": "user_id", "type": "STRING"},
-        {"name": "agent_id", "type": "STRING"},
-        {"name": "group_id", "type": "INTEGER"},
-        {"name": "call_type", "type": "INTEGER"},
-        {"name": "call_status", "type": "STRING"},
-        {"name": "end_time", "type": "TIMESTAMP"},
-        {"name": "wait_time", "type": "STRING"},
-        {"name": "hold_time", "type": "STRING"},
-        {"name": "talk_time", "type": "STRING"},
-        {"name": "end_status", "type": "STRING"},
-        {"name": "ticket_id", "type": "INTEGER"},
-        {"name": "last_agent_id", "type": "STRING"},
-        {"name": "last_user_id", "type": "INTEGER"},
-        {"name": "call_survey", "type": "STRING"},
-        {"name": "call_survey_result", "type": "INTEGER"},
-        {"name": "missed_reason", "type": "STRING"},
-    ]
-
-    columns = [
-        Column("id", Integer),
-        Column("start_time", DateTime(timezone=True)),
-        Column("customer_id", Integer),
-        Column("call_id", String),
-        Column("path", String),
-        Column("path_download", String),
-        Column("caller", String),
-        Column("called", String),
-        Column("user_id", String),
-        Column("agent_id", String),
-        Column("group_id", Integer),
-        Column("call_type", Integer),
-        Column("call_status", String),
-        Column("end_time", DateTime(timezone=True)),
-        Column("wait_time", String),
-        Column("hold_time", String),
-        Column("talk_time", String),
-        Column("end_status", String),
-        Column("ticket_id", Integer, index=True),
-        Column("last_agent_id", String),
-        Column("last_user_id", Integer),
-        Column("call_survey", String),
-        Column("call_survey_result", Integer),
-        Column("missed_reason", String),
-    ]
-
-    def transform(self, rows):
-        return [
+Calls = incremental_time_pipelines(
+    {
+        "name": "Calls",
+        "endpoint": "calls",
+        "row_key": "calls",
+        "transform": lambda rows: [
             {
                 "id": row["id"],
                 "customer_id": row.get("customer_id"),
@@ -99,4 +33,36 @@ class Calls(Caresoft):
                 "missed_reason": row.get("missed_reason"),
             }
             for row in rows
-        ]
+        ],
+        "schema": [
+            {"name": "id", "type": "INTEGER"},
+            {"name": "start_time", "type": "TIMESTAMP"},
+            {"name": "customer_id", "type": "INTEGER"},
+            {"name": "call_id", "type": "STRING"},
+            {"name": "path", "type": "STRING"},
+            {"name": "path_download", "type": "STRING"},
+            {"name": "caller", "type": "STRING"},
+            {"name": "called", "type": "STRING"},
+            {"name": "user_id", "type": "STRING"},
+            {"name": "agent_id", "type": "STRING"},
+            {"name": "group_id", "type": "INTEGER"},
+            {"name": "call_type", "type": "INTEGER"},
+            {"name": "call_status", "type": "STRING"},
+            {"name": "end_time", "type": "TIMESTAMP"},
+            {"name": "wait_time", "type": "STRING"},
+            {"name": "hold_time", "type": "STRING"},
+            {"name": "talk_time", "type": "STRING"},
+            {"name": "end_status", "type": "STRING"},
+            {"name": "ticket_id", "type": "INTEGER"},
+            {"name": "last_agent_id", "type": "STRING"},
+            {"name": "last_user_id", "type": "INTEGER"},
+            {"name": "call_survey", "type": "STRING"},
+            {"name": "call_survey_result", "type": "INTEGER"},
+            {"name": "missed_reason", "type": "STRING"},
+        ],
+        "keys": {
+            "p_key": "id",
+            "incre_key": "start_time",
+        },
+    }
+)

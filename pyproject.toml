@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "vuanem_caresoft"
-version = "2.0"
+name = "vuanem-caresoft"
+version = "3.0"
 description = ""
 authors = ["HM <hieumdd@gmail.com>"]
 
@@ -9,8 +9,6 @@ python = "~3.9"
 requests = "^2.26.0"
 aiohttp = "^3.7.4"
 google-cloud-bigquery = "^2.27.1"
-psycopg2-binary = "^2.9.1"
-SQLAlchemy = "^1.4.25"
 google-cloud-tasks = "^2.5.2"
 asyncio-throttle = "^1.0.2"
 
@@ -18,6 +16,9 @@ asyncio-throttle = "^1.0.2"
 pytest = "^6.2.5"
 pytest-timeout = "^1.4.2"
 black = "^21.9b0"
+mypy = "^0.910"
+types-requests = "^2.26.0"
+types-protobuf = "^3.18.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

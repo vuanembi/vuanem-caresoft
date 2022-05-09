@@ -1,49 +1,23 @@
-import os
-import json
+from controller.pipelines import factory, run
+from controller.tasks import orchestrate
 
-import requests
-
-from models.models import Caresoft
-from tasks import create_tasks
+DATASET = "Caresoft"
 
 
-def main(request):
-    """API Gateway
-
-    Args:
-        request (flask.request): Incoming Request
-
-    Returns:
-        dict: Responses
-    """
-
+def main(request) -> dict:
     data = request.get_json()
     print(data)
 
     if "tasks" in data:
-        results = create_tasks(data)
+        results = orchestrate(data['tasks'])
     elif "table" in data:
-        job = Caresoft.factory(
-            data["table"],
-            data.get("start"),
-            data.get("end"),
-        )
-        results = job.run()
+        results = run(DATASET, factory(data["table"]), data)
+    else:
+        raise ValueError(data)
 
     response = {
         "pipelines": "Caresoft",
         "results": results,
     }
-
     print(response)
-
-    requests.post(
-        "https://api.telegram.org/bot{token}/sendMessage".format(
-            token=os.getenv("TELEGRAM_TOKEN")
-        ),
-        json={
-            "chat_id": os.getenv("TELEGRAM_CHAT_ID"),
-            "text": json.dumps(response, indent=4),
-        },
-    )
     return response

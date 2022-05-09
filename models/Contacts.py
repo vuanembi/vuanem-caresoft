@@ -1,43 +1,11 @@
-from sqlalchemy import Column, Integer, String, DateTime
+from models.base import incremental_updated_pipelines
 
-from models.models import Caresoft
-from components.getter import IncrementalDetailsGetter
-from components.loader import BigQueryIncrementalLoader, PostgresIncrementalLoader
-
-
-class Contacts(Caresoft):
-    getter = IncrementalDetailsGetter
-    loader = [
-        PostgresIncrementalLoader,
-        BigQueryIncrementalLoader,
-    ]
-    endpoint = row_key = "contacts"
-    keys = {
-        "p_key": ["id"],
-        "incre_key": "updated_at",
-    }
-    schema = [
-        {"name": "id", "type": "INTEGER"},
-        {"name": "updated_at", "type": "TIMESTAMP"},
-        {"name": "gender", "type": "INTEGER"},
-        {"name": "created_at", "type": "TIMESTAMP"},
-        {"name": "email", "type": "STRING"},
-        {"name": "phone_no", "type": "STRING"},
-        {"name": "username", "type": "STRING"},
-    ]
-
-    columns = [
-        Column("id", Integer),
-        Column("updated_at", DateTime(timezone=True)),
-        Column("gender", Integer),
-        Column("created_at", DateTime(timezone=True)),
-        Column("email", String),
-        Column("phone_no", String, index=True),
-        Column("username", String),
-    ]
-
-    def transform(self, rows):
-        return [
+Contacts = incremental_updated_pipelines(
+    {
+        "name": "Contacts",
+        "endpoint": "contacts",
+        "row_key": "contacts",
+        "transform": lambda rows: [
             {
                 "id": row.get("id"),
                 "updated_at": row.get("updated_at"),
@@ -47,4 +15,19 @@ class Contacts(Caresoft):
                 "username": row.get("username"),
             }
             for row in rows
-        ]
+        ],
+        "schema": [
+            {"name": "id", "type": "INTEGER"},
+            {"name": "updated_at", "type": "TIMESTAMP"},
+            {"name": "gender", "type": "INTEGER"},
+            {"name": "created_at", "type": "TIMESTAMP"},
+            {"name": "email", "type": "STRING"},
+            {"name": "phone_no", "type": "STRING"},
+            {"name": "username", "type": "STRING"},
+        ],
+        "keys": {
+            "p_key": "id",
+            "incre_key": "updated_at",
+        },
+    }
+)
