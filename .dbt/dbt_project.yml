@@ -1,0 +1,16 @@
+name: 'vuanem_caresoft'
+version: '1.0.0'
+config-version: 2
+
+profile: 'vuanem_caresoft'
+
+model-paths:
+  - "models"
+  
+macro-paths:
+  - "macros"
+
+target-path: "target"
+
+models:
+  vuanem_caresoft:

@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: Caresoft
+    schema: IP_Caresoft
+    tables:
+      - name: p_Calls
+      - name: p_Contacts
+      - name: p_ContactsDetails
+      - name: p_Tickets
+      - name: p_TicketsDetails
+
+models:
+  - name: Contacts
