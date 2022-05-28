@@ -1,6 +1,5 @@
 from typing import Any
 
-from caresoft.caresoft_controller import caresoft_controller
 from tasks.tasks_service import create_cron_tasks_service
 
 

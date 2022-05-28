@@ -1,18 +1,13 @@
-from typing import Callable, Any, Optional, Protocol
+from typing import Callable, Any, Optional
 from dataclasses import dataclass
 
 from caresoft.repo import Data
 
 
-class ParamsFn(Protocol):
-    def __call__(self, *args) -> Any:
-        pass
-
-
 @dataclass
 class Pipeline:
     name: str
-    params_fn: ParamsFn
+    params_fn: Callable[[dict[str, Any]], Any]
     get: Callable[[Any], Data]
     transform: Callable[[Data], Data]
     schema: list[dict[str, Any]]

@@ -7,8 +7,7 @@ pipeline = Pipeline(
     name="Agents",
     params_fn=dimension,
     get=get_dimension("agents", lambda x: x["agents"]),
-    transform=lambda rows: [
-        {
+    transform=lambda row: {
             "id": row.get("id"),
             "username": row.get("username"),
             "email": row.get("email"),
@@ -21,9 +20,7 @@ pipeline = Pipeline(
             "role_id": row.get("role_id"),
             "login_status": row.get("login_status"),
             "call_status": row.get("call_status"),
-        }
-        for row in rows
-    ],
+        },
     schema=[
         {"name": "id", "type": "INTEGER"},
         {"name": "username", "type": "STRING"},
