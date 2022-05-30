@@ -1,23 +1,19 @@
-from controller.pipelines import factory, run
-from controller.tasks import orchestrate
+from typing import Any
 
-DATASET = "Caresoft"
+from caresoft.caresoft_controller import caresoft_controller
+from tasks.tasks_service import create_cron_tasks_service
 
 
-def main(request) -> dict:
-    data = request.get_json()
+def main(request):
+    data: dict[str, Any] = request.get_json()
     print(data)
 
     if "tasks" in data:
-        results = orchestrate(data['tasks'])
+        response = create_cron_tasks_service(data)
     elif "table" in data:
-        results = run(DATASET, factory(data["table"]), data)
+        response = caresoft_controller(data)
     else:
         raise ValueError(data)
 
-    response = {
-        "pipelines": "Caresoft",
-        "results": results,
-    }
     print(response)
     return response

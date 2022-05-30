@@ -1,25 +1,29 @@
-from typing import Callable
+from typing import Callable, Any
 import os
 import json
 import uuid
 
 from google.cloud import tasks_v2
-from google.protobuf.duration_pb2 import Duration
 from google import auth
 
+
 _, PROJECT_ID = auth.default()
-TASKS_CLIENT = tasks_v2.CloudTasksClient()
 
 
-def create(queue: str) -> Callable[[list[dict]], int]:
-    task_paths = (PROJECT_ID, "asia-southeast2", queue)
-    def _create(payloads: list[dict]) -> int:
+def create_tasks(
+    queue: str,
+    payloads: list[dict[str, Any]],
+    name_fn: Callable[[dict[str, Any]], str],
+) -> int:
+    with tasks_v2.CloudTasksClient() as client:
+        task_path = (PROJECT_ID, "asia-southeast2", queue)
+        parent = client.queue_path(*task_path)
         tasks = [
             {
-                "name": TASKS_CLIENT.task_path(
-                    *task_paths, task=f"{payload['table']}-{uuid.uuid4()}"
+                "name": client.task_path(
+                    *task_path,
+                    task=f"{name_fn(payload)}-{uuid.uuid4()}",
                 ),
-                "dispatch_deadline": Duration().FromSeconds(530),  # type: ignore
                 "http_request": {
                     "http_method": tasks_v2.HttpMethod.POST,
                     "url": os.getenv("PUBLIC_URL"),
@@ -36,16 +40,12 @@ def create(queue: str) -> Callable[[list[dict]], int]:
         ]
         return len(
             [
-                TASKS_CLIENT.create_task(
+                client.create_task(
                     request={
-                        "parent": TASKS_CLIENT.queue_path(*task_paths),
+                        "parent": parent,
                         "task": task,
                     }
                 )
                 for task in tasks
             ]
         )
-    return _create
-
-create_tasks = create("caresoft")
-create_details_tasks = create("caresoft-details")
