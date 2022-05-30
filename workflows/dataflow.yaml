@@ -1,0 +1,45 @@
+main:
+  params: [args]
+  steps:
+    - init:
+        assign:
+          - projectId: ${sys.get_env("GOOGLE_CLOUD_PROJECT_ID")}
+          - location: us-central1
+          - launchResult:
+
+    - createJob:
+        call: googleapis.dataflow.v1b3.projects.locations.flexTemplates.launch
+        args:
+          projectId: ${projectId}
+          location: ${location}
+          body:
+            launchParameters:
+              jobName: ${args.jobName}
+              parameters:
+                input: ${args.input}
+        result: launchResult
+
+    - pollJob:
+        steps:
+          - getJobId:
+              assign:
+                - job:
+
+          - checkJob:
+              call: googleapis.dataflow.v1b3.projects.locations.jobs.get
+              args:
+                projectId: ${projectId}
+                location: ${location}
+                jobId: ${launchResult.clientRequestId}
+              result: job
+
+          - checkIfDone:
+              switch:
+                - condition: ${job.currentState == "JOB_STATE_DONE" OR job.currentState == "JOB_STATE_FAILED" OR job.currentState == "JOB_STATE_CANCELLED"}
+                  return: job
+
+          - wait:
+              call: sys.sleep
+              args:
+                seconds: 120
+              next: checkJob
