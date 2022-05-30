@@ -37,7 +37,7 @@ test_details_data = {
 
 TIMEFRAME = (
     # ("auto", (None, None)),
-    ("manual", ("2021-11-15", "2021-11-16")),
+    ("manual", ("2022-05-01", "2022-05-11")),
 )
 
 
