@@ -21,7 +21,7 @@ def load_callback_service(pipeline: Pipeline):
             **(
                 {
                     "callback_res": create_details_tasks_service(
-                        pipeline.name,
+                        f"{pipeline.name}Details",
                         pipeline.id_key,
                         rows,
                     )
