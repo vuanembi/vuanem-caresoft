@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DataFlow",
+            "type": "python",
+            "request": "launch",
+            "program": "dataflow/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--input",
+                "${input:input}"
+            ],
+
+        }
+    ],
+    "inputs": [
+        {
+          "id": "input",
+          "type": "promptString",
+          "description": "Input"
+        }
+      ]
+}

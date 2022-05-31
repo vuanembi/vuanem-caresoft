@@ -39,6 +39,7 @@ def get_dimension(uri: str, res_fn: ResFn):
             async with _get_client() as client:
                 r = await client.get(uri)
                 res = r.json()
+                print(res)
                 return res_fn(res)
 
         return asyncio.run(__get())

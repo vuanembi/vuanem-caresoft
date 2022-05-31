@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DataFlow",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--input",
+                "${input:input}"
+            ],
+        }
+    ],
+    "inputs": [
+        // {
+        //     "id": "input",
+        //     "type": "promptString",
+        //     "description": "Input"
+        // },
+        {
+            "id": "input",
+            "type": "pickString",
+            "options": [
+                "{\"\"table\"\": \"\"Agents\"\"}",
+                "{\"\"table\"\": \"\"Groups\"\"}",
+                "{\"\"table\"\": \"\"Services\"\"}",
+                "{\"\"table\"\": \"\"TicketsCustomFields\"\"}",
+                "{\"\"table\"\": \"\"ContactsCustomFields\"\"}",
+            ],
+            "description": "Input"
+        }
+    ]
+}

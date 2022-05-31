@@ -3,6 +3,40 @@ main:
   steps:
     - init:
         assign:
+          - jobs: ${json.decode(args.jobs).jobs}
+          - jobResults: []
+
+    - runJobs:
+        for:
+          value: job
+          index: i
+          in: ${jobs}
+          steps:
+            - initResult:
+                assign:
+                  - jobResult:
+
+            - runJob:
+                call: dataflow
+                args:
+                  jobName: ${job.table + string(sys.now)}
+                  input: ${json.encode(job)}
+                result: jobResult
+
+            - saveResult:
+                assign:
+                  - jobResults: ${list.concat(jobResults, jobResult)}
+                  
+    - returnResults:
+        return: ${jobResults}
+
+dataflow:
+  params:
+    - jobName
+    - input
+  steps:
+    - init:
+        assign:
           - projectId: ${sys.get_env("GOOGLE_CLOUD_PROJECT_ID")}
           - location: us-central1
           - launchResult:
@@ -14,9 +48,9 @@ main:
           location: ${location}
           body:
             launchParameters:
-              jobName: ${args.jobName}
+              jobName: ${jobName}
               parameters:
-                input: ${args.input}
+                input: ${input}
         result: launchResult
 
     - pollJob:
@@ -35,7 +69,7 @@ main:
 
           - checkIfDone:
               switch:
-                - condition: ${job.currentState == "JOB_STATE_DONE" OR job.currentState == "JOB_STATE_FAILED" OR job.currentState == "JOB_STATE_CANCELLED"}
+                - condition: ${job.currentState in(["JOB_STATE_DONE", "JOB_STATE_FAILED", "JOB_STATE_CANCELLED"])}
                   return: job
 
           - wait:
