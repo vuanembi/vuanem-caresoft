@@ -1,87 +1,85 @@
-from caresoft.pipeline.interface import Pipeline
+from caresoft.pipeline import interface, tickets_details
 from caresoft.repo import get_listing
 from caresoft.request_parser import updated
 
-pipeline = Pipeline(
+pipeline = interface.Pipeline(
     name="Tickets",
     params_fn=updated,
-    get=get_listing("tickets", lambda x: x["tickets"]),
-    transform=lambda rows: [
-        {
-            "ticket_id": row.get("ticket_id"),
-            "updated_at": row.get("updated_at"),
-            "ticket_no": row.get("ticket_no"),
-            "ticket_subject": row.get("ticket_subject"),
-            "created_at": row.get("created_at"),
-            "ticket_status": row.get("ticket_status"),
-            "ticket_source": row.get("ticket_source"),
-            "ticket_priority": row.get("ticket_priority"),
-            "requester_id": row.get("requester_id"),
-            "assignee_id": row.get("assignee_id"),
-            "assignee": {
-                "id": row["assignee"].get("id"),
-                "username": row["assignee"].get("username"),
-                "email": row["assignee"].get("email"),
-                "phone_no": row["assignee"].get("phone_no"),
-                "agent_id": row["assignee"].get("agent_id"),
-                "role_id": row["assignee"].get("role_id"),
-                "group_id": row["assignee"].get("group_id"),
-                "group_name": row["assignee"].get("group_name"),
-            }
-            if row.get("assignee", {})
-            else {},
-            "requester": {
-                "id": row["requester"].get("id"),
-                "username": row["requester"].get("username"),
-                "email": row["requester"].get("email"),
-                "phone_no": row["requester"].get("phone_no"),
-                "organization_id": row["requester"].get("organization_id"),
-            }
-            if row.get("requester", {})
-            else {},
-            "custom_fields": [
-                {
-                    "id": custom_field.get("id"),
-                    "lable": custom_field.get("lable"),
-                    "type": custom_field.get("type"),
-                    "value": custom_field.get("value"),
-                }
-                for custom_field in row["custom_fields"]
-            ]
-            if row.get("custom_fields")
-            else [],
-            "tags": [
-                {
-                    "name": tag.get("name"),
-                    "tags": tag.get("tags"),
-                }
-                for tag in row["tags"]
-            ]
-            if row.get("tags")
-            else [],
-            "ccs": [
-                {
-                    "id": cc.get("id"),
-                    "username": cc.get("username"),
-                    "email": cc.get("email"),
-                }
-                for cc in row["ccs"]
-            ]
-            if row.get("ccs")
-            else [],
-            "follows": [
-                {
-                    "id": cc.get("id"),
-                    "username": cc.get("username"),
-                    "email": cc.get("email"),
-                }
-                for cc in row["follows"]
-            ]
-            if row.get("follows")
-            else [],
+    get=get_listing("tickets", lambda x: x.get("tickets")),
+    transform=lambda row: {
+        "ticket_id": row.get("ticket_id"),
+        "updated_at": row.get("updated_at"),
+        "ticket_no": row.get("ticket_no"),
+        "ticket_subject": row.get("ticket_subject"),
+        "created_at": row.get("created_at"),
+        "ticket_status": row.get("ticket_status"),
+        "ticket_source": row.get("ticket_source"),
+        "ticket_priority": row.get("ticket_priority"),
+        "requester_id": row.get("requester_id"),
+        "assignee_id": row.get("assignee_id"),
+        "assignee": {
+            "id": row["assignee"].get("id"),
+            "username": row["assignee"].get("username"),
+            "email": row["assignee"].get("email"),
+            "phone_no": row["assignee"].get("phone_no"),
+            "agent_id": row["assignee"].get("agent_id"),
+            "role_id": row["assignee"].get("role_id"),
+            "group_id": row["assignee"].get("group_id"),
+            "group_name": row["assignee"].get("group_name"),
         }
-        for row in rows
-    ],
+        if row.get("assignee", {})
+        else {},
+        "requester": {
+            "id": row["requester"].get("id"),
+            "username": row["requester"].get("username"),
+            "email": row["requester"].get("email"),
+            "phone_no": row["requester"].get("phone_no"),
+            "organization_id": row["requester"].get("organization_id"),
+        }
+        if row.get("requester", {})
+        else {},
+        "custom_fields": [
+            {
+                "id": custom_field.get("id"),
+                "lable": custom_field.get("lable"),
+                "type": custom_field.get("type"),
+                "value": custom_field.get("value"),
+            }
+            for custom_field in row["custom_fields"]
+        ]
+        if row.get("custom_fields")
+        else [],
+        "tags": [
+            {
+                "name": tag.get("name"),
+                "tags": tag.get("tags"),
+            }
+            for tag in row["tags"]
+        ]
+        if row.get("tags")
+        else [],
+        "ccs": [
+            {
+                "id": cc.get("id"),
+                "username": cc.get("username"),
+                "email": cc.get("email"),
+            }
+            for cc in row["ccs"]
+        ]
+        if row.get("ccs")
+        else [],
+        "follows": [
+            {
+                "id": cc.get("id"),
+                "username": cc.get("username"),
+                "email": cc.get("email"),
+            }
+            for cc in row["follows"]
+        ]
+        if row.get("follows")
+        else [],
+        "_cursor": row.get("updated_at"),
+    },
     schema=[
         {"name": "ticket_id", "type": "INTEGER"},
         {"name": "updated_at", "type": "TIMESTAMP"},
@@ -158,8 +156,8 @@ pipeline = Pipeline(
                 {"name": "email", "type": "STRING"},
             ],
         },
+        {"name": "_cursor", "type": "TIMESTAMP"},
     ],
-    id_key="ticket_id",
-    cursor_key="updated_at",
-    queue_task=True,
+    key=interface.Key("ticket_id", "created_at"),
+    details=tickets_details.pipeline,
 )

@@ -1,4 +1,4 @@
-from caresoft.pipeline.interface import Pipeline
+from caresoft.pipeline.interface import Pipeline, Key
 from caresoft.repo import get_listing
 from caresoft.request_parser import time
 
@@ -6,35 +6,33 @@ pipeline = Pipeline(
     name="Calls",
     params_fn=time,
     get=get_listing("calls", lambda x: x["calls"]),
-    transform=lambda rows: [
-        {
-            "id": row["id"],
-            "customer_id": row.get("customer_id"),
-            "call_id": row.get("call_id"),
-            "path": row.get("path"),
-            "path_download": row.get("path_download"),
-            "caller": row.get("caller"),
-            "called": row.get("called"),
-            "user_id": row.get("user_id"),
-            "agent_id": row.get("agent_id"),
-            "group_id": row.get("group_id"),
-            "call_type": row.get("call_type"),
-            "start_time": row.get("start_time"),
-            "call_status": row.get("call_status"),
-            "end_time": row.get("end_time"),
-            "wait_time": row.get("wait_time"),
-            "hold_time": row.get("hold_time"),
-            "talk_time": row.get("talk_time"),
-            "end_status": row.get("end_status"),
-            "ticket_id": row.get("ticket_id"),
-            "last_agent_id": row.get("last_agent_id"),
-            "last_user_id": row.get("last_user_id"),
-            "call_survey": row.get("call_survey"),
-            "call_survey_result": row.get("call_survey_result"),
-            "missed_reason": row.get("missed_reason"),
-        }
-        for row in rows
-    ],
+    transform=lambda row: {
+        "id": row["id"],
+        "customer_id": row.get("customer_id"),
+        "call_id": row.get("call_id"),
+        "path": row.get("path"),
+        "path_download": row.get("path_download"),
+        "caller": row.get("caller"),
+        "called": row.get("called"),
+        "user_id": row.get("user_id"),
+        "agent_id": row.get("agent_id"),
+        "group_id": row.get("group_id"),
+        "call_type": row.get("call_type"),
+        "start_time": row.get("start_time"),
+        "call_status": row.get("call_status"),
+        "end_time": row.get("end_time"),
+        "wait_time": row.get("wait_time"),
+        "hold_time": row.get("hold_time"),
+        "talk_time": row.get("talk_time"),
+        "end_status": row.get("end_status"),
+        "ticket_id": row.get("ticket_id"),
+        "last_agent_id": row.get("last_agent_id"),
+        "last_user_id": row.get("last_user_id"),
+        "call_survey": row.get("call_survey"),
+        "call_survey_result": row.get("call_survey_result"),
+        "missed_reason": row.get("missed_reason"),
+        "_cursor": row.get("start_time"),
+    },
     schema=[
         {"name": "id", "type": "INTEGER"},
         {"name": "start_time", "type": "TIMESTAMP"},
@@ -60,7 +58,7 @@ pipeline = Pipeline(
         {"name": "call_survey", "type": "STRING"},
         {"name": "call_survey_result", "type": "INTEGER"},
         {"name": "missed_reason", "type": "STRING"},
+        {"name": "_cursor", "type": "TIMESTAMP"},
     ],
-    id_key="id",
-    cursor_key="start_time",
+    key=Key("id", "start_time"),
 )

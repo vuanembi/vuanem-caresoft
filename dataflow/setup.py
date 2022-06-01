@@ -6,6 +6,7 @@ setuptools.setup(
     install_requires=[
         "asyncio-throttle",
         "httpx",
+        "google-cloud-secret-manager",
     ],
     packages=setuptools.find_packages(),
 )

@@ -1,6 +1,6 @@
+from typing import Callable, Any, Union, Iterable
 import os
 import sys
-from typing import Callable, Any, Union
 import asyncio
 import math
 
@@ -28,8 +28,7 @@ def _get_client() -> httpx.AsyncClient:
     )
 
 
-Row = dict
-Data = list[Row]
+Data = Iterable[Any]
 ResFn = Callable[[dict[str, Any]], Any]
 
 
@@ -39,7 +38,6 @@ def get_dimension(uri: str, res_fn: ResFn):
             async with _get_client() as client:
                 r = await client.get(uri)
                 res = r.json()
-                print(res)
                 return res_fn(res)
 
         return asyncio.run(__get())
@@ -69,7 +67,7 @@ async def _get_one_listing(
 
 
 def get_listing(uri: str, res_fn: ResFn):
-    def _get(params: dict[str, Any]):
+    def _get(params: Any):
         async def __get() -> Data:
             _params = params | {"count": API_COUNT}
 
@@ -110,7 +108,7 @@ async def _get_one_id(
     uri: str,
     id: int,
     res_fn: ResFn,
-) -> Row:
+) -> Any:
     async with throttler:
         r = await client.get(f"{uri}/{id}")
         if r.status_code in (404, 500):

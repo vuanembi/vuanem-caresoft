@@ -1,54 +1,52 @@
 import json
 
-from caresoft.pipeline.interface import Pipeline
+from caresoft.pipeline.interface import Pipeline, Key
 from caresoft.repo import get_details
 from caresoft.request_parser import details
 
 pipeline = Pipeline(
     name="ContactsDetails",
     params_fn=details,
-    get=get_details("contacts", lambda x: x["contact"]),
-    transform=lambda rows: [
-        {
-            "id": row.get("id"),
-            "updated_at": row.get("updated_at"),
-            "account_id": row.get("account_id"),
-            "username": row.get("username"),
-            "email": row.get("email"),
-            "email2": row.get("email2"),
-            "phone_no": row.get("phone_no"),
-            "phone_no2": row.get("phone_no2"),
-            "phone_no3": row.get("phone_no3"),
-            "facebook": row.get("facebook"),
-            "gender": row.get("gender"),
-            "organization_id": row.get("organization_id"),
-            "created_at": row.get("created_at"),
-            "role_id": row.get("role_id"),
-            "campaign_handler_id": row.get("campaign_handler_id"),
-            "organization": json.dumps(row.get("organization")),
-            "custom_fields": [
-                {
-                    "id": custom_field.get("id"),
-                    "lable": custom_field.get("lable"),
-                    "type": custom_field.get("type"),
-                    "value": custom_field.get("value"),
-                }
-                for custom_field in row["custom_fields"]
-            ]
-            if row.get("custom_fields")
-            else [],
-            "psid": [
-                {
-                    "page_id": psid.get("page_id"),
-                    "psid": psid.get("psid"),
-                }
-                for psid in row["psid"]
-            ]
-            if row.get("psid", [])
-            else [],
-        }
-        for row in rows
-    ],
+    get=get_details("contacts", lambda x: x.get("contact")),
+    transform=lambda row: {
+        "id": row.get("id"),
+        "updated_at": row.get("updated_at"),
+        "account_id": row.get("account_id"),
+        "username": row.get("username"),
+        "email": row.get("email"),
+        "email2": row.get("email2"),
+        "phone_no": row.get("phone_no"),
+        "phone_no2": row.get("phone_no2"),
+        "phone_no3": row.get("phone_no3"),
+        "facebook": row.get("facebook"),
+        "gender": row.get("gender"),
+        "organization_id": row.get("organization_id"),
+        "created_at": row.get("created_at"),
+        "role_id": row.get("role_id"),
+        "campaign_handler_id": row.get("campaign_handler_id"),
+        "organization": json.dumps(row.get("organization")),
+        "custom_fields": [
+            {
+                "id": custom_field.get("id"),
+                "lable": custom_field.get("lable"),
+                "type": custom_field.get("type"),
+                "value": custom_field.get("value"),
+            }
+            for custom_field in row["custom_fields"]
+        ]
+        if row.get("custom_fields")
+        else [],
+        "psid": [
+            {
+                "page_id": psid.get("page_id"),
+                "psid": psid.get("psid"),
+            }
+            for psid in row["psid"]
+        ]
+        if row.get("psid", [])
+        else [],
+        "_cursor": row.get("updated_at"),
+    },
     schema=[
         {"name": "id", "type": "INTEGER"},
         {"name": "updated_at", "type": "TIMESTAMP"},
@@ -86,7 +84,7 @@ pipeline = Pipeline(
                 {"name": "psid", "type": "INTEGER"},
             ],
         },
+        {"name": "_cursor", "type": "TIMESTAMP"},
     ],
-    id_key="id",
-    cursor_key="updated_at",
+    key=Key("id", "created_at"),
 )

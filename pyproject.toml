@@ -11,16 +11,13 @@ google-cloud-tasks = "^2.5.2"
 asyncio-throttle = "^1.0.2"
 httpx = "^0.22.0"
 apache-beam = {version = "2.38.0", extras = ["gcp"]}
+google-cloud-secret-manager = "^2.11.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 black = "^22.3.0"
 mypy = "^0.910"
 poetry-setup = "^0.3.6"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 addopts = "-s --durations=0"
@@ -32,3 +29,7 @@ testpaths = [
 python_version = 3.9
 ignore_missing_imports = true
 namespace_packages = true
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
