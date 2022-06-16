@@ -1,5 +1,5 @@
 from typing import Any
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from db.bigquery import get_last_timestamp
 
@@ -23,7 +23,7 @@ def _listing_request_parser(start_key: str, end_key: str):
                 start, end = [datetime.strptime(i, DATE_FORMAT) for i in [_start, _end]]
             else:
                 start = get_last_timestamp(table, cursor_key)
-                end = datetime.utcnow()
+                end = datetime.utcnow() + timedelta(hours=7)
             return {
                 start_key: start.isoformat(timespec="seconds") + "Z",
                 end_key: end.isoformat(timespec="seconds") + "Z",
