@@ -70,6 +70,7 @@ async def _get_one_listing(
 def get_listing(uri: str, res_fn: ResFn):
     def _get(params: dict[str, str]):
         async def __get() -> Data:
+            print(params)
             throttler = Throttler(rate_limit=LISTING_API_REQ_PER_SEC, period=1)
             async with _get_client() as client:
                 num_found: int = await _get_one_listing(  # type: ignore

@@ -25,7 +25,8 @@ def _listing_request_parser(start_key: str, end_key: str):
                 start = get_last_timestamp(table, cursor_key)
                 end = datetime.utcnow() + timedelta(hours=7)
             return {
-                start_key: start.isoformat(timespec="seconds") + "Z",
+                start_key: start.replace(tzinfo=None).isoformat(timespec="seconds")
+                + "Z",
                 end_key: end.isoformat(timespec="seconds") + "Z",
                 "count": API_COUNT,
             }
